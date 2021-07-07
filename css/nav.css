@@ -1,0 +1,306 @@
+/*
+
+CSS File for the Nav Bar, Preloader, and other basic page css needs
+
+*/
+
+*{
+
+  margin: 0;
+  padding: 0;
+
+}
+
+html {
+
+  scroll-behavior: smooth;
+  background-color:  rgb(18, 18, 17);
+
+}
+
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/**************************************************************************
+Scrollbar
+**************************************************************************/
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(18, 18, 17);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ababab;
+}
+
+/**************************************************************************
+Preloader
+**************************************************************************/
+
+.preloader{
+
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(18, 18, 17);
+  position: fixed;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: opacity 0.5s ease;
+
+
+}
+
+.ship{
+
+  max-width: 200px;
+  min-width: 125px;
+  width: 30vw;
+  height: auto;
+
+}
+
+.loadDots{
+
+  display: flex;
+
+}
+
+.loadDots img{
+
+
+  width: 24vw;
+  min-width: 100px;
+  max-width: 185px;
+  height: auto;
+
+}
+
+.loaded{
+
+  opacity: 0;
+  pointer-events: none;
+
+}
+
+/**************************************************************************
+Navbar
+**************************************************************************/
+
+.navbar{
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: rift, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  width: 100%;
+  height: 12vh;
+  max-height: 80px;
+  min-height: 58px;
+  position: fixed;
+  background-color: transparent;
+  z-index: 4;
+  transition: 0.3s ease-in-out;
+
+}
+
+.nav-links{
+
+  display: flex;
+  justify-content: space-evenly;
+  width: 60vw;
+  min-width: 700px;
+  max-width: 1250px;
+
+}
+
+.nav-links li{
+
+  list-style: none;
+
+}
+
+.nav-links a{
+
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 16px;
+  position: relative;
+  padding-bottom: 2px;
+
+}
+
+/*Animation for the navbar links*/
+ .nav-links a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-signature{
+  z-index: 5;
+  max-width: 145px;
+  min-width: 100px;
+  width: 16vw;
+  height: auto;
+  margin-left: 10px;
+
+}
+
+.imgLink{
+
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.open{
+
+  visibility: visible;
+  transform: translate(-0.8%, 42%);
+
+}
+
+/**************************************************************************
+Burger
+**************************************************************************/
+
+.burger{
+  z-index: 5;
+  display: none;
+  cursor: pointer;
+  max-width: 100%;
+  max-height: 100%;
+
+}
+
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 5px;
+  transition: 0.5s ease-in-out;
+}
+/*Burger Animation*/
+.ex .line1{
+
+  transform: rotate(-45deg) translate(-5px, 6px);
+
+}
+
+.ex .line2{
+
+  transform: rotateY(-90deg);
+
+}
+
+.ex .line3{
+
+  transform: rotate(45deg) translate(-5px, -6px);
+
+}
+
+/*Links Animation when opening burger*/
+@keyframes linksFadeIn{
+
+  from{
+
+    opacity: 0;
+    transform: translate(50px);
+
+  }
+  to{
+
+    opacity: 1;
+    transform: translate(0px);
+
+  }
+
+}
+
+
+/*Nav Link changes for tablet/mobile and showing the burger*/
+@media screen and (max-width: 920px){
+
+  /*Hamburger*/
+  .nav-links{
+
+    visibility: hidden;
+    position: fixed;
+    background: rgba(13, 13, 12, 0.9);
+    height: 105vh;
+    width: 101%;
+    transform: translate(-0.8%, -60%);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.5s ease-in-out;
+    min-width: 0px;
+  }
+
+  .nav-links a{
+
+    font-size: 25px;
+
+  }
+
+  .nav-links li:first-of-type{
+    padding-top: 8vh;
+  }
+
+  .nav-links li{
+
+    opacity: 0;
+    padding-bottom: 10vh
+
+  }
+
+  .open{
+
+    visibility: visible;
+    transform: translate(0%, 44%);
+
+  }
+
+  .burger{
+
+    display: block;
+    margin-right: 5vw;
+
+  }
+
+}
+
+@media (hover:hover) and (pointer: fine){
+
+  .nav-links a:hover:before{
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+}

@@ -1,0 +1,214 @@
+/**************************************************************************
+CSS for the home page of the website
+**************************************************************************/
+
+/**************************************************************************
+The home parallax image
+**************************************************************************/
+
+.parallax {
+  background-image: url("../images/main.jpg");
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/**************************************************************************
+SVG name animation over the parallax image
+**************************************************************************/
+
+svg{
+
+  z-index: 2;
+
+}
+
+.image-anim{
+
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+}
+
+.image-anim svg{
+
+  width: 50vw;
+  max-width: 650px;
+  min-width: 250px;
+  height: auto;
+
+}
+
+.image-anim p{
+  z-index: 2;
+  font-family: freight-neo-pro,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.6vw;
+  color: #ffffff;
+  padding-top: 1vw;
+  opacity: 0;
+  animation: fadeIn 2s ease-in 6s 1 normal forwards;
+
+}
+
+#nim path:nth-child(1){
+  stroke-dasharray: 371px;
+  stroke-dashoffset: 371px;
+  animation: line-anim 3s ease forwards 2s;
+}
+#nim path:nth-child(2){
+  stroke-dasharray: 350.6px;
+  stroke-dashoffset: 350.6px;
+  animation: line-anim 3s ease forwards 2.3s;
+}
+#nim path:nth-child(3){
+  stroke-dasharray: 384.8px;
+  stroke-dashoffset: 384.8px;
+  animation: line-anim 3s ease forwards 2.6s;
+}
+#nim path:nth-child(4){
+  stroke-dasharray: 324.5px;
+  stroke-dashoffset: 324.5px;
+  animation: line-anim 3s ease forwards 2.9s;
+}
+#nim path:nth-child(5){
+  stroke-dasharray: 239.5px;
+  stroke-dashoffset: 239.5px;
+  animation: line-anim 3s ease forwards 3.0s;
+}
+#nim path:nth-child(6){
+  stroke-dasharray: 319.6px;
+  stroke-dashoffset: 319.6px;
+  animation: line-anim 3s ease forwards 3.3s;
+}
+#nim path:nth-child(7){
+  stroke-dasharray: 387.5px;
+  stroke-dashoffset: 387.5px;
+  animation: line-anim 3s ease forwards 3.5s;
+}
+
+@keyframes line-anim{
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+
+
+@keyframes fadeIn{
+  100% {
+    opacity: 1;
+  }
+}
+
+/**************************************************************************
+Arrow to scroll to first section
+**************************************************************************/
+
+.downArrow{
+  position: absolute;
+  left: 48%;
+  bottom: 8%;
+  z-index: 3;
+  animation: bounce 1s ease infinite alternate;
+
+}
+
+.downArrow span{
+
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-bottom: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+  transform: rotate(45deg);
+
+}
+
+@keyframes bounce{
+
+  from{
+    transform: translateY(0px);
+
+  }
+  to{
+    transform: translateY(40px);
+
+  }
+
+}
+
+/**************************************************************************
+General Section CSS for text, headers, and sizes
+**************************************************************************/
+
+section {
+
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  
+}
+
+section h1{
+
+  font-family: freight-neo-pro,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: calc( (1.44em + 0.46125 * ( ( 100vw - 37.5em) / 18.75 ))/1);
+  border-bottom: 2px solid #bed6e0;
+  padding: 0px 15px 0px 15px;
+  color: #d5eaf2;
+
+}
+
+section h2{
+
+  font-family: freight-neo-pro,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: calc( (1.44em + 0.46125 * ( ( 100vw - 37.5em) / 18.75 ))/2);
+  color: #d5eaf2;
+  padding: 2%;
+
+}
+
+section p{
+
+  font-family: freight-neo-pro,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: calc( (1.44em + 0.46125 * ( ( 100vw - 37.5em) / 18.75 ))/2.2);
+  color: #afc2c9;
+  text-align: left;
+  line-height: 1.7;
+}
+
+section a{
+
+  font-family: freight-neo-pro,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: calc( (1.44em + 0.46125 * ( ( 100vw - 37.5em) / 18.75 ))/2.2);
+  color: #afc2c9;
+
+}
+
+@media (hover:hover) and (pointer: fine){
+
+  .parallax {
+    background-attachment: scroll;
+  }
+
+}
