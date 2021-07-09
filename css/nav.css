@@ -15,10 +15,12 @@ html {
 
   scroll-behavior: smooth;
   background-color:  rgb(18, 18, 17);
+  font-size: 22px;
+  overflow-x: hidden;
 
 }
 
-.resize-animation-stopper * {
+.resize-animation-stopper *:not(.image-anim svg):not(.image-anim path):not(.image-anim p){
   animation: none !important;
   transition: none !important;
 }
@@ -186,6 +188,10 @@ Navbar
 
 }
 
+.nottransparent{
+  background-color: rgba(0, 12, 21, 0.7);
+}
+
 /**************************************************************************
 Burger
 **************************************************************************/
@@ -243,6 +249,16 @@ Burger
 
 }
 
+@media screen and (max-width: 1025px){
+
+  html{
+
+    font-size: 20px;
+
+  }
+
+}
+
 
 /*Nav Link changes for tablet/mobile and showing the burger*/
 @media screen and (max-width: 920px){
@@ -291,6 +307,16 @@ Burger
 
     display: block;
     margin-right: 5vw;
+
+  }
+
+}
+
+@media screen and (max-width: 426px){
+
+  html{
+
+    font-size: 17px;
 
   }
 
