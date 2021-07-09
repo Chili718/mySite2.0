@@ -112,11 +112,13 @@ Arrow to scroll to first section
 **************************************************************************/
 
 .downArrow{
+
   position: absolute;
-  left: calc(50vw - 3vw);
+  left: calc(50% - 19.5px);
   bottom: 8%;
   z-index: 3;
   animation: bounce 1s ease infinite alternate;
+  width: 50px;
 
 }
 
@@ -140,7 +142,7 @@ Arrow to scroll to first section
 
   }
   to{
-    transform: translateY(5vh);
+    transform: translateY(3vh);
 
   }
 
@@ -159,9 +161,6 @@ section {
   align-items: center;
   min-height: 400px;
   width: 100vw;
-  font-family: freight-neo-pro,sans-serif;
-  font-weight: 500;
-  font-style: normal;
   padding: 4vw 0px 4vw 0px;
   overflow-x: hidden;
 
@@ -173,6 +172,9 @@ section h1{
   color: #d5eaf2;
   text-align: center;
   padding-bottom: 10px;
+  font-family: ff-meta-web-pro, sans-serif;
+  font-weight: 300;
+  font-style: normal;
 
 }
 
@@ -181,6 +183,9 @@ section h2{
   font-size: 1.2rem;
   color: #d5eaf2;
   text-align: center;
+  font-family: ff-meta-web-pro, sans-serif;
+  font-weight: 300;
+  font-style: normal;
 
 }
 
@@ -190,6 +195,9 @@ section p{
   color: #afc2c9;
   text-align: left;
   padding-bottom: 15px;
+  font-family: fira-sans-condensed, sans-serif;
+  font-weight: 300;
+  font-style: normal;
 
 }
 
@@ -198,6 +206,9 @@ section a{
   font-size: 0.8rem;
   color: #afc2c9;
   text-align: center;
+  font-family: fira-sans-condensed, sans-serif;
+  font-weight: 300;
+  font-style: normal;
 
 }
 
@@ -236,11 +247,63 @@ About Me Section
 
 }
 
+/**************************************************************************
+Freelance Work Section
+**************************************************************************/
+
+.freelanceWork{
+
+  padding-top: 10vw;
+  background-color: #023b3e;
+  padding-bottom: calc(10vw + 4vh);
+
+}
+
+.worksContainer{
+
+  display: flex;
+
+}
+
+.workContainer{
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.workContainer:nth-child(odd){
+
+  padding-right: 5vw;
+
+}
+
+.workContainer img{
+
+  width: 30vw;
+  max-width: 600px;
+  min-width: 250px;
+
+}
+
 @media screen and (max-width: 768px){
 
   .about{
 
     flex-direction: column;
+
+  }
+
+  .worksContainer{
+
+    flex-direction: column;
+
+  }
+
+  .workContainer:nth-child(odd){
+
+    padding-right: 0vw;
 
   }
 

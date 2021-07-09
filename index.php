@@ -119,6 +119,8 @@
 
     </div>
 
+    <!-- ABOUT ME SECTION START-->
+
     <section class="about">
 
       <img class="myPicture" src="images/picofme.png">
@@ -136,6 +138,44 @@
       </div>
 
     </section>
+
+    <!-- ABOUT ME SECTION END-->
+
+    <!-- FREELANCE WORK SECTION START -->
+
+    <section class="freelanceWork">
+
+      <h1>Freelance Work</h1>
+
+      <div class="worksContainer">
+
+        <div class="workContainer">
+          <h2>My NC State Retirement</h2>
+          <div class="container">
+            <img src="images/myNCS.jpg">
+            <div class="org">
+              <a href="https://myncsretirement.com/" target="_blank" rel="noopener noreferrer">View Website</a>
+            </div>
+           </div>
+           <p>Tap or Hover for more!</p>
+        </div>
+
+        <div class="workContainer">
+          <h2>Part of the Goodness</h2>
+          <div class="container">
+            <img src="images/partofthegoodness.jpg">
+            <div class="org">
+              <a href="https://partofthegoodness.com/" target="_blank" rel="noopener noreferrer">View Website</a>
+            </div>
+           </div>
+           <p>Tap or Hover for more!</p>
+        </div>
+        
+      </div>
+
+    </section>
+
+    <!-- FREELANCE WORK SECTION END -->
 
     <script type="text/javascript" src="js/mySite.js"></script>
   </body>
