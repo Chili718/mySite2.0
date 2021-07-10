@@ -57,6 +57,7 @@
     <div class="navbar">
         <a class="imgLink" href="#home"><img class="nav-signature" src="images/logo.png"></a>
         <ul class="nav-links" id="check">
+          <li><a href="#work">Developer Work</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="view.php">Photoshop Work</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -121,7 +122,7 @@
 
     <!-- ABOUT ME SECTION START-->
 
-    <section class="about">
+    <section class="about" id="about">
 
       <img class="myPicture" src="images/picofme.png">
 
@@ -143,7 +144,7 @@
 
     <!-- FREELANCE WORK SECTION START -->
 
-    <section class="freelanceWork">
+    <section class="freelanceWork" id="work">
 
       <h1>Freelance Work</h1>
 
@@ -153,9 +154,7 @@
           <h2>My NC State Retirement</h2>
           <div class="container">
             <img src="images/myNCS.jpg">
-            <div class="org">
-              <a href="https://myncsretirement.com/" target="_blank" rel="noopener noreferrer">View Website</a>
-            </div>
+            <a href="https://myncsretirement.com/" target="_blank" rel="noopener noreferrer">View Website</a>
            </div>
            <p>Tap or Hover for more!</p>
         </div>
@@ -164,13 +163,11 @@
           <h2>Part of the Goodness</h2>
           <div class="container">
             <img src="images/partofthegoodness.jpg">
-            <div class="org">
-              <a href="https://partofthegoodness.com/" target="_blank" rel="noopener noreferrer">View Website</a>
-            </div>
+            <a href="https://partofthegoodness.com/" target="_blank" rel="noopener noreferrer">View Website</a>
            </div>
            <p>Tap or Hover for more!</p>
         </div>
-        
+
       </div>
 
     </section>

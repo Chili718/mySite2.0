@@ -41,6 +41,7 @@
     <div class="navbar">
         <a class="miglink" href="#home"><img class="nav-signature" src="images/logo.png"></a>
         <ul class="nav-links" id="check">
+          <li><a href="#work">Developer Work</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="view.php">Photoshop Work</a></li>
           <li><a href="#contact">Contact</a></li>

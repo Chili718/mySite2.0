@@ -223,9 +223,9 @@ About Me Section
   align-items: center;
   justify-content: space-evenly;
   background-color: #024247;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
-  margin-bottom: -10vw;
-  padding-bottom: 10vw;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14vh), 0 100%);
+  margin-bottom: -14vh;
+  padding-bottom: 14vh;
 
 }
 
@@ -253,7 +253,7 @@ Freelance Work Section
 
 .freelanceWork{
 
-  padding-top: 10vw;
+  padding-top: 14vh;
   background-color: #023b3e;
   padding-bottom: calc(10vw + 4vh);
 
@@ -262,6 +262,8 @@ Freelance Work Section
 .worksContainer{
 
   display: flex;
+  justify-content: space-evenly;
+  width: 100%;
 
 }
 
@@ -270,20 +272,44 @@ Freelance Work Section
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-top: 5vh;
 
 }
 
-.workContainer:nth-child(odd){
+.container img{
 
-  padding-right: 5vw;
-
-}
-
-.workContainer img{
-
-  width: 30vw;
+  width: 32vw;
   max-width: 600px;
   min-width: 250px;
+  z-index: 3;
+  transition: 0.3s ease-in-out;
+}
+/*I want this to be used on mobile*/
+.container img:hover{
+
+  z-index: 2;
+  opacity: 0.5;
+
+}
+
+.container{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3vh 0px 3vh 0px;
+
+}
+
+.container a{
+  z-index: 2;
+  position: absolute;
+  font-size: 1rem;
+  color: white;
+  background-color: rgba(2, 59, 62, 1);
+  padding: 25px;
+  border-radius: 2em;
+  transition: 0.3s ease-in-out;
 
 }
 
@@ -300,10 +326,16 @@ Freelance Work Section
     flex-direction: column;
 
   }
-
+/*might use in the future*/
   .workContainer:nth-child(odd){
 
     padding-right: 0vw;
+
+  }
+
+  .container img{
+
+    width: 50vw;
 
   }
 
@@ -341,6 +373,13 @@ Freelance Work Section
 
   .parallax {
     background-attachment: scroll;
+  }
+
+  .container a:hover{
+
+    padding: 35px;
+    z-index: 4;
+
   }
 
 }
