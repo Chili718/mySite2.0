@@ -45,7 +45,7 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="view.php">Photoshop Work</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="downloads/Resume.pdf" download="JonTiceResume">Resume</a></li>
+          <li><a href="downloads/TiceResume.pdf" download="JonTiceResume">Resume</a></li>
 
           <?php
             //display login our logout link depending on the if the users is or not

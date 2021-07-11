@@ -14,6 +14,7 @@
 
     <title>Jon Tice - Designer and Full Stack Web Developer</title>
     <link rel="icon" href="images/icon.ico">
+    <link rel="stylesheet" href="css/input.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/index.css">
     <!-- Front I use from Adobe -->
@@ -61,7 +62,7 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="view.php">Photoshop Work</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="downloads/Resume.pdf" download="JonTiceResume">Resume</a></li>
+          <li><a href="downloads/TiceResume.pdf" download="JonTiceResume">Resume</a></li>
 
           <?php
             //display login our logout link depending on the if the users is or not
@@ -97,7 +98,7 @@
 
       }
     ?>
-    <div class="parallax">
+    <div class="parallax" id="home">
 
       <div class="image-anim">
         <svg id="name" width="518" height="107" viewBox="0 0 518 107" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -134,7 +135,9 @@
           I am a programmer who focuses on website development with HTML, JavaScript(REACT & jQuery), CSS, PHP, and MySQL. My background in programming has quite the breadth of exposure from not only my <a href="https://github.com/Chili718/Course-Work" target="_blank" rel="noopener noreferrer">education</a> but my eagerness to learn and accept challenges. While I mainly stick to my full stack development, I've spent a good amount of time with other languages such as C++, C#(Unity), Java, and Python.
           The greatest thing about web development is each project I tackle is a challenge in terms of creativity and logic. The process of assessing the needs of a user and going from design to implementation never leaves you without a problem that needs a new solution. I am never not learning and am certainly never bored.
         </p>
-        <a href="downloads/Resume.pdf" download="JonTiceResume"><div class="btn">Resume</div></a>
+
+        <div class="btn btnResume"><a class="btnLink" href="downloads/TiceResume.pdf" target="_blank">View Resume</a></div>
+        <!---->
 
       </div>
 
@@ -152,19 +155,13 @@
 
         <div class="workContainer">
           <h2>My NC State Retirement</h2>
-          <div class="container">
-            <img src="images/myNCS.jpg">
-            <a href="https://myncsretirement.com/" target="_blank" rel="noopener noreferrer">View Website</a>
-           </div>
+          <a href="https://myncsretirement.com/" target="_blank" rel="noopener noreferrer"><img src="images/myNCS.jpg"></a>
            <p>Tap or Hover for more!</p>
         </div>
 
         <div class="workContainer">
           <h2>Part of the Goodness</h2>
-          <div class="container">
-            <img src="images/partofthegoodness.jpg">
-            <a href="https://partofthegoodness.com/" target="_blank" rel="noopener noreferrer">View Website</a>
-           </div>
+          <a href="https://partofthegoodness.com/" target="_blank" rel="noopener noreferrer"><img src="images/partofthegoodness.jpg"></a>
            <p>Tap or Hover for more!</p>
         </div>
 
