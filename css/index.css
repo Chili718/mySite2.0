@@ -229,6 +229,12 @@ About Me Section
 
 }
 
+.about a{
+
+  transition: 0.2s ease-in-out;
+
+}
+
 .myPicture{
 
   width: 32vw;
@@ -270,12 +276,13 @@ Freelance Work Section
 
   padding-top: 14vh;
   background-color: #023b3e;
-  padding-bottom: calc(10vw + 4vh);
+  padding-bottom: calc(10vw + 14vh);
+  margin-bottom: -14vh;
 
 }
 
 .worksContainer{
-
+  margin-top: 4vw;
   display: flex;
   justify-content: space-evenly;
   width: 100%;
@@ -287,13 +294,17 @@ Freelance Work Section
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 5vh;
+  padding: 4vh 4vh 2vh 4vh;
+  /*position: relative;*/
+  box-shadow: 0.1rem 0.1rem 0.3rem #012c2e, -0.1rem -0.1rem 0.25rem #065257;
+  --border-size: 2px;
 
 }
 
 .workContainer img{
 
   width: 32vw;
+  height: 100%;
   max-width: 600px;
   min-width: 250px;
   z-index: 3;
@@ -303,9 +314,10 @@ Freelance Work Section
 .workContainer a::before{
 
   content: "View Website";
+  white-space: nowrap;
   display: inline;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 10px;
   color: #ffffff;
   top: 50%;
@@ -313,6 +325,19 @@ Freelance Work Section
   transform: translate(-50%, -50%);
   z-index: 10;
   font-size: 1rem;
+  border: var(--border-size) solid white;
+
+}
+
+.workContainer a::after{
+
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: var(--border-size) solid white;
 
 }
 
@@ -320,13 +345,43 @@ Freelance Work Section
 
   margin: 3vh 0px 3vh 0px;
   position: relative;
+  font-size: 0rem !important;
 
 }
 
-.workContainer a > *{
+.workContainer a span{
+
+  display: block;
+  background: #ffffff;
+  transition: all 0.2s;
+
+}
+
+.workContainer a::before{
+
+  transition: 0.4s ease-in-out;
+
+}
+
+.workContainer a::after{
 
   transition: 0.3s ease-in-out;
+  transition-delay: 0.1s;
 
+}
+
+/**************************************************************************
+Code Projecsts Section
+**************************************************************************/
+
+.codeprojects{
+  padding: 1% 1%;
+  background-color: #00333a;
+  /*clip-path: polygon(0 0, 0 100%, 100% 100%, 100% calc(0% + 10vw));*/
+  clip-path: polygon(0 0, 100% calc(0% + 14vh), 100% calc(100% - 14vh), 0% 100%);
+  margin-top: -10vw;
+  padding-top: 10vw;
+  padding-bottom: 12vw;
 }
 
 @media screen and (max-width: 768px){
@@ -339,16 +394,25 @@ Freelance Work Section
 
   .worksContainer{
 
-    flex-direction: column;
+    display: contents;
 
   }
-/*might use in the future*/
+
+
+  .worksContainer div:first-of-type{
+
+    margin-bottom: 5vh;
+    margin-top: 3vh;
+
+  }
+
+/*might use in the future
   .workContainer:nth-child(odd){
 
     padding-right: 0vw;
 
   }
-
+*/
   .workContainer img{
 
     width: 50vw;
@@ -385,16 +449,48 @@ Freelance Work Section
 
 }
 
+@media screen and (max-width: 375px){
+
+  .workContainer{
+
+    padding: 3vh 2vh 1vh 2vh;
+
+  }
+
+}
+
 @media (hover:hover) and (pointer: fine){
 
   .parallax {
     background-attachment: scroll;
   }
-
+  /*
   .workContainer a:hover > *{
 
-    box-shadow: 0 30px 10px -10px rgb(0 0 0 / 40%);
+    box-shadow: 0px 30px 10px -10px rgba(0, 0, 0, 0.2);
     transform: translateY(0px) scale(1.01);
+
+  }
+  */
+  .workContainer a:hover::before, .workContainer a:focus::before{
+
+    padding: 4%;
+
+  }
+
+  .workContainer a:hover::after, .workContainer a:focus::after{
+
+    top: calc(var(--border-size) * -3.5);
+    bottom: calc(var(--border-size) * -3.5);
+    left: calc(var(--border-size) * -3.5);
+    right: calc(var(--border-size) * -3.5);
+    box-shadow: 0px 25px 10px -10px rgba(0, 0, 0, 0.2);
+
+  }
+
+  .about a:hover{
+
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.3);
 
   }
 

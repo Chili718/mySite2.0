@@ -11,6 +11,12 @@ CSS File for the Nav Bar, Preloader, and other basic page css needs
 
 }
 
+*:focus{
+
+  outline: none;
+
+}
+
 html {
 
   scroll-behavior: smooth;

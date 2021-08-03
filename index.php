@@ -155,13 +155,17 @@
 
         <div class="workContainer">
           <h2>My NC State Retirement</h2>
-          <a href="https://myncsretirement.com/" target="_blank" rel="noopener noreferrer"><img src="images/myNCS.jpg"></a>
+          <a href="https://myncsretirement.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/myNCS.jpg">
+          </a>
            <p>Tap or Hover for more!</p>
         </div>
 
         <div class="workContainer">
           <h2>Part of the Goodness</h2>
-          <a href="https://partofthegoodness.com/" target="_blank" rel="noopener noreferrer"><img src="images/partofthegoodness.jpg"></a>
+          <a href="https://partofthegoodness.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/partofthegoodness.jpg">
+          </a>
            <p>Tap or Hover for more!</p>
         </div>
 
@@ -170,6 +174,48 @@
     </section>
 
     <!-- FREELANCE WORK SECTION END -->
+
+    <!-- CODING PROJECTS SECTION START -->
+
+    <section class="codeprojects" id="projects">
+
+      <h1>Coding Projects</h1>
+
+      <p class ="andMore">
+        Here are two of my bigger projects I've done in my free time using REACT. You can view the code on Git along with other programs I've made using a variety of other languages such as C++, C#(Unity), Python, Java. <a href="https://github.com/Chili718?tab=repositories"  target="_blank" rel="noopener noreferrer">My Git repositories</a> are a combination of my course work and other projects I've done in my free time. You can also view the source for <a href="https://github.com/Chili718/dynamicSite"  target="_blank" rel="noopener noreferrer">This Website</a> which was made using JS, PHP, jQuery, and mySQL.
+      </p>
+
+      <div class="projectContainer">
+        <div>
+          <h2>Sorting Algorithm Visualizer</h2>
+          <div class="container">
+            <img src="images/dummy.gif">
+            <div class="org">
+              <a href="">View Source</a>
+              <a href="">View Live Demo</a>
+            </div>
+         </div>
+         <p>Tap or Hover for more!</p>
+
+        </div>
+
+        <div>
+          <h2>Pathfinding Algorithm Visualizer</h2>
+          <div class="container">
+            <img src="images/dummy.gif">
+            <div class="org">
+              <a href="">View Source</a>
+              <a href="">View Live Demo</a>
+            </div>
+         </div>
+         <p>Tap or Hover for more!</p>
+        </div>
+
+      </div>
+
+     </section>
+
+     <!-- CODING PROJECTS SECTION END -->
 
     <script type="text/javascript" src="js/mySite.js"></script>
   </body>
