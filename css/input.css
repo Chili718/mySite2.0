@@ -22,7 +22,7 @@ Neumorphic Button
 .btnLink{
 
   text-decoration: none;
-  color: #9bc8cf;
+  color: #000000;
   width: 100%;
   height: 100%;
   vertical-align: middle;
@@ -38,8 +38,7 @@ Neumorphic Button
 @media (hover:hover) and (pointer: fine){
 
   .btnLink:hover, .btnLink:focus{
-    color: #dceff2;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5);
+
   }
 
 }

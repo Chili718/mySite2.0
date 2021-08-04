@@ -1,4 +1,4 @@
-/*
+ /*
 
 CSS File for the Nav Bar, Preloader, and other basic page css needs
 
@@ -40,15 +40,15 @@ Scrollbar
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(18, 18, 17);
+  background: rgb(255, 255, 255);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ffffff;
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ababab;
+  background: ##8a8888;
 }
 
 /**************************************************************************
@@ -59,7 +59,7 @@ Preloader
 
   width: 100%;
   height: 100vh;
-  background-color: rgb(18, 18, 17);
+  background-color: rgb(255, 255, 255);
   position: fixed;
   z-index: 90;
   display: flex;
@@ -116,7 +116,7 @@ Navbar
   font-style: normal;
   font-weight: 400;
   width: 100%;
-  height: 12vh;
+  height: 10vh;
   max-height: 80px;
   min-height: 58px;
   position: fixed;
@@ -144,7 +144,7 @@ Navbar
 
 .nav-links a{
 
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: bold;
@@ -162,7 +162,7 @@ Navbar
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: #ffffff;
+  background-color: #000000;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
@@ -195,7 +195,7 @@ Navbar
 }
 
 .nottransparent{
-  background-color: rgba(0, 12, 21, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 /**************************************************************************
@@ -214,7 +214,7 @@ Burger
 .burger div{
   width: 25px;
   height: 3px;
-  background-color: #ffffff;
+  background-color: #000000;
   margin: 5px;
   transition: 0.5s ease-in-out;
 }
@@ -274,7 +274,7 @@ Burger
 
     visibility: hidden;
     position: fixed;
-    background: rgba(13, 13, 12, 0.9);
+    background: rgba(255, 255, 255, 0.9);
     height: 105vh;
     width: 101%;
     transform: translate(-0.8%, -60%);

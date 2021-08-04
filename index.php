@@ -25,7 +25,7 @@
 
     <script>
       //change opacity of the header background on scroll
-      $(window).on("scroll", function(){
+      /*$(window).on("scroll", function(){
 
         if($(window).scrollTop() > 0){
           $(".navbar").addClass("nottransparent");
@@ -36,6 +36,7 @@
         }
 
       });
+      */
     </script>
 
   </head>
@@ -55,7 +56,7 @@
 
     </div>
 
-    <div class="navbar">
+    <div class="navbar nottransparent">
         <a class="imgLink" href="#home"><img class="nav-signature" src="images/logo.png"></a>
         <ul class="nav-links" id="check">
           <li><a href="#work">Developer Work</a></li>
@@ -181,12 +182,12 @@
 
       <h1>Coding Projects</h1>
 
-      <p class ="andMore">
+      <p class ="codeprojectsExplantation">
         Here are two of my bigger projects I've done in my free time using REACT. You can view the code on Git along with other programs I've made using a variety of other languages such as C++, C#(Unity), Python, Java. <a href="https://github.com/Chili718?tab=repositories"  target="_blank" rel="noopener noreferrer">My Git repositories</a> are a combination of my course work and other projects I've done in my free time. You can also view the source for <a href="https://github.com/Chili718/dynamicSite"  target="_blank" rel="noopener noreferrer">This Website</a> which was made using JS, PHP, jQuery, and mySQL.
       </p>
 
       <div class="projectContainer">
-        <div>
+        <div class="project">
           <h2>Sorting Algorithm Visualizer</h2>
           <div class="container">
             <img src="images/dummy.gif">
@@ -199,7 +200,7 @@
 
         </div>
 
-        <div>
+        <div class="project">
           <h2>Pathfinding Algorithm Visualizer</h2>
           <div class="container">
             <img src="images/dummy.gif">
