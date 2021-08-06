@@ -25,7 +25,7 @@
 
     <script>
       //change opacity of the header background on scroll
-      /*$(window).on("scroll", function(){
+      $(window).on("scroll", function(){
 
         if($(window).scrollTop() > 0){
           $(".navbar").addClass("nottransparent");
@@ -36,7 +36,7 @@
         }
 
       });
-      */
+
     </script>
 
   </head>
@@ -56,7 +56,7 @@
 
     </div>
 
-    <div class="navbar nottransparent">
+    <div class="navbar">
         <a class="imgLink" href="#home"><img class="nav-signature" src="images/logo.png"></a>
         <ul class="nav-links" id="check">
           <li><a href="#work">Developer Work</a></li>
@@ -132,7 +132,7 @@
 
         <h1>About Me</h1>
 
-        <p>
+        <p class="aboutParagraph">
           I am a programmer who focuses on website development with HTML, JavaScript(REACT & jQuery), CSS, PHP, and MySQL. My background in programming has quite the breadth of exposure from not only my <a href="https://github.com/Chili718/Course-Work" target="_blank" rel="noopener noreferrer">education</a> but my eagerness to learn and accept challenges. While I mainly stick to my full stack development, I've spent a good amount of time with other languages such as C++, C#(Unity), Java, and Python.
           The greatest thing about web development is each project I tackle is a challenge in terms of creativity and logic. The process of assessing the needs of a user and going from design to implementation never leaves you without a problem that needs a new solution. I am never not learning and am certainly never bored.
         </p>
@@ -159,7 +159,6 @@
           <a href="https://myncsretirement.com/" target="_blank" rel="noopener noreferrer">
             <img src="images/myNCS.jpg">
           </a>
-           <p>Tap or Hover for more!</p>
         </div>
 
         <div class="workContainer">
@@ -167,7 +166,6 @@
           <a href="https://partofthegoodness.com/" target="_blank" rel="noopener noreferrer">
             <img src="images/partofthegoodness.jpg">
           </a>
-           <p>Tap or Hover for more!</p>
         </div>
 
       </div>
@@ -186,6 +184,8 @@
         Here are two of my bigger projects I've done in my free time using REACT. You can view the code on Git along with other programs I've made using a variety of other languages such as C++, C#(Unity), Python, Java. <a href="https://github.com/Chili718?tab=repositories"  target="_blank" rel="noopener noreferrer">My Git repositories</a> are a combination of my course work and other projects I've done in my free time. You can also view the source for <a href="https://github.com/Chili718/dynamicSite"  target="_blank" rel="noopener noreferrer">This Website</a> which was made using JS, PHP, jQuery, and mySQL.
       </p>
 
+      <p>Tap or Hover for more!</p>
+
       <div class="projectContainer">
         <div class="project">
           <h2>Sorting Algorithm Visualizer</h2>
@@ -196,8 +196,6 @@
               <a href="">View Live Demo</a>
             </div>
          </div>
-         <p>Tap or Hover for more!</p>
-
         </div>
 
         <div class="project">
@@ -209,7 +207,6 @@
               <a href="">View Live Demo</a>
             </div>
          </div>
-         <p>Tap or Hover for more!</p>
         </div>
 
       </div>

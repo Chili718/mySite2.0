@@ -38,7 +38,7 @@
 
     </div>
 
-    <div class="navbar nottransparent">
+    <div class="navbar">
         <a class="miglink" href="#home"><img class="nav-signature" src="images/logo.png"></a>
         <ul class="nav-links" id="check">
           <li><a href="#work">Developer Work</a></li>
