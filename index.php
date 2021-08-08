@@ -133,7 +133,7 @@
         <h1>About Me</h1>
 
         <p class="aboutParagraph">
-          I am a programmer who focuses on website development with HTML, JavaScript(REACT & jQuery), CSS, PHP, and MySQL. My background in programming has quite the breadth of exposure from not only my <a href="https://github.com/Chili718/Course-Work" target="_blank" rel="noopener noreferrer">education</a> but my eagerness to learn and accept challenges. While I mainly stick to my full stack development, I've spent a good amount of time with other languages such as C++, C#(Unity), Java, and Python.
+          I am a programmer who focuses on website development with HTML, JavaScript(REACT & jQuery), CSS, PHP, and MySQL. My background in programming has quite the breadth of exposure from not only my <a href="https://github.com/Chili718/Course-Work" target="_blank" rel="noopener noreferrer">education</a> but my eagerness to learn and accept challenges. While I mainly stick to my full stack development, I've spent a good amount of time with other languages such as C++, C# (Unity), Java, and Python.
           The greatest thing about web development is each project I tackle is a challenge in terms of creativity and logic. The process of assessing the needs of a user and going from design to implementation never leaves you without a problem that needs a new solution. I am never not learning and am certainly never bored.
         </p>
 
@@ -180,7 +180,7 @@
 
       <h1>Coding Projects</h1>
 
-      <p class ="codeprojectsExplantation">
+      <p class ="codeprojectsExplanation">
         Here are two of my bigger projects I've done in my free time using REACT. You can view the code on Git along with other programs I've made using a variety of other languages such as C++, C#(Unity), Python, Java. <a href="https://github.com/Chili718?tab=repositories"  target="_blank" rel="noopener noreferrer">My Git repositories</a> are a combination of my course work and other projects I've done in my free time. You can also view the source for <a href="https://github.com/Chili718/dynamicSite"  target="_blank" rel="noopener noreferrer">This Website</a> which was made using JS, PHP, jQuery, and mySQL.
       </p>
 
@@ -214,6 +214,50 @@
      </section>
 
      <!-- CODING PROJECTS SECTION END -->
+
+     <!-- PHOTOSHOP PROJECTS SECTION START -->
+
+     <section class="photoshop" id="photoshop">
+
+       <h1>Photoshop Work</h1>
+
+       <p class ="photoshopExplanation">
+         In order to get better at using Photoshop I would make an image every day that would help me learn something new about the program and improve upon my design skills. After doing this for a whole year I was left with a deep understanding of Photoshop and a large body of work.
+         I don't have all 365 images on here, but it's instead a selection of what I thought was at least decent to really good. This also contains other images I've done after the whole year which I've spent more than a couple hours in a day on.
+         Theres a lot to look at and I can 100% guarantee you will like at least one of my images so check them out! I ended up really enjoying the experience and taking a lot from it. Anytime I want to learn a program, coding language, or anything I apply the same principle. I still make images for fun and will upload them here and on my Instagram when they are finished.
+       </p>
+
+      <div class="btn btnPhotoshop"><a class="btnLink" href="view.php" target="_blank">View All Images</a></div>
+
+      </section>
+
+      <!-- PHOTOSHOP PROJECTS SECTION END -->
+
+      <!-- SOCIAL CONTACT SECTION START -->
+
+      <section class="socialContact" id="contact">
+
+          <h1>Thanks for stopping by!</h1>
+
+
+
+          <!--
+          <ul>
+            <a href="https://twitter.com/jon_tice_" target="_blank" rel="noopener noreferrer"><li><img src="images/twitter.png"></li></a>
+            <a href="https://github.com/Chili718?tab=repositories" target="_blank" rel="noopener noreferrer"><li><img src="images/git.png"></li></a>
+            <a href="https://www.instagram.com/tice_jon/" target="_blank" rel="noopener noreferrer"><li><img src="images/insta.png"></li></a>
+            <a href="https://www.facebook.com/jon.tice.718" target="_blank" rel="noopener noreferrer"><li><img src="images/facebook.png"></li></a>
+          </ul>
+        -->
+          <a class="button" href="mailto: ticej2@winthropalumni.com" target="_blank">Email Me</a>
+
+          <p class="cpyrght"> &copy; 2021 Jon Tice. <p>
+
+       </section>
+
+      <!-- SOCIAL CONTACT SECTION END -->
+
+
 
     <script type="text/javascript" src="js/mySite.js"></script>
   </body>

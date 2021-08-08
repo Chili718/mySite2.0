@@ -132,12 +132,12 @@ Arrow to scroll to first section
 .downArrow span{
 
   display: block;
-  width: 3vw;
+  width: 4vw;
   min-width: 35px;
-  height: 3vw;
+  height: 4vw;
   min-height: 35px;
-  border-bottom: 6px double #000000;
-  border-right: 6px double #000000;
+  border-bottom: 8px double #000000;
+  border-right: 8px double #000000;
   transform: rotate(45deg);
 
 }
@@ -240,7 +240,7 @@ About Me Section
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #ffffff;
+  background-color: #ebebeb;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14vh), 0 100%);
   margin-bottom: -14vh;
   padding-bottom: 14vh;
@@ -276,13 +276,13 @@ About Me Section
 
 .btnResume{
 
-    box-shadow: 0.1rem 0.1rem 0.3rem #c7c7c7, -0.1rem -0.1rem 0.25rem #ebebeb;
+    box-shadow: 0.1rem 0.1rem 0.3rem #ded9d9, -0.1rem -0.1rem 0.25rem #ffffff;
 
 }
 
 .btnResume:active{
 
-  box-shadow: inset .1rem .1rem .25rem #c7c7c7, inset -.1rem -.1rem .25rem #ebebeb;
+  box-shadow: inset .1rem .1rem .25rem #ded9d9, inset -.1rem -.1rem .25rem #ffffff;
 
 }
 
@@ -293,8 +293,8 @@ Freelance Work Section
 .freelanceWork{
 
   padding-top: 14vh;
-  background-color: #f2f2f2;
-  padding-bottom: calc(10vw + 14vh);
+  background-color: #e6e6e6;
+  padding-bottom: calc(6vw + 14vh);
   margin-bottom: -14vh;
 
 }
@@ -314,7 +314,7 @@ Freelance Work Section
   flex-direction: column;
   padding: 4vh 4vh 2vh 4vh;
   /*position: relative;*/
-  box-shadow: 0.1rem 0.1rem 0.3rem #c7c7c7, -0.1rem -0.1rem 0.25rem #ebebeb;
+  box-shadow: 0.1rem 0.1rem 0.3rem #c9c1c1, -0.1rem -0.1rem 0.25rem #ffffff;
   --border-size: 2px;
 
 }
@@ -335,7 +335,7 @@ Freelance Work Section
   white-space: nowrap;
   display: inline;
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 10px;
   color: #000000;
   top: 50%;
@@ -394,15 +394,14 @@ Code Projecsts Section
 
 .codeprojects{
   width: 100%;
-  background-color: #ebebeb;
+  background-color: #d9d9d9;
   /*clip-path: polygon(0 0, 0 100%, 100% 100%, 100% calc(0% + 10vw));*/
   clip-path: polygon(0 0, 100% calc(0% + 14vh), 100% calc(100% - 14vh), 0% 100%);
-  margin-top: -14vh;
   padding-top: 14vh;
   padding-bottom: 14vh;
 }
 
-.codeprojectsExplantation{
+.codeprojectsExplanation{
 
   width: 75vw;
   min-width: 250px;
@@ -411,7 +410,7 @@ Code Projecsts Section
 
 }
 
-.codeprojectsExplantation a{
+.codeprojectsExplanation a{
 
   transition: 0.2s ease-in-out;
 
@@ -465,7 +464,6 @@ Code Projecsts Section
   padding: 20px;
   margin-top: 2vh;
   transition: 0.4s ease-in-out;
-  cursor: pointer;
   position: relative;
   border-radius: 1rem;
 
@@ -473,8 +471,8 @@ Code Projecsts Section
 
 .container:hover{
 
-  box-shadow: 0.1rem 0.1rem 0.3rem #b8b8b8, -0.1rem -0.1rem 0.25rem #e0e0e0;
-  transform: scale(1.01);
+  box-shadow: 0.1rem 0.1rem 0.3rem #aba6a6, -0.1rem -0.1rem 0.25rem #f7f5f5;
+  transform: scale(1.02);
 
 }
 
@@ -507,8 +505,67 @@ Code Projecsts Section
   text-decoration: none;
   color: #000000 !important;
   transition: 0.3s ease;
+  cursor: pointer;
 
 }
+
+/**************************************************************************
+Photoshop Work Section
+**************************************************************************/
+
+.photoshop{
+
+  background-color: #cccccc;
+  /*clip-path: polygon(0 calc(0% + 10vw), 0 100%, 100% 100%, 100% 0);*/
+  margin-top: -14.1vh;
+  padding-top: 14.1vh;
+  padding-bottom: 14.1vh;
+
+}
+
+.photoshopExplanation{
+
+  width: 75vw;
+  min-width: 250px;
+  max-width: 900px;
+  line-height: 1.5;
+
+}
+
+.btnPhotoshop{
+
+    box-shadow: 0.1rem 0.1rem 0.3rem #999393, -0.1rem -0.1rem 0.25rem #f5f0f0;
+
+}
+
+.btnPhotoshop:active{
+
+  box-shadow: inset .1rem .1rem .25rem #999393, inset -.1rem -.1rem .25rem #f5f0f0;
+
+}
+
+/**************************************************************************
+Social Contact Section
+**************************************************************************/
+
+.socialContact{
+
+  background-color: #c2c2c2;
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% calc(0% + 14vh));
+  margin-top: -14vh;
+  padding-top: 14vh;
+  position: relative;
+
+}
+
+.cpyrght{
+
+  position: absolute;
+  bottom: -2%;
+  right: 2%;
+
+}
+
 
 @media screen and (max-width: 768px){
 
@@ -617,6 +674,7 @@ they do when not placed here for touch devices*/
   .workContainer a:hover::before, .workContainer a:focus::before{
 
     padding: 4%;
+    background-color: rgba(255, 255, 255, 1);
 
   }
 
@@ -630,7 +688,7 @@ they do when not placed here for touch devices*/
 
   }
 
-  .aboutParagraph a:hover, .codeprojectsExplantation a:hover{
+  .aboutParagraph a:hover, .codeprojectsExplanation a:hover{
 
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.3);
 
@@ -638,14 +696,21 @@ they do when not placed here for touch devices*/
 
   .btnResume a:hover{
 
-    color: #abffff;
-    text-shadow: 0 0 10px #abffff, 0 0 10px #abffff;
+    color: #4bc4c4;
+    text-shadow: 0 0 10px #61ffff, 0 0 10px #61ffff;
+
+  }
+
+  .btnPhotoshop a:hover{
+
+    color: #2e9999;
+    text-shadow: 0 0 10px #61ffff, 0 0 10px #61ffff;
 
   }
 
   .org a:hover{
 
-    transform: scale(1.07);
+    transform: scale(1.08);
 
   }
 
