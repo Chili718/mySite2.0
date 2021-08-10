@@ -7,7 +7,7 @@ The home parallax image
 **************************************************************************/
 
 .parallax {
-  background-image: url("../images/Floating-Island.jpg");
+  background-image: url("../images/Floating-Island-wide.jpg");
   height: 100vh;
   background-attachment: fixed;
   background-position: center;
@@ -399,6 +399,7 @@ Code Projecsts Section
   clip-path: polygon(0 0, 100% calc(0% + 14vh), 100% calc(100% - 14vh), 0% 100%);
   padding-top: 14vh;
   padding-bottom: 14vh;
+  position: relative;
 }
 
 .codeprojectsExplanation{
@@ -416,13 +417,77 @@ Code Projecsts Section
 
 }
 
+.tapOrHover{
+
+  margin: 5vh 20px 2vh 20px;
+  text-align: center;
+  animation: grow 2s ease-in-out infinite alternate
+
+}
+
+.tapOrHover::before{
+
+  content: "[";
+  display: inline-block;
+  animation: left 2s ease-in-out infinite alternate;
+  margin-right: 10px;
+
+}
+
+.tapOrHover::after{
+
+  content: "]";
+  display: inline-block;
+  animation: right 2s ease-in-out infinite alternate;
+  margin-left: 10px;
+
+}
+
+@keyframes grow{
+
+  from{
+    transform: scale(1);
+
+  }
+  to{
+    transform: scale(1.08);
+
+  }
+
+}
+
+@keyframes right{
+
+  from{
+    transform: translateX(0px) scale(1.1);
+
+  }
+  to{
+    transform: translateX(5px) scale(1.4);
+
+  }
+
+}
+
+@keyframes left{
+
+  from{
+    transform: translateX(0px) scale(1.1);
+
+  }
+  to{
+    transform: translateX(-5px) scale(1.4);
+
+  }
+
+}
+
 .projectContainer{
 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 100vw;
-    margin: 5vh 0vh;
 
 }
 
@@ -466,6 +531,7 @@ Code Projecsts Section
   transition: 0.4s ease-in-out;
   position: relative;
   border-radius: 1rem;
+  border: solid 1px rgba(0, 0, 0, 0.15);
 
 }
 
@@ -473,6 +539,7 @@ Code Projecsts Section
 
   box-shadow: 0.1rem 0.1rem 0.3rem #aba6a6, -0.1rem -0.1rem 0.25rem #f7f5f5;
   transform: scale(1.02);
+  border: solid 1px rgba(0, 0, 0, 0);
 
 }
 
@@ -563,6 +630,39 @@ Social Contact Section
   position: absolute;
   bottom: -2%;
   right: 2%;
+
+}
+
+.icons{
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 5vh 0vh;
+  width: 50vw;
+  max-width: 450px;
+  min-width: 300px;
+
+}
+
+.iconLink{
+
+  box-shadow: 0.1rem 0.1rem 0.3rem #999393, -0.1rem -0.1rem 0.25rem #f5f0f0;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: 0.6s ease;
+  color: #8f8f8f;
+
+}
+
+.iconLink:active{
+
+  box-shadow: inset .1rem .1rem .25rem #999393, inset -.1rem -.1rem .25rem #f5f0f0;
 
 }
 
@@ -711,6 +811,12 @@ they do when not placed here for touch devices*/
   .org a:hover{
 
     transform: scale(1.08);
+
+  }
+
+  .iconLink:hover{
+
+    color: white;
 
   }
 

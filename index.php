@@ -184,7 +184,7 @@
         Here are two of my bigger projects I've done in my free time using REACT. You can view the code on Git along with other programs I've made using a variety of other languages such as C++, C#(Unity), Python, Java. <a href="https://github.com/Chili718?tab=repositories"  target="_blank" rel="noopener noreferrer">My Git repositories</a> are a combination of my course work and other projects I've done in my free time. You can also view the source for <a href="https://github.com/Chili718/dynamicSite"  target="_blank" rel="noopener noreferrer">This Website</a> which was made using JS, PHP, jQuery, and mySQL.
       </p>
 
-      <p>Tap or Hover for more!</p>
+      <p class="tapOrHover">Tap or Hover for more!</p>
 
       <div class="projectContainer">
         <div class="project">
@@ -239,7 +239,33 @@
 
           <h1>Thanks for stopping by!</h1>
 
+          <div class="icons">
 
+            <a href="https://github.com/Chili718?tab=repositories" target="_blank" rel="noopener noreferrer">
+              <div class="iconLink">
+                <ion-icon name="logo-github"></ion-icon>
+              </div>
+            </a>
+
+            <a href="https://twitter.com/jon_tice_" target="_blank" rel="noopener noreferrer">
+              <div class="iconLink">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </div>
+            </a>
+
+            <a href="https://www.instagram.com/tice_jon/" target="_blank" rel="noopener noreferrer">
+              <div class="iconLink">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </div>
+            </a>
+
+            <a href="https://www.facebook.com/jon.tice.718" target="_blank" rel="noopener noreferrer">
+              <div class="iconLink">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </div>
+            </a>
+
+          </div>
 
           <!--
           <ul>
@@ -258,7 +284,8 @@
       <!-- SOCIAL CONTACT SECTION END -->
 
 
-
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script type="text/javascript" src="js/mySite.js"></script>
   </body>
 
