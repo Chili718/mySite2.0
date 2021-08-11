@@ -20,7 +20,7 @@ CSS File for the Nav Bar, Preloader, and other basic page css needs
 html {
 
   scroll-behavior: smooth;
-  background-color:  rgb(18, 18, 17);
+  background-color:  rgb(255, 255, 255);
   font-size: 22px;
   overflow-x: hidden;
 
@@ -123,6 +123,7 @@ Navbar
   background-color: transparent;
   z-index: 4;
   transition: 0.3s ease-in-out;
+  border: solid 1px rgba(0, 0, 0, 0.15);
 
 }
 
