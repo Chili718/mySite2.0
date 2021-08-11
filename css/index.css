@@ -50,17 +50,14 @@ svg{
 
 .image-anim p{
   z-index: 2;
-  font-family: freight-neo-pro,sans-serif;
-  font-weight: 500;
+  font-family: cardea, serif;
+  font-weight: 400;
   font-style: normal;
   font-size: 1rem;
   color: #000000;
   padding-top: 1vw;
   opacity: 0;
   animation: fadeIn 2s ease-in 6s 1 normal forwards;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 5px 15px;
-  border-radius: 1rem;
   margin-top: 0.8rem;
 
 }
@@ -176,11 +173,11 @@ section {
 section h1{
 
   font-size: 1.6rem;
-  color: #000000;
+  color: #5e5e5e;
   text-align: center;
   padding-bottom: 10px;
-  font-family: ff-meta-web-pro, sans-serif;
-  font-weight: 300;
+  font-family: livory, serif;
+  font-weight: 400;
   font-style: normal;
 
 }
@@ -188,10 +185,10 @@ section h1{
 section h2{
 
   font-size: 1.2rem;
-  color: #1c1c1c;
+  color: #5e5e5e;
   text-align: center;
-  font-family: ff-meta-web-pro, sans-serif;
-  font-weight: 300;
+  font-family: livory, serif;
+  font-weight: 400;
   font-style: normal;
 
 }
@@ -199,10 +196,10 @@ section h2{
 section h3{
 
   font-size: 1rem;
-  color: #292929;
+  color: #5e5e5e;
   text-align: center;
-  font-family: ff-meta-web-pro, sans-serif;
-  font-weight: 300;
+  font-family: livory, serif;
+  font-weight: 400;
   font-style: normal;
 
 }
@@ -210,11 +207,11 @@ section h3{
 section p{
 
   font-size: 0.8rem;
-  color: #2b2b2b;
+  color: #5e5e5e;
   text-align: left;
   padding-bottom: 25px;
-  font-family: fira-sans-condensed, sans-serif;
-  font-weight: 300;
+  font-family: cardea, serif;
+  font-weight: 400;
   font-style: normal;
 
 }
@@ -222,10 +219,10 @@ section p{
 section a:not(.btnLink){
 
   font-size: 0.8rem;
-  color: #2b2b2b;
+  color: #454545;
   text-align: center;
-  font-family: fira-sans-condensed, sans-serif;
-  font-weight: 300;
+  font-family: cardea, serif;
+  font-weight: 400;
   font-style: normal;
 
 }
@@ -315,7 +312,7 @@ Freelance Work Section
   padding: 4vh 4vh 2vh 4vh;
   /*position: relative;*/
   box-shadow: 0.1rem 0.1rem 0.3rem #c9c1c1, -0.1rem -0.1rem 0.25rem #ffffff;
-  --border-size: 2px;
+  --border-size: 1px;
 
 }
 
@@ -335,7 +332,7 @@ Freelance Work Section
   white-space: nowrap;
   display: inline;
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(230, 230, 230, 0.7);
   padding: 10px;
   color: #000000;
   top: 50%;
@@ -343,7 +340,7 @@ Freelance Work Section
   transform: translate(-50%, -50%);
   z-index: 10;
   font-size: 1rem;
-  border: var(--border-size) solid black;
+  border: var(--border-size) solid rgba(0, 0, 0, 0.35);
 
 }
 
@@ -355,7 +352,7 @@ Freelance Work Section
   left: 0;
   bottom: 0;
   right: 0;
-  border: var(--border-size) solid black;
+  border: var(--border-size) solid rgba(0, 0, 0, 0.35);
 
 }
 
@@ -421,7 +418,9 @@ Code Projecsts Section
 
   margin: 5vh 20px 2vh 20px;
   text-align: center;
-  animation: grow 2s ease-in-out infinite alternate
+  animation: grow 2s ease-in-out infinite alternate;
+  color: rgb(0, 0, 0);
+  text-shadow: 10px 10px rgba(23, 23, 23, 0.05);
 
 }
 
@@ -488,6 +487,7 @@ Code Projecsts Section
     justify-content: space-evenly;
     align-items: center;
     width: 100vw;
+    margin-bottom: 5vh;
 
 }
 
@@ -537,7 +537,7 @@ Code Projecsts Section
 
 .container:hover{
 
-  box-shadow: 0.1rem 0.1rem 0.3rem #aba6a6, -0.1rem -0.1rem 0.25rem #f7f5f5;
+  box-shadow: 0.1rem 0.1rem 0.3rem #aba6a6, -0.1rem -0.1rem 0.25rem rgba(247, 245, 245, 0.8);
   transform: scale(1.02);
   border: solid 1px rgba(0, 0, 0, 0);
 
@@ -568,7 +568,7 @@ Code Projecsts Section
   margin: 25% 0%;
   padding: 10px;
   border-radius: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(217, 217, 217, 0.6);
   text-decoration: none;
   color: #000000 !important;
   transition: 0.3s ease;
@@ -628,8 +628,10 @@ Social Contact Section
 .cpyrght{
 
   position: absolute;
-  bottom: -2%;
+  bottom: 2%;
   right: 2%;
+  background: rgba(0,0,0, 0.05);
+  padding: 5px 15px;
 
 }
 
@@ -638,7 +640,7 @@ Social Contact Section
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin: 5vh 0vh;
+  margin: 6vh 0vh;
   width: 50vw;
   max-width: 450px;
   min-width: 300px;
@@ -666,6 +668,32 @@ Social Contact Section
 
 }
 
+.btnEmail{
+
+    box-shadow: 0.1rem 0.1rem 0.3rem #999393, -0.1rem -0.1rem 0.25rem #f5f0f0;
+    font-size: 1.5rem;
+    color: #525252;
+    margin-top: 2vh;
+
+}
+
+.btnEmail > *{
+
+  transition: 0.6s ease;
+
+}
+
+.btnEmail:active{
+
+  box-shadow: inset .1rem .1rem .25rem #999393, inset -.1rem -.1rem .25rem #f5f0f0;
+
+}
+
+.mailIcon{
+
+  margin-right: 10%;
+
+}
 
 @media screen and (max-width: 768px){
 
@@ -774,16 +802,17 @@ they do when not placed here for touch devices*/
   .workContainer a:hover::before, .workContainer a:focus::before{
 
     padding: 4%;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(230, 230, 230, 0.8);
+    font-size: 1.1rem;
 
   }
 
   .workContainer a:hover::after, .workContainer a:focus::after{
 
-    top: calc(var(--border-size) * -3.5);
-    bottom: calc(var(--border-size) * -3.5);
-    left: calc(var(--border-size) * -3.5);
-    right: calc(var(--border-size) * -3.5);
+    top: calc(var(--border-size) * -5);
+    bottom: calc(var(--border-size) * -5);
+    left: calc(var(--border-size) * -5);
+    right: calc(var(--border-size) * -5);
     box-shadow: 0px 25px 10px -10px rgba(0, 0, 0, 0.2);
 
   }
@@ -794,22 +823,9 @@ they do when not placed here for touch devices*/
 
   }
 
-  .btnResume a:hover{
-
-    color: #4bc4c4;
-    text-shadow: 0 0 10px #61ffff, 0 0 10px #61ffff;
-
-  }
-
-  .btnPhotoshop a:hover{
-
-    color: #2e9999;
-    text-shadow: 0 0 10px #61ffff, 0 0 10px #61ffff;
-
-  }
-
   .org a:hover{
 
+    background-color: rgba(217, 217, 217, 0.9);
     transform: scale(1.08);
 
   }
@@ -817,6 +833,13 @@ they do when not placed here for touch devices*/
   .iconLink:hover{
 
     color: white;
+
+  }
+
+  .btnEmail:hover > *, .btnPhotoshop a:hover, .btnResume a:hover{
+
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5);
 
   }
 

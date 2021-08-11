@@ -112,9 +112,9 @@ Navbar
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: rift, sans-serif;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
+  transition: 0.3s ease-in-out;
   width: 100%;
   height: 10vh;
   max-height: 80px;
@@ -146,7 +146,7 @@ Navbar
 
   color: #000000;
   text-decoration: none;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   font-weight: bold;
   font-size: 16px;
   position: relative;
@@ -195,7 +195,7 @@ Navbar
 }
 
 .nottransparent{
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(235, 235, 235, 0.85);
 }
 
 /**************************************************************************
