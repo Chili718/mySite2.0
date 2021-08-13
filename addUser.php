@@ -39,7 +39,7 @@
     </div>
 
     <div class="navbar">
-        <a class="miglink" href="index.php#home"><img class="nav-signature" src="images/logo.png"></a>
+        <a class="imgLink" href="index.php#home"><img class="nav-signature" src="images/logo.png"></a>
         <ul class="nav-links" id="check">
           <li><a href="index.php#work">Developer Work</a></li>
           <li><a href="index.php#projects">Projects</a></li>

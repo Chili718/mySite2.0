@@ -153,6 +153,57 @@ Arrow to scroll to first section
 }
 
 /**************************************************************************
+Add Image and Add User Button
+**************************************************************************/
+
+.homeIconButtons{
+
+  box-shadow: 0.1rem 0.1rem 0.3rem #999393, -0.1rem -0.1rem 0.25rem #f5f0f0;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: 0.6s ease;
+  color: #ffffff;
+  background-color: rgba(194, 194, 194, 0.5);
+  position: fixed;
+  z-index: 10;
+  transition: 0.6s ease;
+
+}
+
+.homeIconButtons:hover{
+
+  transform: scale(1.1);
+  background-color: rgba(194, 194, 194, 0.8);
+
+}
+
+.dayNightToggle{
+
+  left: 1%;
+  bottom: 40%;
+
+}
+
+.addImageButton{
+
+  left: 1%;
+  bottom: 27%;
+
+}
+
+.addUserButton{
+
+  left: 1%;
+  bottom: 14%;
+
+}
+
+
+/**************************************************************************
 General Section CSS for text, headers, and sizes
 **************************************************************************/
 
@@ -170,15 +221,20 @@ section {
 
 }
 
+section h1, section h2, section h3{
+
+  font-family: livory, serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
 section h1{
 
   font-size: 1.6rem;
   color: #5e5e5e;
   text-align: center;
   padding-bottom: 10px;
-  font-family: livory, serif;
-  font-weight: 400;
-  font-style: normal;
 
 }
 
@@ -187,9 +243,6 @@ section h2{
   font-size: 1.2rem;
   color: #5e5e5e;
   text-align: center;
-  font-family: livory, serif;
-  font-weight: 400;
-  font-style: normal;
 
 }
 
@@ -198,9 +251,6 @@ section h3{
   font-size: 1rem;
   color: #5e5e5e;
   text-align: center;
-  font-family: livory, serif;
-  font-weight: 400;
-  font-style: normal;
 
 }
 

@@ -3,6 +3,30 @@ CSS for elements such as buttons and input boxes
 **************************************************************************/
 
 /**************************************************************************
+Error and Success Messages
+**************************************************************************/
+#errorTxt, #successTxt{
+
+  font-family: livory, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8rem;
+
+}
+
+#errorTxt{
+
+  color:#e61936;
+
+}
+
+#successTxt{
+
+  color: #42eb45;
+
+}
+
+/**************************************************************************
 Neumorphic Button
 **************************************************************************/
 
@@ -35,10 +59,163 @@ Neumorphic Button
   transition: 0.3s ease-in-out;
 }
 
+/**************************************************************************
+General Form CSS
+**************************************************************************/
+
+.centerForm{
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e6e6e6;
+
+}
+
+.frm{
+
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    box-shadow: 0.1rem 0.1rem 0.3rem #ded9d9, -0.1rem -0.1rem 0.25rem #ffffff;
+    max-width: 350px;
+    min-width: 215px;
+
+}
+
+.frm label, .frm input{
+
+  font-family: cardea, serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.frm label{
+
+  color: #5e5e5e;
+  font-size: 0.8rem;
+
+}
+
+.frm input{
+
+  color: #696969;
+  font-size: 0.7rem;
+
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+
+  transition: background-color 5000s ease-in-out 0s;
+
+}
+
+.frm h1{
+
+  margin-bottom: 35px;
+  font-size: 1.6rem;
+  color: #5e5e5e;
+  text-align: center;
+  font-family: livory, serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.frmBtn{
+
+  margin-top: 30px;
+  box-shadow: 0.1rem 0.1rem 0.3rem #ded9d9, -0.1rem -0.1rem 0.25rem #ffffff;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  color: #454545;
+  text-align: center;
+  font-family: cardea, serif;
+  font-weight: 400;
+  font-style: normal;
+  transition: 0.3s ease-in-out;
+
+}
+
+.frmBtn:active{
+
+  box-shadow: inset .1rem .1rem .25rem #ded9d9, inset -.1rem -.1rem .25rem #ffffff;
+
+}
+
+.allInp{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.inp{
+
+  margin-bottom: 15px;
+
+}
+
+.allInp .inp{
+
+    position: relative;
+
+}
+
+.allInp .inp input{
+
+  width: 100%;
+  min-width: 225px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  color: #000000;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+  outline: none;
+  background: transparent;
+
+}
+
+.allInp .inp label{
+
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 5px 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+
+}
+
+.allInp .inp input:focus ~ label,
+.allInp .inp input:valid ~ label{
+  top: -25px;
+  left: 0;
+  color: #333333;
+  font-size: 0.85rem;
+}
+
 @media (hover:hover) and (pointer: fine){
 
-  .btnLink:hover, .btnLink:focus{
-
+  .frmBtn:hover, .frmBtn:focus{
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5);
   }
 
 }

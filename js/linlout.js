@@ -1,30 +1,46 @@
+var tmeOut;
+
 function login(){
 
   var xhr = new XMLHttpRequest();
+
   var data = new FormData(document.querySelector("form"));
+
   xhr.open("POST", "php/login.php", true);
+
   xhr.addEventListener("readystatechange", function(){
+
     if (xhr.readyState === 4 && xhr.status === 200){
       //alert(xhr.responseText);
       if (xhr.responseText === "true") {
         window.location = "index.php";
-      }else {
-        if(xhr.responseText === "notVer")
-        {
-          document.getElementById('validateTXT').innerHTML = 'You must verify your account before you can login, please check your email.';
+      }else{
+        //starting with the most general case and getting more specific as the if goes on
+        if(xhr.responseText === "false"){
+
+          document.getElementById('errorTxt').innerHTML = 'Invalid Username or Password';
+
         }
-        else if (xhr.responseText === "DBF")
+        else if(xhr.responseText === "notVer")
         {
-          document.getElementById('validateTXT').innerHTML = 'Looks like its the internet, or me though.';
+          document.getElementById('errorTxt').innerHTML = 'You must verify your account before you can login, please check your email.';
         }
         else
-        {
-          document.getElementById('validateTXT').innerHTML = 'Invalid Username or Password';
+        {//if all else then this response will show for other responses and DB failures
+          document.getElementById('errorTxt').innerHTML = 'Looks like its the internet, or me though.';
         }
 
-        setTimeout(function(){
-          document.getElementById('validateTXT').innerHTML = '';
-        }, 5000);
+        if(tmeOut){
+
+          clearTimeout(tmeOut);
+
+        }
+
+        //remove the response text after 10 seconds
+        tmeOut = setTimeout(function(){
+          document.getElementById('errorTxt').innerHTML = '';
+        }, 10000);
+
       }
     }
   });
@@ -33,17 +49,26 @@ function login(){
 
 
 function logout(){
+  //run the logout script which destroys the session and returns the logged out
+  //user to the home page
   var xhr = new XMLHttpRequest();
-  xhr.open("POST", "../php/logout.php", true);
+  xhr.open("POST", "php/logout.php", true);
   xhr.addEventListener("readystatechange", function(){
     if (xhr.readyState === 4 && xhr.status === 200){
 
-        window.location = "https://jonticedesigns.com/login.php";
+        window.location = "login.php";
 
+    }
+    else {
+      console.log(xhr.readyState);
+      console.log(xhr.status);
+      console.log(xhr.responseText);
     }
   });
   xhr.send();
 }
+
+
 //special thanks to Tim from thisintrestsme.com for the start of this function :)
 function activityWatcher(){
 
@@ -71,7 +96,7 @@ function activityWatcher(){
             console.log('User has been inactive for more than ' + maxInactivity + ' seconds');
             //Redirect them to your logout.php page.
             logout();
-            location.href = 'php/logout.php';
+            location.href = 'login.php';
         }
     }, 5000);
 

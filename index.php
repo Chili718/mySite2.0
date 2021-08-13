@@ -23,6 +23,8 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
+    <script type="text/javascript" src="js/linlout.js"></script>
+
     <script>
       //change opacity of the header background on scroll
       $(window).on("scroll", function(){
@@ -89,13 +91,19 @@
         </div>
     </div>
 
+    <a href="">
+      <div class="homeIconButtons dayNightToggle">
+        <ion-icon name="moon-outline"></ion-icon>
+      </div>
+    </a>
+
     <?php
       //user functions of adding images and other users if the user is signed in or not
       if(isset($_SESSION['verified']))
       {
 
-        echo "<div class='addU'><a href='user.php'><img src='images/addUICON.png'></a></div>";
-        echo "<div class='addIM'><a href='upload.php'><img src='images/addIMICON.png'></a></div>";
+        echo "<a href='addUser.php'><div class='homeIconButtons addUserButton'><ion-icon name='person-add-outline'></ion-icon></div></a>";
+        echo "<a href='uploadPic.php'><div class='homeIconButtons addImageButton'><ion-icon name='images-outline'></ion-icon></div></a>";
 
       }
     ?>
@@ -227,7 +235,7 @@
          Theres a lot to look at and I can 100% guarantee you will like at least one of my images so check them out! I ended up really enjoying the experience and taking a lot from it. Anytime I want to learn a program, coding language, or anything I apply the same principle. I still make images for fun and will upload them here and on my Instagram when they are finished.
        </p>
 
-      <div class="btn btnPhotoshop"><a class="btnLink" href="view.php" target="_blank">View All Images</a></div>
+      <div class="btn btnPhotoshop"><a class="btnLink" href="view.php" target="" >View All Images</a></div>
 
       </section>
 
@@ -285,7 +293,6 @@
        </section>
 
       <!-- SOCIAL CONTACT SECTION END -->
-
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

@@ -1,8 +1,24 @@
 <?php
+session_start();
 
-  session_start();
+$ver = "";
+$dbf = "";
+//close variable to remove the error text after an amount of time
+$close = "";
+//print_r($_SESSION);
+if(isset($_SESSION['verified']))
+{
+  header("Location: index.php");
+  die();
+//the vkey will only be set if the user clicks the verify link in the verification email
+//and the script will run to verify the account
+}else if(isset($_GET['vkey'])){
 
- ?>
+  require 'php/verify.php';
+
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -15,11 +31,14 @@
     <title>All Photoshop Work</title>
     <link rel="icon" href="images/icon.ico">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/input.css">
     <!-- Front I use from Adobe -->
     <script src="https://use.typekit.net/efv3afb.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/linlout.js"></script>
 
   </head>
 
@@ -39,7 +58,7 @@
     </div>
 
     <div class="navbar">
-        <a class="miglink" href="index.php#home"><img class="nav-signature" src="images/logo.png"></a>
+        <a class="imgLink" href="index.php#home"><img class="nav-signature" src="images/logo.png"></a>
         <ul class="nav-links" id="check">
           <li><a href="index.php#work">Developer Work</a></li>
           <li><a href="index.php#projects">Projects</a></li>
@@ -71,7 +90,37 @@
         </div>
     </div>
 
+    <div class="centerForm">
+      <!--
+      Handle the form submission vis JS when hitting enter "submitting the form"
+      another way than clicking the button
+      -->
+      <form class="frm" onsubmit="login(); return false">
 
+        <h1>Account Login</h1>
+
+        <div class="allInp">
+          <div class="inp">
+            <input type="text" name="userNME" required/>
+            <label>Username</label>
+          </div>
+          <div class="inp">
+            <input type="password" name="pswrd" required/>
+            <label>Password</label>
+          </div>
+        </div>
+
+        <h3 id="errorTxt"><?php echo $dbf; ?></h3>
+        <h3 id="successTxt"><?php echo $ver; echo $close; ?></h3>
+
+        <div class="btn frmBtn" onclick="login()" tabindex="0">
+          Sign In
+          <input type= "submit" style="display: none">
+        </div>
+
+      </form>
+
+    </div>
 
     <script type="text/javascript" src="js/mySite.js"></script>
   </body>
