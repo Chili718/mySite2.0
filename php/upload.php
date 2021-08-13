@@ -18,14 +18,15 @@ else
     //print_r($_POST);
     $picnim = $_POST['imageNme'];
     $picdes = $_POST['imageDes'];
+    $rating = $_POST['rating'];
 
     //echo $picnim;
     //echo $picdes;
 
     $dir = 'photoshopWork/'.$_FILES['image']['name'];
-    $sql = $con->prepare("INSERT INTO photoshopwork (name, description, path) VALUES (?, ?, ?)");
+    $sql = $con->prepare("INSERT INTO photoshopwork (name, description, rating, path) VALUES (?, ?, ?, ?)");
 
-    $sql->bind_param("sss", $picnim, $picdes, $dir);
+    $sql->bind_param("ssis", $picnim, $picdes, $rating, $dir);
 
     //"INSERT INTO $table (name, description, path) VALUES ('$picnim','$picdes','$imDir')";
 

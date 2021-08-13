@@ -82,16 +82,16 @@ function uploadAndResizeImage() {
                         switch(php_result){
 
                           case "success":
-                            document.getElementById('confirm').innerHTML = "Image Uploaded Successfully!";
-                            setTimeout(function(){document.getElementById('confirm').innerHTML = '';}, 3000);
+                            document.getElementById('successTxt').innerHTML = "Image Uploaded Successfully!";
+                            setTimeout(function(){document.getElementById('successTxt').innerHTML = '';}, 6000);
                             break;
                           case "fail":
-                            document.getElementById('validateTXT').innerHTML = "Image and or name already exists!";
-                            setTimeout(function(){document.getElementById('validateTXT').innerHTML = '';}, 3000);
+                            document.getElementById('errorTxt').innerHTML = "Image and or name already exists!";
+                            setTimeout(function(){document.getElementById('errorTxt').innerHTML = '';}, 6000);
                             break;
                           case "dbf":
-                            document.getElementById('validateTXT').innerHTML = "Whoops its either me or the internet!";
-                            setTimeout(function(){document.getElementById('validateTXT').innerHTML = '';}, 3000);
+                            document.getElementById('errorTxt').innerHTML = "Whoops its either me or the internet!";
+                            setTimeout(function(){document.getElementById('errorTxt').innerHTML = '';}, 6000);
                             break;
                           default:
 
@@ -112,9 +112,13 @@ function uploadAndResizeImage() {
 
         }
 
-    } else {
-        alert('The File APIs are not fully supported in this browser.');
     }
+    else
+    {
+      document.getElementById('errorTxt').innerHTML = "The File APIs are not fully supported in this browser.";
+      setTimeout(function(){document.getElementById('errorTxt').innerHTML = '';}, 6000);
+    }
+
 }
 
 
@@ -123,16 +127,17 @@ function checkUpload(){
   var image = document.getElementById('image').value;
   var image_name = document.getElementById('imageNme').value;
   var image_des = document.getElementById('imageDes').value;
+  var image_rating = document.getElementById('rating').value;
 
   //console.log(image);
 
-  if(image_name == '' || image == '' || image_des == '')
+  if(image_name == '' || image == '' || image_des == '' || image_rating == '')
   {
-    document.getElementById('validateTXT').innerHTML = 'Please complete all fields!';
+    document.getElementById('errorTxt').innerHTML = 'Please complete all fields!';
 
     setTimeout(function(){
-      document.getElementById('validateTXT').innerHTML = '';
-    }, 3000);
+      document.getElementById('errorTxt').innerHTML = '';
+    }, 6000);
 
     return false;
 
@@ -143,11 +148,11 @@ function checkUpload(){
     //console.log(extension);
     if (!['gif', 'png', 'jpg', 'jpeg'].includes(extension))
     {
-      document.getElementById('validateTXT').innerHTML = 'Invalid File Type!';
+      document.getElementById('errorTxt').innerHTML = 'Invalid File Type!';
 
       setTimeout(function(){
-        document.getElementById('validateTXT').innerHTML = '';
-      }, 3000);
+        document.getElementById('errorTxt').innerHTML = '';
+      }, 6000);
 
       document.getElementById('image').value = '';
       return false;

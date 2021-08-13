@@ -121,11 +121,11 @@ if(!isset($_SESSION['verified']) || $_SESSION['verified'] !== true)
           <input type="range" name="rating" id="rating" min="0" max="100" value="0">
         </div>
 
-        <h3 id="errorTxt"><?php echo $dbf; ?></h3>
-        <h3 id="successTxt"><?php echo $ver; echo $close; ?></h3>
+        <h3 id="errorTxt"></h3>
+        <h3 id="successTxt"></h3>
 
         <div class="btn frmBtn" onclick="checkUpload();" tabindex="0">
-          Upload Image
+          Upload
           <input type= "submit" style="display: none">
         </div>
 
@@ -142,59 +142,6 @@ if(!isset($_SESSION['verified']) || $_SESSION['verified'] !== true)
 </html>
 <script>
 
-  $(document).ready(function(){
-
-    $("#frm").keydown(function(e){
-
-      if(e.which == 13){
-
-        checkUpload();
-
-      }
-
-    });
-
-    $('#insert').click(function(){
-
-      checkUpload();
-      /*
-      var image = $('#image').val();
-      var image_name = $('#imageNme').val();
-      var image_des = $('#imageDes').val();
-
-      if(image_name == '' || image == '' || image_des == '')
-      {
-        document.getElementById('validateTXT').innerHTML = 'Please complete all fields!';
-
-        setTimeout(function(){
-          document.getElementById('validateTXT').innerHTML = '';
-        }, 3000);
-
-        return false;
-
-      }
-      else
-      {
-        var extension = $('#image').val().split('.').pop().toLowerCase();
-
-        if (jQuery.inArray(extension, ['gif', 'png', 'jpg', 'jpeg']) == -1)
-        {
-          document.getElementById('validateTXT').innerHTML = 'Invalid File Type!';
-
-          setTimeout(function(){
-            document.getElementById('validateTXT').innerHTML = '';
-          }, 3000);
-
-          $('#image').val('');
-          return false;
-        }
-      }
-
-      uploadAndResizeImage();
-      */
-    });
-
-  });
   //nifty js to remove confirm form resubmission
   if ( window.history.replaceState ) {
     window.history.replaceState( null, null, window.location.href );
