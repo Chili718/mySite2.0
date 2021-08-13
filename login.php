@@ -90,6 +90,12 @@ if(isset($_SESSION['verified']))
         </div>
     </div>
 
+    <a href="">
+      <div class="homeIconButtons dayNightToggle">
+        <ion-icon name="moon-outline"></ion-icon>
+      </div>
+    </a>
+
     <div class="centerForm">
       <!--
       Handle the form submission vis JS when hitting enter "submitting the form"
@@ -123,6 +129,8 @@ if(isset($_SESSION['verified']))
     </div>
 
     <script type="text/javascript" src="js/mySite.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 
 </html>

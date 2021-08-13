@@ -60,9 +60,9 @@ function logout(){
 
     }
     else {
-      console.log(xhr.readyState);
-      console.log(xhr.status);
-      console.log(xhr.responseText);
+      //console.log(xhr.readyState);
+      //console.log(xhr.status);
+      //console.log(xhr.responseText);
     }
   });
   xhr.send();
@@ -93,7 +93,7 @@ function activityWatcher(){
         //if the user has been inactive or idle for longer
         //then the seconds specified in maxInactivity
         if((seconds - secondsSinceLastActivity) > maxInactivity){
-            console.log('User has been inactive for more than ' + maxInactivity + ' seconds');
+            //console.log('User has been inactive for more than ' + maxInactivity + ' seconds');
             //Redirect them to your logout.php page.
             logout();
             location.href = 'login.php';
