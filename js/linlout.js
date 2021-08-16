@@ -2,6 +2,25 @@ var tmeOut;
 
 function login(){
 
+  removeMsgs();
+
+  var usr_nme = document.getElementById('userNME').value;
+  var usr_pswd = document.getElementById('pswrd').value;
+
+  //console.log(image);
+
+  if(usr_nme == '' || usr_pswd == '')
+  {
+    document.getElementById('errorTxt').innerHTML = 'Please complete all fields!';
+
+    setTimeout(function(){
+      document.getElementById('errorTxt').innerHTML = '';
+    }, 6000);
+
+    return false;
+
+  }
+
   var xhr = new XMLHttpRequest();
 
   var data = new FormData(document.querySelector("form"));
@@ -134,3 +153,10 @@ function logoutMaybe(){
   }
 }
 */
+
+function removeMsgs(){
+
+  document.getElementById('errorTxt').innerHTML = '';
+  document.getElementById('successTxt').innerHTML = '';
+
+}

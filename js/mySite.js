@@ -74,7 +74,7 @@ function toggleMenu(){
     if(link.style.animation){
       link.style.animation = '';
     }else{
-      link.style.animation = `linksFadeIn 0.5S ease-in-out forwards ${index / 5}s`;
+      link.style.animation = `linksFadeIn 0.4S ease-in-out forwards ${index / 5}s`;
     }
 
   });

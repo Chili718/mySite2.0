@@ -60,7 +60,7 @@ Neumorphic Button
 }
 
 /**************************************************************************
-General Form CSS
+General Form and Input CSS
 **************************************************************************/
 
 .centerForm{
@@ -87,7 +87,7 @@ General Form CSS
 
 }
 
-.frm label, .frm input{
+.frm label, .frm input, input[type=file]::file-selector-button, span{
 
   font-family: cardea, serif;
   font-weight: 400;
@@ -95,7 +95,7 @@ General Form CSS
 
 }
 
-.frm label{
+.frm label, span{
 
   color: #5e5e5e;
   font-size: 0.8rem;
@@ -209,6 +209,103 @@ select:-webkit-autofill:focus {
   left: 0;
   color: #333333;
   font-size: 0.85rem;
+}
+
+.frm input[type="file"]{
+
+  width: 90%;
+  padding: 5px;
+  box-shadow: 0.1rem 0.1rem 0.3rem #c9c1c1, -0.1rem -0.1rem 0.25rem #ffffff;
+  margin-bottom: 5vh;
+
+}
+
+input[type=file]::file-selector-button{
+
+  margin: 5px 50px 5px 5px;
+  padding: 4px 10px;
+  box-shadow: 0.1rem 0.1rem 0.3rem #c9c1c1, -0.1rem -0.1rem 0.25rem #ffffff;
+  border: none;
+  background-color: #e6e6e6;
+  cursor: pointer;
+
+}
+
+.rangeContainer{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px rgba(0, 0, 0, 0.15);
+  padding: 10px 15px;
+  margin-bottom: 3vh;
+
+}
+
+.rangeContainer *:not(:last-child){
+
+  margin-right: 15px;
+
+}
+
+#rangeValue{
+
+  box-shadow: 0.1rem 0.1rem 0.3rem #c9c1c1, -0.1rem -0.1rem 0.25rem #ffffff;
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  width: 20px;
+
+}
+
+#rating{
+
+  -webkit-appearance: none;
+  background-color: #ebebeb;
+  outline: none;
+  border-radius: 1rem;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.3s ease;
+  height: 10px;
+
+}
+
+#rating::-webkit-slider-thumb{
+
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #d4d4d4;
+  border-radius: 1rem;
+  cursor: pointer;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+
+}
+
+#rating::-webkit-slider-thumb:hover{
+
+  background-color: #c2c2c2;
+
+}
+
+#rating:hover, #rating:focus{
+
+  box-shadow: 0.1rem 0.1rem 0.3rem #c9c1c1, -0.1rem -0.1rem 0.25rem #ffffff;
+
+}
+
+@media screen and (max-height: 700px){
+
+  .frm{
+
+    margin-top: 60px;
+
+  }
+
 }
 
 @media (hover:hover) and (pointer: fine){

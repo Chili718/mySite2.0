@@ -124,6 +124,8 @@ function uploadAndResizeImage() {
 
 function checkUpload(){
 
+  removeMsgs();
+
   var image = document.getElementById('image').value;
   var image_name = document.getElementById('imageNme').value;
   var image_des = document.getElementById('imageDes').value;

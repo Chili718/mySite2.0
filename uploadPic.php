@@ -104,7 +104,7 @@ if(!isset($_SESSION['verified']) || $_SESSION['verified'] !== true)
       Handle the form submission vis JS when hitting enter "submitting the form"
       another way than clicking the button
       -->
-      <form class="frm" onsubmit="checkUpload();" method="POST" enctype="multipart/form-data">
+      <form class="frm" id="frm">
 
         <h1>Upload an Image</h1>
 
@@ -118,7 +118,11 @@ if(!isset($_SESSION['verified']) || $_SESSION['verified'] !== true)
             <label>Image Description</label>
           </div>
           <input type="file" name="image" id="image" value=""/>
-          <input type="range" name="rating" id="rating" min="0" max="100" value="0">
+          <div class="rangeContainer">
+            <label>Rating: </label>
+            <input type="range" name="rating" id="rating" min="0" max="100" value="0" onchange="updateValue(this.value)" onmousemove="updateValue(this.value)" ontouchmove="updateValue(this.value)">
+            <span id="rangeValue">0</span>
+          </div>
         </div>
 
         <h3 id="errorTxt"></h3>
@@ -140,7 +144,17 @@ if(!isset($_SESSION['verified']) || $_SESSION['verified'] !== true)
   </body>
 
 </html>
-<script>
+<script type="text/javascript">
+
+  $("#frm").submit(function(e) {
+      e.preventDefault();
+  });
+
+  function updateValue(value){
+
+    document.getElementById("rangeValue").innerHTML = value;
+
+  }
 
   //nifty js to remove confirm form resubmission
   if ( window.history.replaceState ) {

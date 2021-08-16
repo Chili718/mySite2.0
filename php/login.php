@@ -6,8 +6,8 @@
   if (!$con) {
     echo 'DBF';
     die();
-  }//check if the username and password is set in POST
-  else if (isset($_POST['userNME']) && !empty($_POST['pswrd']))
+  }
+  else
   {
     $msg = "";
 
@@ -53,9 +53,6 @@
     $stmt->close();
     $con->close();
   }
-  else
-  {//if username and or password is not set
-    echo "false";
-  }
+  
 
  ?>

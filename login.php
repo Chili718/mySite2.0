@@ -101,17 +101,17 @@ if(isset($_SESSION['verified']))
       Handle the form submission vis JS when hitting enter "submitting the form"
       another way than clicking the button
       -->
-      <form class="frm" onsubmit="login(); return false">
+      <form class="frm">
 
         <h1>Account Login</h1>
 
         <div class="allInp">
           <div class="inp">
-            <input type="text" name="userNME" required/>
+            <input type="text" name="userNME" id="userNME" required/>
             <label>Username</label>
           </div>
           <div class="inp">
-            <input type="password" name="pswrd" required/>
+            <input type="password" name="pswrd" id="pswrd" required/>
             <label>Password</label>
           </div>
         </div>
