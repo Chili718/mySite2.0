@@ -1,14 +1,14 @@
 var tmeOut;
 
 function login(){
-
+  //remove all the messages if any
   removeMsgs();
 
   var usr_nme = document.getElementById('userNME').value;
   var usr_pswd = document.getElementById('pswrd').value;
 
   //console.log(image);
-
+  //checking client side if the user gave any input upon call
   if(usr_nme == '' || usr_pswd == '')
   {
     document.getElementById('errorTxt').innerHTML = 'Please complete all fields!';

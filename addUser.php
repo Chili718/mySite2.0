@@ -1,8 +1,8 @@
 <?php
 
-  session_start();
+require 'php/user.php';
 
- ?>
+?>
 <!DOCTYPE html>
 <html>
 
@@ -15,11 +15,14 @@
     <title>All Photoshop Work</title>
     <link rel="icon" href="images/icon.ico">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/input.css">
     <!-- Front I use from Adobe -->
     <script src="https://use.typekit.net/efv3afb.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/linlout.js"></script>
 
   </head>
 
@@ -71,9 +74,39 @@
         </div>
     </div>
 
+    <a href="">
+      <div class="homeIconButtons dayNightToggle">
+        <ion-icon name="moon-outline"></ion-icon>
+      </div>
+    </a>
 
+    <?php
+
+    if(isset($_SESSION['verified']))
+    {
+
+      echo "<a href='uploadPic.php'><div class='homeIconButtons addImageButton'><ion-icon name='images-outline'></ion-icon></div></a>";
+
+    }
+
+    ?>
+
+    <div class="centerForm">
+      <!--
+      Handle the form submission vis JS when hitting enter "submitting the form"
+      another way than clicking the button
+      -->
+      <form class="frm" id="frm">
+
+
+
+      </form>
+
+    </div>
 
     <script type="text/javascript" src="js/mySite.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 
 </html>

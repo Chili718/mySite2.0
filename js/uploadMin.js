@@ -4,7 +4,9 @@ function uploadAndResizeImage() {
     //but the original fucntion can be found here:
     //https://codepen.io/tuanitpro/pen/wJZJbp?editors=1010
     if (window.File && window.FileReader && window.FileList && window.Blob) {
+        //getting all the files selected but only the first one will be used for obvious purposes
         var filesToUploads = document.getElementById('image').files;
+        //the first file
         var file = filesToUploads[0];
         if(file){
 
@@ -25,7 +27,7 @@ function uploadAndResizeImage() {
                   var MAX_HEIGHT = 400;
                   var width = img.width;
                   var height = img.height;
-
+                  //selecting the orienation of the image so it wont be squished
                   if (width > height) {
                       if (width > MAX_WIDTH) {
                           height *= MAX_WIDTH / width;
@@ -44,14 +46,14 @@ function uploadAndResizeImage() {
 
                   ctx.drawImage(img, 0, 0, width, height);
 
-
+                  //converting the canvas image to a file types that can be sent through post
                   dataurl = canvas.toDataURL(file.type);
                   //console.log(dataurl);
 
                   //document.getElementById('test').src = dataurl;
 
                   var fd = new FormData(document.getElementById('frm'));
-
+                  //appending min to the file name to keep a standard which will be send to the proper min folder 
                   var fileName = file.name.substring(0, file.name.lastIndexOf('.')) + "Min" + file.name.substring(file.name.lastIndexOf('.'));
 
                   //console.log(fileName);
@@ -59,6 +61,7 @@ function uploadAndResizeImage() {
                   fetch(dataurl)
                   .then(res => res.blob())
                   .then(blob => {
+                    //appending the new min image to the existing file data that was submitted
                     fd.append("min", blob, fileName);
 
                     //const file = new File([blob], 'dot.png', blob)
@@ -123,7 +126,7 @@ function uploadAndResizeImage() {
 
 
 function checkUpload(){
-
+  //remove any existing messages from a previous attempt
   removeMsgs();
 
   var image = document.getElementById('image').value;
@@ -132,7 +135,7 @@ function checkUpload(){
   var image_rating = document.getElementById('rating').value;
 
   //console.log(image);
-
+  //checking if the user gave all the required fields upon function call
   if(image_name == '' || image == '' || image_des == '' || image_rating == '')
   {
     document.getElementById('errorTxt').innerHTML = 'Please complete all fields!';
@@ -145,7 +148,7 @@ function checkUpload(){
 
   }
   else
-  {
+  {//getting the file extension of the given file to check if a proper file type was given
     var extension = document.getElementById('image').value.split('.').pop().toLowerCase();
     //console.log(extension);
     if (!['gif', 'png', 'jpg', 'jpeg'].includes(extension))
@@ -160,7 +163,8 @@ function checkUpload(){
       return false;
     }
   }
-
+  //after the file has been verified a smaller version of the file will be created for the gallery
+  //squares icon for a much faster loading time
   uploadAndResizeImage();
 
 }
