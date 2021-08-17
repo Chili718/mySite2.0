@@ -53,7 +53,7 @@ function uploadAndResizeImage() {
                   //document.getElementById('test').src = dataurl;
 
                   var fd = new FormData(document.getElementById('frm'));
-                  //appending min to the file name to keep a standard which will be send to the proper min folder 
+                  //appending min to the file name to keep a standard which will be send to the proper min folder
                   var fileName = file.name.substring(0, file.name.lastIndexOf('.')) + "Min" + file.name.substring(file.name.lastIndexOf('.'));
 
                   //console.log(fileName);
@@ -86,15 +86,15 @@ function uploadAndResizeImage() {
 
                           case "success":
                             document.getElementById('successTxt').innerHTML = "Image Uploaded Successfully!";
-                            setTimeout(function(){document.getElementById('successTxt').innerHTML = '';}, 6000);
+                            removeSetTimeOut('successTxt');
                             break;
                           case "fail":
                             document.getElementById('errorTxt').innerHTML = "Image and or name already exists!";
-                            setTimeout(function(){document.getElementById('errorTxt').innerHTML = '';}, 6000);
+                            removeSetTimeOut('errorTxt');
                             break;
                           case "dbf":
                             document.getElementById('errorTxt').innerHTML = "Whoops its either me or the internet!";
-                            setTimeout(function(){document.getElementById('errorTxt').innerHTML = '';}, 6000);
+                            removeSetTimeOut('errorTxt');
                             break;
                           default:
 
@@ -119,7 +119,8 @@ function uploadAndResizeImage() {
     else
     {
       document.getElementById('errorTxt').innerHTML = "The File APIs are not fully supported in this browser.";
-      setTimeout(function(){document.getElementById('errorTxt').innerHTML = '';}, 6000);
+
+      removeSetTimeOut('errorTxt');
     }
 
 }
@@ -140,9 +141,7 @@ function checkUpload(){
   {
     document.getElementById('errorTxt').innerHTML = 'Please complete all fields!';
 
-    setTimeout(function(){
-      document.getElementById('errorTxt').innerHTML = '';
-    }, 6000);
+    removeSetTimeOut('errorTxt');
 
     return false;
 
@@ -155,9 +154,7 @@ function checkUpload(){
     {
       document.getElementById('errorTxt').innerHTML = 'Invalid File Type!';
 
-      setTimeout(function(){
-        document.getElementById('errorTxt').innerHTML = '';
-      }, 6000);
+      removeSetTimeOut('errorTxt');
 
       document.getElementById('image').value = '';
       return false;

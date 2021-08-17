@@ -13,9 +13,7 @@ function login(){
   {
     document.getElementById('errorTxt').innerHTML = 'Please complete all fields!';
 
-    setTimeout(function(){
-      document.getElementById('errorTxt').innerHTML = '';
-    }, 6000);
+    removeSetTimeOut('errorTxt');
 
     return false;
 
@@ -49,16 +47,7 @@ function login(){
           document.getElementById('errorTxt').innerHTML = 'Looks like its the internet, or me though.';
         }
 
-        if(tmeOut){
-
-          clearTimeout(tmeOut);
-
-        }
-
-        //remove the response text after 10 seconds
-        tmeOut = setTimeout(function(){
-          document.getElementById('errorTxt').innerHTML = '';
-        }, 10000);
+        removeSetTimeOut('errorTxt');
 
       }
     }
@@ -158,5 +147,19 @@ function removeMsgs(){
 
   document.getElementById('errorTxt').innerHTML = '';
   document.getElementById('successTxt').innerHTML = '';
+
+}
+
+function removeSetTimeOut(id){
+
+  if(tmeOut){
+
+    clearTimeout(tmeOut);
+
+  }
+  //remove the response text after 8 seconds
+  tmeOut = setTimeout(function(){
+    document.getElementById(id).innerHTML = '';
+  }, 6000);
 
 }

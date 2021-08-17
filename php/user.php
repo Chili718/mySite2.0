@@ -1,25 +1,13 @@
 <?php
-session_start();
+
 //print_r($_SESSION);
-if(!isset($_SESSION['verified']) || $_SESSION['verified'] !== true)
-{
-  header("Location: login.php");
-  die();
-
-}
-
-
-$close = "";
-$cmplt = "";
-$rmsg = "";
 
 require 'dbCON.php';
 
 if (!$con) {
-  echo '<script>alert("Could not connect to db, whoops!")</script>';
-  die("<script>window.location = 'index.php';</script>");
+  echo "dbf";
 }
-else if(isset($_POST['insert']))
+else
 {
 
   //next 5 variables are being stored in db
@@ -58,15 +46,13 @@ else if(isset($_POST['insert']))
 
     mail($to, $subject, $message, $header);
     */
-    $cmplt = "<h2 id='change'>User Added Successfully, an email was sent to verify their account!</h2>";
-    $close = "<script>setTimeout(function(){document.getElementById('change').innerHTML = '';}, 5000);</script>";
+    echo "true";
 
   }
   else
   {
 
-    $rmsg = "<h3 id='change'>Existing Username or Email</h3>";
-    $close = "<script>setTimeout(function(){document.getElementById('change').innerHTML = '';}, 5000);</script>";
+    echo "false";
 
   }
 

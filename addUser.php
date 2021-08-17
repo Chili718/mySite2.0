@@ -1,6 +1,12 @@
 <?php
+session_start();
 
-require 'php/user.php';
+if(!isset($_SESSION['verified']) || $_SESSION['verified'] !== true)
+{
+  header("Location: login.php");
+  die();
+
+}
 
 ?>
 <!DOCTYPE html>
@@ -98,15 +104,124 @@ require 'php/user.php';
       -->
       <form class="frm" id="frm">
 
+        <h1>Create a New User</h1>
 
+        <div class="allInp">
+          <div class="inp">
+            <input type="text" name="userNME" id="userNME" required/>
+            <label>Username</label>
+          </div>
+          <div class="inp">
+            <input type="password" name="pswrd" id="pswrd" required/>
+            <label>Password</label>
+          </div>
+          <div class="inp">
+            <input type="password" name="pswrdR" id="pswrdR" required/>
+            <label>Repeat Password</label>
+          </div>
+          <div class="inp">
+            <input type="text" name="email" id="email" required/>
+            <label>Email</label>
+          </div>
+        </div>
+
+        <h3 id="errorTxt"></h3>
+        <h3 id="successTxt"></h3>
+
+        <div class="btn frmBtn">
+          Create User
+          <input type= "submit" style="display: none">
+        </div>
 
       </form>
 
     </div>
 
     <script type="text/javascript" src="js/mySite.js"></script>
+    <script type="text/javascript" src="js/createUser.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 
 </html>
+<script>
+
+  $(document).ready(function(){
+
+    $("#frm").submit(function(e) {
+        e.preventDefault();
+    });
+
+    $('.frmBtn').click(function(){
+
+      var userNme = $('#userNME').val();
+      var pswrd = $('#pswrd').val();
+      var pswrdR = $('#pswrdR').val();
+      var email = $('#email').val();
+      
+      //reg expression for an email
+      var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+      if(userNme == '' || pswrd == '' || pswrdR == '' || email == '')
+      {
+        document.getElementById('errorTxt').innerHTML = 'Please complete all fields!';
+
+        removeSetTimeOut('errorTxt');
+
+        return false;
+
+      }
+      else if(userNme.length < 4)
+      {
+
+        document.getElementById('errorTxt').innerHTML = 'Username must be at least 4 characters!';
+
+        removeSetTimeOut('errorTxt');
+
+        return false;
+
+      }
+      else if(pswrd != pswrdR)
+      {
+
+        document.getElementById('errorTxt').innerHTML = 'Passwords Do Not Match!';
+
+        removeSetTimeOut('errorTxt');
+
+        return false;
+
+      }//I should make you add a special character but I don't want or need to do that for this
+      else if(pswrd.length < 8 || pswrd.match(RegExp('(?=.*[0-9])+(?=.*[A-Z])')) == null)
+      //regular expression checking for at least one number and capitol letter
+      {
+
+        document.getElementById('errorTxt').innerHTML = 'Password length must be at least 8 characters and contain 1 number and 1 capitol letter!';
+
+        removeSetTimeOut('errorTxt');
+
+        return false;
+
+
+      }
+      else if(!regex.test(email))
+      {
+
+        document.getElementById('errorTxt').innerHTML = 'Invalid Email Given';
+
+        removeSetTimeOut('errorTxt');
+
+        return false;
+
+      }
+
+      createUser();
+
+    });
+
+  });
+  //nifty js to remove confirm form resubmission
+  if ( window.history.replaceState ) {
+    window.history.replaceState( null, null, window.location.href );
+  }
+
+</script>

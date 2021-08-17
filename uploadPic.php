@@ -146,19 +146,23 @@ if(!isset($_SESSION['verified']) || $_SESSION['verified'] !== true)
 </html>
 <script type="text/javascript">
 
-  $("#frm").submit(function(e) {
-      e.preventDefault();
-  });
+  $(document).ready(function(){
 
-  function updateValue(value){
+    $("#frm").submit(function(e) {
+        e.preventDefault();
+    });
 
-    document.getElementById("rangeValue").innerHTML = value;
+    function updateValue(value){
 
-  }
+      document.getElementById("rangeValue").innerHTML = value;
 
-  //nifty js to remove confirm form resubmission
-  if ( window.history.replaceState ) {
-    window.history.replaceState( null, null, window.location.href );
+    }
+
+    //nifty js to remove confirm form resubmission
+    if ( window.history.replaceState ) {
+      window.history.replaceState( null, null, window.location.href );
+    }
+
   }
 
 </script>
