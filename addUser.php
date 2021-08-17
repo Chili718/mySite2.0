@@ -153,69 +153,7 @@ if(!isset($_SESSION['verified']) || $_SESSION['verified'] !== true)
     });
 
     $('.frmBtn').click(function(){
-
-      var userNme = $('#userNME').val();
-      var pswrd = $('#pswrd').val();
-      var pswrdR = $('#pswrdR').val();
-      var email = $('#email').val();
-      
-      //reg expression for an email
-      var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-
-      if(userNme == '' || pswrd == '' || pswrdR == '' || email == '')
-      {
-        document.getElementById('errorTxt').innerHTML = 'Please complete all fields!';
-
-        removeSetTimeOut('errorTxt');
-
-        return false;
-
-      }
-      else if(userNme.length < 4)
-      {
-
-        document.getElementById('errorTxt').innerHTML = 'Username must be at least 4 characters!';
-
-        removeSetTimeOut('errorTxt');
-
-        return false;
-
-      }
-      else if(pswrd != pswrdR)
-      {
-
-        document.getElementById('errorTxt').innerHTML = 'Passwords Do Not Match!';
-
-        removeSetTimeOut('errorTxt');
-
-        return false;
-
-      }//I should make you add a special character but I don't want or need to do that for this
-      else if(pswrd.length < 8 || pswrd.match(RegExp('(?=.*[0-9])+(?=.*[A-Z])')) == null)
-      //regular expression checking for at least one number and capitol letter
-      {
-
-        document.getElementById('errorTxt').innerHTML = 'Password length must be at least 8 characters and contain 1 number and 1 capitol letter!';
-
-        removeSetTimeOut('errorTxt');
-
-        return false;
-
-
-      }
-      else if(!regex.test(email))
-      {
-
-        document.getElementById('errorTxt').innerHTML = 'Invalid Email Given';
-
-        removeSetTimeOut('errorTxt');
-
-        return false;
-
-      }
-
-      createUser();
-
+      validateData();
     });
 
   });

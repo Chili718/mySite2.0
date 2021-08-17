@@ -63,7 +63,7 @@
         <ul class="nav-links" id="check">
           <li><a href="#work">Developer Work</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="view.php">Photoshop Work</a></li>
+          <li><a href="#photoshop">Photoshop Work</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="downloads/TiceResume.pdf" download="JonTiceResume">Resume</a></li>
 

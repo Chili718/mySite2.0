@@ -54,7 +54,7 @@ if(!isset($_SESSION['verified']) || $_SESSION['verified'] !== true)
         <ul class="nav-links" id="check">
           <li><a href="index.php#work">Developer Work</a></li>
           <li><a href="index.php#projects">Projects</a></li>
-          <li><a href="index.php#photoshop">Photoshop Work</a></li>
+          <li><a href="view.php">Photoshop Work</a></li>
           <li><a href="index.php#contact">Contact</a></li>
           <li><a href="downloads/TiceResume.pdf" download="JonTiceResume">Resume</a></li>
 
@@ -120,7 +120,7 @@ if(!isset($_SESSION['verified']) || $_SESSION['verified'] !== true)
           <input type="file" name="image" id="image" value=""/>
           <div class="rangeContainer">
             <label>Rating: </label>
-            <input type="range" name="rating" id="rating" min="0" max="100" value="0" onchange="updateValue(this.value)" onmousemove="updateValue(this.value)" ontouchmove="updateValue(this.value)">
+            <input type="range" name="rating" id="rating" min="0" max="100" value="0" onchange="updateValue(this.value);" onmousemove="updateValue(this.value);" ontouchmove="updateValue(this.value);">
             <span id="rangeValue">0</span>
           </div>
         </div>
@@ -146,23 +146,20 @@ if(!isset($_SESSION['verified']) || $_SESSION['verified'] !== true)
 </html>
 <script type="text/javascript">
 
-  $(document).ready(function(){
+  $("#frm").submit(function(e) {
+      e.preventDefault();
+  });
 
-    $("#frm").submit(function(e) {
-        e.preventDefault();
-    });
+  function updateValue(value){
 
-    function updateValue(value){
-
-      document.getElementById("rangeValue").innerHTML = value;
-
-    }
-
-    //nifty js to remove confirm form resubmission
-    if ( window.history.replaceState ) {
-      window.history.replaceState( null, null, window.location.href );
-    }
+    document.getElementById("rangeValue").innerHTML = value;
 
   }
+
+  //nifty js to remove confirm form resubmission
+  if ( window.history.replaceState ) {
+    window.history.replaceState( null, null, window.location.href );
+  }
+
 
 </script>

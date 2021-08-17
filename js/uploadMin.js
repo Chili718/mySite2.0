@@ -87,6 +87,7 @@ function uploadAndResizeImage() {
                           case "success":
                             document.getElementById('successTxt').innerHTML = "Image Uploaded Successfully!";
                             removeSetTimeOut('successTxt');
+                            document.getElementById('frm').reset();
                             break;
                           case "fail":
                             document.getElementById('errorTxt').innerHTML = "Image and or name already exists!";
