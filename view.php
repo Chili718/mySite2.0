@@ -15,11 +15,88 @@
     <title>All Photoshop Work</title>
     <link rel="icon" href="images/icon.ico">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/input.css">
+    <link rel="stylesheet" href="css/view.css">
     <!-- Front I use from Adobe -->
     <script src="https://use.typekit.net/efv3afb.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/linlout.js"></script>
+
+    <script>
+    /*
+    //when the ajax request on the page is made for getting more
+    //images the loading element will be displayed
+    $(document).ajaxStart(function(){
+      //show the loading animation
+      $('#load').toggleClass('hideGroup');
+      //console.log("unhide");
+
+      }).ajaxStop(function(){
+      //hide the loading animtaion after 2.5s to show the whole
+      //animation as a visual for user
+      setTimeout(function(){
+        $('#load').toggleClass('hideGroup');
+        //console.log("hide");
+      }, 2500);
+
+    });
+    */
+    //boolean for limiting how often a request for more
+    //images can be sent
+    var r = false;
+
+      //change opacity of the header background on scroll
+      $(window).on("scroll", function(){
+
+        if($(window).scrollTop() > 0){
+          $(".navbar").addClass("nottransparent");
+
+        }else{
+          $(".navbar").removeClass("nottransparent");
+
+        }
+        /*
+        if($(window).scrollTop() + $(window).height() > $(document).height()-50 && r == false){
+
+          var count = $(".psW").length;;
+
+          //console.log(count);
+
+          r = true;
+          //ajax request to put another 20 or less images on the page
+          $.ajax({
+
+            url: 'php/viewMore.php',
+            type: 'POST',
+            data: {count: count},
+            success: function(response){
+
+              //timeout to display the images after the loading animation plays once
+              setTimeout(function(){
+                //console.log("success");
+                $(".grid div").last().after(response).show().fadeIn("slow");
+                //addLB();
+
+              }, 2500);
+              //timeout for allowing another request for images to be sent after 4 seconds
+              setTimeout(function(){
+
+                r = false;
+
+              }, 4000);
+
+            }
+
+          });
+
+        }
+        */
+      });
+
+    </script>
 
   </head>
 
@@ -71,9 +148,69 @@
         </div>
     </div>
 
+    <a href="">
+      <div class="homeIconButtons dayNightToggle">
+        <ion-icon name="moon-outline"></ion-icon>
+      </div>
+    </a>
+
+    <?php
+      //user functions of adding images and other users if the user is signed in or not
+      if(isset($_SESSION['verified']))
+      {
+
+        echo "<a href='addUser.php'><div class='homeIconButtons addUserButton'><ion-icon name='person-add-outline'></ion-icon></div></a>";
+        echo "<a href='uploadPic.php'><div class='homeIconButtons addImageButton'><ion-icon name='images-outline'></ion-icon></div></a>";
+
+      }
+    ?>
+
+    <div class="viewContainer">
+      <div class="filters">
+
+        <input type="radio" name="filter" onclick="" value="newest" id="tab-1" checked/>
+        <label for="tab-1" class= "segmented-control__1">Newest</label>|
+
+        <input type="radio" name="filter" onclick="" value="oldest" id="tab-2" />
+        <label for="tab-2" class= "segmented-control__2"><p>Oldest</p></label>|
+
+        <input type="radio" name="filter" onclick="" value="best" id="tab-3" />
+        <label for="tab-3" class= "segmented-control__3">Best</label>|
+
+        <input type="radio" name="filter" onclick="" value="worst" id="tab-4" />
+        <label for="tab-4" class= "segmented-control__4">Worst</label>
+
+        <div class="segmented-control__color"></div>
+      </div>
+
+    </div>
+
+    
+    <div class="contain">
+      <h2 id="galleryTitle">Click or tap on the image!</h2>
+      <div class="grid">
+        <?php
+          //inital 20 images for the page
+          //require "php/view.php";
+
+         ?>
+      </div>
+    </div>
+
+    <h3 id="validateTXT"></h3>
+
+    <div class="group hideGroup" id="load">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
 
 
     <script type="text/javascript" src="js/mySite.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 
 </html>
