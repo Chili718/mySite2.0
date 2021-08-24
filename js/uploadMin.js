@@ -71,6 +71,7 @@ function uploadAndResizeImage() {
                     }
                     */
 
+
                     $.ajax({
 
                       url:'php/upload.php',
@@ -81,6 +82,7 @@ function uploadAndResizeImage() {
                       success:function(php_result){
 
                         //document.getElementById('validateTXT').innerHTML = php_result;
+                        //console.log(php_result);
 
                         switch(php_result){
 
@@ -98,6 +100,7 @@ function uploadAndResizeImage() {
                             removeSetTimeOut('errorTxt');
                             break;
                           default:
+
 
                         }
 

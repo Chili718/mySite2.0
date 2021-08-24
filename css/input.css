@@ -303,6 +303,19 @@ input[type=file]::file-selector-button{
 CSS for the filter options
 **************************************************************************/
 
+.filterContainer{
+
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  padding-top: calc(10vh + 15px);
+  padding-bottom: 20px;
+  z-index: 9;
+  background-color: #e6e6e6;
+
+}
+
 .filters{
 
   width: 27.2rem;
@@ -311,8 +324,6 @@ CSS for the filter options
   border-radius: 1rem;
   display: flex;
   align-items: center;
-  position: sticky;
-  top: 95px;
 
 }
 
@@ -321,6 +332,10 @@ input[type="radio"]{
   display: none;
 
 }
+
+/*
+////Special thanks to Maria M. Muñoz for the code and idea over on: https://codepen.io/myacode/pens/showcase
+*/
 
 .segmented-control__1, .segmented-control__2, .segmented-control__3, .segmented-control__4{
 

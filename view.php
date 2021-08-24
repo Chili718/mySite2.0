@@ -26,27 +26,80 @@
     <script type="text/javascript" src="js/linlout.js"></script>
 
     <script>
-    /*
-    //when the ajax request on the page is made for getting more
-    //images the loading element will be displayed
-    $(document).ajaxStart(function(){
-      //show the loading animation
-      $('#load').toggleClass('hideGroup');
-      //console.log("unhide");
 
-      }).ajaxStop(function(){
-      //hide the loading animtaion after 2.5s to show the whole
-      //animation as a visual for user
-      setTimeout(function(){
-        $('#load').toggleClass('hideGroup');
-        //console.log("hide");
-      }, 2500);
+    $(document).ready(function() {
 
-    });
-    */
-    //boolean for limiting how often a request for more
-    //images can be sent
-    var r = false;
+      var count = $(".psW").length;
+      var filter = $('input[name="filter"]:checked').val();
+      //boolean for limiting how often a request for more
+      //images can be sent
+      var r = false;
+      //getting the initial 20 images on the page
+      $.ajax({
+
+        url: 'php/view.php',
+        type: 'POST',
+        data: {count: count,
+              filter: filter},
+        success: function(response){
+
+          $(".grid").prepend(response).show().fadeIn("slow");
+
+        }
+
+      });
+
+      //console.log($(".psW").length);
+
+      //when the ajax request on the page is made for getting more
+      //images the loading element will be displayed
+      //I only want this to work when the user is loading in more images
+      $(document).ajaxStart(function(){
+        //show the loading animation
+        if(count != 0)
+        {
+          $('#load').toggleClass('hideGroup');
+        }
+        //console.log("unhide");
+
+        }).ajaxStop(function(){
+        //hide the loading animtaion after 2.5s to show the whole
+        //animation as a visual for user
+        if(count != 0){
+
+          setTimeout(function(){
+            $('#load').toggleClass('hideGroup');
+            //console.log("hide");
+          }, 2500);
+
+        }
+
+      });
+      //when the filters are changed the page will be updated with the
+      //first 20 of the clicked filter
+      $('input[type=radio][name=filter]').change(function() {
+        //remove the current images
+        $(".grid").html('');
+        //reset the count to zero instead of using jquery
+        count = 0;
+        //filter from the current radio selected
+        filter = this.value;
+
+        $.ajax({
+
+          url: 'php/view.php',
+          type: 'POST',
+          data: {count: count,
+                filter: filter},
+          success: function(response){
+
+            $(".grid").prepend(response).hide().fadeIn(1500);
+
+          }
+
+        });
+
+      });
 
       //change opacity of the header background on scroll
       $(window).on("scroll", function(){
@@ -58,10 +111,12 @@
           $(".navbar").removeClass("nottransparent");
 
         }
-        /*
+        //check for when the user is at the bottom of the page to load more images
+        //unless a request was made to quick 
         if($(window).scrollTop() + $(window).height() > $(document).height()-50 && r == false){
 
-          var count = $(".psW").length;;
+          count = $(".psW").length;
+          filter = $('input[name="filter"]:checked').val();
 
           //console.log(count);
 
@@ -69,9 +124,10 @@
           //ajax request to put another 20 or less images on the page
           $.ajax({
 
-            url: 'php/viewMore.php',
+            url: 'php/view.php',
             type: 'POST',
-            data: {count: count},
+            data: {count: count,
+                   filter: filter},
             success: function(response){
 
               //timeout to display the images after the loading animation plays once
@@ -81,20 +137,22 @@
                 //addLB();
 
               }, 2500);
-              //timeout for allowing another request for images to be sent after 4 seconds
+              //timeout for allowing another request for images to be sent after 6 seconds
               setTimeout(function(){
 
                 r = false;
 
-              }, 4000);
+              }, 6000);
 
             }
 
           });
 
         }
-        */
+
       });
+
+    });
 
     </script>
 
@@ -165,7 +223,7 @@
       }
     ?>
 
-    <div class="viewContainer">
+    <div class="filterContainer">
       <div class="filters">
 
         <input type="radio" name="filter" onclick="" value="newest" id="tab-1" checked/>
@@ -185,15 +243,11 @@
 
     </div>
 
-    
-    <div class="contain">
-      <h2 id="galleryTitle">Click or tap on the image!</h2>
-      <div class="grid">
-        <?php
-          //inital 20 images for the page
-          //require "php/view.php";
 
-         ?>
+    <div class="contain">
+      <!--<h2 id="galleryTitle">Click or tap on the image!</h2>-->
+      <div class="grid">
+
       </div>
     </div>
 
