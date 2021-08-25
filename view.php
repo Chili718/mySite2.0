@@ -58,6 +58,7 @@
         //show the loading animation
         if(count != 0)
         {
+          $('.dot').addClass("dotAnim");
           $('#load').toggleClass('hideGroup');
         }
         //console.log("unhide");
@@ -68,9 +69,10 @@
         if(count != 0){
 
           setTimeout(function(){
+            $('.dot').removeClass("dotAnim");
             $('#load').toggleClass('hideGroup');
             //console.log("hide");
-          }, 2500);
+          }, 3000);
 
         }
 
@@ -112,7 +114,7 @@
 
         }
         //check for when the user is at the bottom of the page to load more images
-        //unless a request was made to quick 
+        //unless a request was made to quick
         if($(window).scrollTop() + $(window).height() > $(document).height()-50 && r == false){
 
           count = $(".psW").length;
