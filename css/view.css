@@ -63,48 +63,17 @@ CSS for the grid of the images
   font-family: freight-neo-pro,sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: calc( (1.44em + 0.46125 * ( ( 100vw - 37.5em) / 18.75 ))/1.2);
+  font-size: 1.1rem;
   background-color: rgba(230, 230, 230, 0.9);
   padding: 3px 10px;
   text-align: center;
 
 }
 
-#galleryTitle{
 
-  width: 100%;
-  font-family: freight-neo-pro,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 24px;
-  color: white;
-  text-align: center;
-  position: relative;
-  padding-bottom: 20px;
-  padding-top: 95px;
-}
-
-.viewTitle{
-
-  position: absolute;
-  top: 0px;
-  font-family: freight-neo-pro,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 30px;
-  color: white;
-  /*text-decoration: underline white 2px;*/
-  background-color: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  padding: 6px 0px 6px 0px;
-
-}
-
-.err{
-
-  color: red;
-
-}
+/**************************************************************************
+CSS for the loading block at the bottom of the page
+**************************************************************************/
 
 .dot{
 
@@ -190,106 +159,13 @@ CSS for the grid of the images
 
 }
 
-@media screen and (min-width: 1445px){
+@media screen and (max-width: 425px){
 
   .grid h2{
 
-    font-size: 25px;
+    font-size: 1.2rem;
 
   }
-
-  .viewTitle{
-
-    font-size: 35px;
-
-  }
-
-}
-
-@media screen and (max-width: 790px){
-
-  #viewNext img, #viewPrevious img{
-
-    width: 48px;
-    height: 48px;
-
-  }
-
-}
-
-@media screen and (max-width: 768px){
-
-  #galleryTitle{
-
-    padding-top: 72px;
-
-  }
-
-}
-
-@media screen and (max-width: 645px){
-
-  .grid h2{
-
-    font-size: 30px;
-
-  }
-
-  #viewNext{
-
-    left: 88vw;
-
-  }
-
-  #viewPrevious{
-
-    right: 88vw;
-
-  }
-
-
-
-}
-
-@media screen and (max-width: 570px){
-
-  #viewNext img, #viewPrevious img{
-
-    width: 34px;
-    height: 34px;
-
-  }
-
-}
-
-@media screen and (max-width: 472px){
-
-  #deleteBtn{
-
-    width: 40px;
-    height: 40px;
-    bottom: 5vw;
-    right: 5vw;
-
-  }
-
-}
-
-@media screen and (max-width: 420px){
-
-  #viewNext{
-
-    left: 85vw;
-
-  }
-
-  #viewPrevious{
-
-    right: 85vw;
-
-  }
-
-
 
 }
 
@@ -318,25 +194,5 @@ CSS for the grid of the images
     z-index: 6;
 
   }
-
-  #deleteBtn:hover{
-
-    transform: scale(1.1);
-
-  }
-
-  #viewNext img:hover{
-
-    transform: scale(1.1);
-
-  }
-
-  #viewPrevious img:hover{
-
-    transform: scale(1.1);
-
-  }
-
-
 
 }

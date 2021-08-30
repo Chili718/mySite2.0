@@ -3,7 +3,7 @@
 require 'dbCON.php';
 
 if (!$con) {
-  echo "<h2>Oops might be the internet or me!</h2>";
+  echo "dbf";
 }
 else
 {
@@ -77,7 +77,7 @@ else
   }
   else
   {
-    //error for getting one or neither in post goes here
+    echo "fail";
   }
 
   $con->close();
@@ -108,7 +108,7 @@ function printHtml($result){
   }else{//there is a very high likely this will never be reached due to the conditional
       //that is before this function is called
 
-    $htmlR .= "<h2>Looks like there are no images!</h2>";
+    $htmlR = "fail";
 
   }
 

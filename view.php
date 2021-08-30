@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/input.css">
     <link rel="stylesheet" href="css/view.css">
+    <link rel="stylesheet" href="css/lightbox.css">
     <!-- Front I use from Adobe -->
     <script src="https://use.typekit.net/efv3afb.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -43,7 +44,19 @@
               filter: filter},
         success: function(response){
 
-          $(".grid").prepend(response).show().fadeIn("slow");
+          if(response == "dbf" || response == "fail"){
+
+            document.getElementById('errorTxt').innerHTML = 'Looks like its the internet, or me though.';
+
+            removeSetTimeOut('errorTxt');
+
+          }else{
+
+            $(".grid").prepend(response).show().fadeIn("slow");
+
+            addLB();
+
+          }
 
         }
 
@@ -97,6 +110,8 @@
 
             $(".grid").prepend(response).hide().fadeIn(1500);
 
+            addLB();
+
           }
 
         });
@@ -132,13 +147,24 @@
                    filter: filter},
             success: function(response){
 
-              //timeout to display the images after the loading animation plays once
-              setTimeout(function(){
-                //console.log("success");
-                $(".grid div").last().after(response).show().fadeIn("slow");
-                //addLB();
+              if(response == "dbf" || response == "fail"){
 
-              }, 2500);
+                document.getElementById('errorTxt').innerHTML = 'Looks like its the internet, or me though.';
+
+                removeSetTimeOut('errorTxt');
+
+              }else{
+
+                //timeout to display the images after the loading animation plays once
+                setTimeout(function(){
+                  //console.log("success");
+                  $(".grid div").last().after(response).show().fadeIn("slow");
+                  addLB();
+
+                }, 2500);
+
+              }
+
               //timeout for allowing another request for images to be sent after 6 seconds
               setTimeout(function(){
 
@@ -247,6 +273,7 @@
 
 
     <div class="contain">
+      <h3 id="errorTxt"></h3>
       <!--<h2 id="galleryTitle">Click or tap on the image!</h2>-->
       <div class="grid">
 
@@ -263,7 +290,24 @@
       <div class="dot"></div>
     </div>
 
+    <div id="lightbox">
+      <div class='lightboxButtons closeButton'><ion-icon name="close-circle-outline"></ion-icon></div>
+      <?php
+      //display ability to delete image when user is logged in on the lightbox
+      if(isset($_SESSION['verified']))
+      {
 
+        echo "<div class='lightboxButtons deleteButton'><ion-icon name='trash-outline'></ion-icon></div>";
+
+
+      }
+
+      ?>
+      <div class='lightboxButtons viewPrevious'><ion-icon name="arrow-back-circle-outline"></ion-icon></div>
+      <div class='lightboxButtons viewNext'><ion-icon name="arrow-forward-circle-outline"></ion-icon></div>
+    </div>
+
+    <script type="text/javascript" src="js/lightbox.js"></script>
     <script type="text/javascript" src="js/mySite.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
