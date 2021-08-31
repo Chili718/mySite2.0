@@ -1,4 +1,10 @@
 <?php
+//
+//
+//File for uploading the user to the db and sending a verificaiton email
+//
+//
+
 
 //print_r($_SESSION);
 

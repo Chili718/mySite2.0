@@ -1,4 +1,9 @@
 <?php
+//
+//
+//File for uploading the users picture to the db or not
+//
+//
 
 require 'dbCON.php';
 

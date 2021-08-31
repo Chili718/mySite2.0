@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+
+$dbf = "";
+$ver = "";
 //print_r($_SESSION);
 if(isset($_SESSION['verified']))
 {
@@ -112,8 +115,8 @@ if(isset($_SESSION['verified']))
           </div>
         </div>
 
-        <h3 id="errorTxt"></h3>
-        <h3 id="successTxt"></h3>
+        <h3 id="errorTxt"><?php echo $dbf; ?></h3>
+        <h3 id="successTxt"><?php echo $ver; ?></h3>
 
         <div class="btn frmBtn" onclick="login()" tabindex="0">
           Sign In

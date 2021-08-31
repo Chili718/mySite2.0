@@ -1,4 +1,9 @@
 <?php
+//
+//
+//File for checking users data if they are in the db and then logging them in
+//
+//
   session_start();
   //connect to database
   require 'dbCON.php';
@@ -53,6 +58,6 @@
     $stmt->close();
     $con->close();
   }
-  
+
 
  ?>

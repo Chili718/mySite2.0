@@ -273,14 +273,13 @@
 
 
     <div class="contain">
-      <h3 id="errorTxt"></h3>
+      <h3 id="successTxt" class="viewChanges"></h3>
+      <h3 id="errorTxt" class="viewChanges"></h3>
       <!--<h2 id="galleryTitle">Click or tap on the image!</h2>-->
       <div class="grid">
 
       </div>
     </div>
-
-    <h3 id="validateTXT"></h3>
 
     <div class="group hideGroup" id="load">
       <div class="dot"></div>
@@ -297,7 +296,7 @@
       if(isset($_SESSION['verified']))
       {
 
-        echo "<div class='lightboxButtons deleteButton'><ion-icon name='trash-outline'></ion-icon></div>";
+        echo "<div class='lightboxButtons deleteButton' onClick='deleteIm()'><ion-icon name='trash-outline'></ion-icon></div>";
 
 
       }

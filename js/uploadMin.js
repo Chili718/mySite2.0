@@ -1,3 +1,15 @@
+/*
+
+JS file that contains the functions to upload the image file and create the min icon for it
+
+*/
+
+
+//
+//
+//Function to create the min version of the image and append it to post to be uploaded
+//
+//
 function uploadAndResizeImage() {
 
     //special thanks from tuanitpro on codepen for this function, slight changes were made
@@ -129,7 +141,11 @@ function uploadAndResizeImage() {
 
 }
 
-
+//
+//
+//Function to check if the proper file was given before the min verison is created
+//
+//
 function checkUpload(){
   //remove any existing messages from a previous attempt
   removeMsgs();

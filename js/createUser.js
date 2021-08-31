@@ -1,3 +1,13 @@
+/*
+
+File for handling the creation of a user and the validation and response of that data
+
+*/
+
+
+//
+//Function for sending off the post data and returning the correct responses
+//
 function createUser(){
 
   var xhr = new XMLHttpRequest();
@@ -38,6 +48,11 @@ function createUser(){
   xhr.send(data);
 }
 
+//
+//
+//Function for validating the fields in the form to meet all of the requiments
+//
+//
 function validateData(){
 
   //remove any existing messages from a previous attempt

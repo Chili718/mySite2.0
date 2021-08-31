@@ -1,5 +1,17 @@
+//
+//
+//File that contains the functions for logging in and out the user
+//
+//
+
+
+//timeout variable to call and clear when needed to remove a premature
+//disappearance of a message
 var tmeOut;
 
+//
+//Function to get the data from post and login the user or display the error msgs
+//
 function login(){
   //remove all the messages if any
   removeMsgs();
@@ -55,7 +67,9 @@ function login(){
   xhr.send(data);
 }
 
-
+//
+//Function to call the logout script for the user
+//
 function logout(){
   //run the logout script which destroys the session and returns the logged out
   //user to the home page
@@ -78,6 +92,9 @@ function logout(){
 
 
 //special thanks to Tim from thisintrestsme.com for the start of this function :)
+//
+//Will log the user out if no input detection from the user is given after an amount of time
+//
 function activityWatcher(){
 
     //The number of seconds that have passed
@@ -143,6 +160,9 @@ function logoutMaybe(){
 }
 */
 
+//
+//remove the error messages when the users attemps to login again
+//
 function removeMsgs(){
 
   document.getElementById('errorTxt').innerHTML = '';
@@ -150,6 +170,9 @@ function removeMsgs(){
 
 }
 
+//
+//Removes or resets the timer on the messsages to remove premature image disappearance
+//
 function removeSetTimeOut(id){
 
   if(tmeOut){

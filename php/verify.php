@@ -1,5 +1,9 @@
 <?php
-
+//
+//
+//File for verifying the users account so it wont be deleted after an amount of time
+//
+//
 if(isset($_GET['vkey'])){
 
   //?vkey=852e9650ab350b95c7b5bbd2ec7c4d31
@@ -27,20 +31,18 @@ if(isset($_GET['vkey'])){
       //update the users data to verify their account
       if($stmt->affected_rows >= 1)
       {
-        $ver =  "Your account has now been verified! You may now login.";
-        $close = "<script>setTimeout(function(){document.getElementById('ver').innerHTML = '';}, 10000);</script>";
+        $ver =  "Your account has now been verified! You may now login.<script>setTimeout(function(){document.getElementById('successTxt').innerHTML = '';}, 10000);</script>";
+
       }
       else
       {
-        $dbf = "Looks like its the internet or me!";
-        $close = "<script>setTimeout(function(){document.getElementById('validateTXT').innerHTML = '';}, 10000);</script>";
+        $dbf = "Looks like its the internet or me! <script>setTimeout(function(){document.getElementById('errorTxt').innerHTML = '';}, 10000);</script>";
       }
 
     }
     else
     {
-      $dbf = "This account is invalid or has already been verified.";
-      $close = "<script>setTimeout(function(){document.getElementById('validateTXT').innerHTML = '';}, 10000);</script>";
+      $dbf = "This account is invalid or has already been verified.<script>setTimeout(function(){document.getElementById('errorTxt').innerHTML = '';}, 10000);</script>";
     }
 
     $stmt->close();
