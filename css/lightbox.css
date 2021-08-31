@@ -26,9 +26,9 @@ CSS File for the lightbox and its buttons
 }
 
 #lightbox img{
-  padding-top: 1%;
-  max-width: 95%;
-  max-height: 95%;
+  padding-top: 0%;
+  max-width: 97%;
+  max-height: 97%;
   object-fit: contain;
 
 }
@@ -37,7 +37,6 @@ CSS File for the lightbox and its buttons
 
   box-shadow: 0.1rem 0.1rem 0.3rem #999393, -0.1rem -0.1rem 0.25rem #f5f0f0;
   padding: 8px 15px;
-  border-radius: 1rem;
   color: #333333;
   font-size: 1.5rem;
   position: fixed;
@@ -98,7 +97,20 @@ CSS File for the lightbox and its buttons
 
 }
 
-.noScroll {margin: 0; height: 100%; overflow: hidden}
+.showHideButton{
+
+  left: 2%;
+  top: 2%;
+
+}
+
+.hide{
+
+  display: none;
+
+}
+
+.noScroll {margin: 0; height: 100vh; overflow: hidden !important;}
 
 @media (hover: hover) and (pointer: fine){
 

@@ -273,8 +273,11 @@
 
 
     <div class="contain">
-      <h3 id="successTxt" class="viewChanges"></h3>
-      <h3 id="errorTxt" class="viewChanges"></h3>
+      <div class="viewErrors">
+        <h3 id="successTxt"></h3>
+        <h3 id="errorTxt"></h3>
+      </div>
+
       <!--<h2 id="galleryTitle">Click or tap on the image!</h2>-->
       <div class="grid">
 
@@ -296,7 +299,7 @@
       if(isset($_SESSION['verified']))
       {
 
-        echo "<div class='lightboxButtons deleteButton' onClick='deleteIm()'><ion-icon name='trash-outline'></ion-icon></div>";
+        echo "<div class='lightboxButtons deleteButton' id='deleteButton' onClick='deleteIm()'><ion-icon name='trash-outline'></ion-icon></div>";
 
 
       }
@@ -304,8 +307,10 @@
       ?>
       <div class='lightboxButtons viewPrevious'><ion-icon name="arrow-back-circle-outline"></ion-icon></div>
       <div class='lightboxButtons viewNext'><ion-icon name="arrow-forward-circle-outline"></ion-icon></div>
+      <div class='lightboxButtons showHideButton'><ion-icon name="eye-off-outline"></ion-icon></div>
     </div>
 
+    <script type="text/javascript" src="js/swipe.js"></script>
     <script type="text/javascript" src="js/lightbox.js"></script>
     <script type="text/javascript" src="js/mySite.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

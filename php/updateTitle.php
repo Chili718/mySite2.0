@@ -1,4 +1,9 @@
 <?php
+//
+//
+//File for updating the title of the image
+//
+//
   session_start();
   //connect to database
   require 'dbCON.php';
@@ -18,11 +23,11 @@
     if($sql->affected_rows == 1)
     {
 
-      echo "Successful Update!";
+      echo "The title has been successfully updated!";
 
     }
     else {
-      echo "Could not be Updated in the DB";
+      echo "Title could not be updated!";
     }
 
   }

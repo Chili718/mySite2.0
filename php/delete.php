@@ -22,35 +22,34 @@
     if($sql->affected_rows >= 1)
     {
       $rem = "../".$_POST['path'];
-
-      if(!unlink($rem)){
-        echo "Could not remove file from local system...";
-      }
-      else {
-        echo "Successful Delete!";
-      }
-
-      $minPath = substr_replace($_POST['path'], "Min", strripos($_POST['path'],"."),0);
-
-      $minPath = substr_replace($minPath, "/min", strripos($minPath,"/"),0);
-
-      $minPath = "../".$minPath;
-
-      //echo $minPath;
-
-      if(!unlink($minPath))
+      //remove the normal image from the file system
+      if(!unlink($rem))
       {
-        //echo "Could not remove file from local system...";
+        echo "Could not remove file from local system...";
       }
       else
       {
-        echo "Successful Delete!";
+        //creating the min version of the path
+        $minPath = substr_replace($_POST['path'], "Min", strripos($_POST['path'],"."),0);
+        $minPath = substr_replace($minPath, "/min", strripos($minPath,"/"),0);
+        $minPath = "../".$minPath;
+
+        //removing the min version of the image from the file system
+        if(!unlink($minPath))
+        {
+          echo "Could not remove file from local system...";
+        }
+        else
+        {
+          echo "The Image was Deleted Successfully!";
+        }
+
       }
 
 
     }
     else {
-      echo "Could not be Deleted From DB";
+      echo "The Image could not be Deleted.";
     }
 
   }

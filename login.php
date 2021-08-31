@@ -100,7 +100,7 @@ if(isset($_SESSION['verified']))
       Handle the form submission vis JS when hitting enter "submitting the form"
       another way than clicking the button
       -->
-      <form class="frm">
+      <form class="frm"id="frm">
 
         <h1>Account Login</h1>
 
@@ -127,6 +127,12 @@ if(isset($_SESSION['verified']))
 
     </div>
 
+    <script>
+      //preventing the page from reloading after hitting enter
+      $("#frm").submit(function(e) {
+          e.preventDefault();
+      });
+    </script>
     <script type="text/javascript" src="js/mySite.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

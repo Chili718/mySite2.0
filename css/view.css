@@ -8,7 +8,7 @@ CSS for the grid of the images
 
 .contain{
 
-  padding-top: min(250px, 24vh);
+  padding-top: min(250px, 22vh);
 
 }
 
@@ -70,9 +70,9 @@ CSS for the grid of the images
 
 }
 
-.viewChanges{
+.viewErrors{
 
-
+  padding-bottom: 15px;
 
 }
 

@@ -14,10 +14,10 @@ var previous = document.querySelector(".viewPrevious");
 var next = document.querySelector(".viewNext");
 //contains all of the images in their divs
 var boxes = document.querySelector(".grid").children;
-//user button for deleting an image
-var deleteButton = document.querySelector("deleteButton");
 //variable for the last version of the image title
 var lastVal = "";
+
+var showHideButton = document.querySelector(".showHideButton");
 
 //
 //Function for moving to the previous image in the gallery
@@ -168,7 +168,7 @@ document.body.onkeyup = function(e){
     }
 }
 
-//closeButtondetectSwipe('lightbox', swipeDir);
+detectSwipe('lightbox', swipeDir);
 
 //when clicking off the image the lightbox will be removed
 lightbox.addEventListener('click', e => {
@@ -187,6 +187,36 @@ x.addEventListener('click', e => {
   lightbox.classList.remove('active');
 
   document.body.classList.remove('noScroll');
+
+});
+
+showHideButton.addEventListener('click', e => {
+
+  if(showHideButton.innerHTML.includes('eye-off-outline')){
+
+    showHideButton.innerHTML = "<ion-icon name='eye-outline'></ion-icon>";
+    next.classList.toggle("hide");
+    previous.classList.toggle("hide");
+    x.classList.toggle("hide");
+    if(lightbox.contains(document.getElementById('deleteButton'))){
+      document.getElementById('deleteButton').classList.toggle("hide");
+    }
+    document.querySelector('.viewTitle').classList.toggle("hide");
+
+  }
+  else
+  {
+
+    showHideButton.innerHTML = "<ion-icon name='eye-off-outline'></ion-icon>";
+    next.classList.toggle("hide");
+    previous.classList.toggle("hide");
+    x.classList.toggle("hide");
+    if(lightbox.contains(document.getElementById('deleteButton'))){
+      document.getElementById('deleteButton').classList.toggle("hide");
+    }
+    document.querySelector('.viewTitle').classList.toggle("hide");
+
+  }
 
 });
 
@@ -225,7 +255,7 @@ function deleteIm(){
         document.querySelector('.grid').innerHTML = "";
 
         var filters = document.getElementsByName('filter');
-
+        //find the current filter the users is on to load the right first 20 images
         for (var i = 0, length = filters.length; i < length; i++) {
           if (filters[i].checked) {
 
@@ -249,6 +279,10 @@ function deleteIm(){
                   $(".grid").prepend(response).show().fadeIn("slow");
 
                   addLB();
+
+                  document.getElementById('successTxt').innerHTML = php_result;
+
+                  removeSetTimeOut('successTxt');
 
                 }
 
@@ -276,7 +310,7 @@ function deleteIm(){
 //
 //User function for updating the images title on the gallery
 //
-function updateIM(){
+function updateIMTitle(){
 
   var data = lightbox.lastChild.src;
 
@@ -288,7 +322,7 @@ function updateIM(){
 
     $.ajax({
 
-      url:'php/update.php',
+      url:'php/updateTitle.php',
       type:'post',
       data:{
         path: path,
@@ -310,11 +344,45 @@ function updateIM(){
 
         }
 
-        $.get( "php/view.php", function( data ) {
-            $('.grid').html(data);
+        var filters = document.getElementsByName('filter');
+        //find the current filter the users is on to load the right first 20 images
+        for (var i = 0, length = filters.length; i < length; i++) {
+          if (filters[i].checked) {
 
-            addLB();
-        });
+            //reload all of the images on the page minus the one just deleted
+            $.ajax({
+
+              url: 'php/view.php',
+              type: 'POST',
+              data: {count: 0,
+                    filter: filters[i].value},
+              success: function(response){
+
+                if(response == "dbf" || response == "fail"){
+
+                  document.getElementById('errorTxt').innerHTML = 'Looks like its the internet, or me though.';
+
+                  removeSetTimeOut('errorTxt');
+
+                }else{
+
+                  $(".grid").prepend(response).show().fadeIn("slow");
+
+                  addLB();
+
+                  document.getElementById('successTxt').innerHTML = php_result;
+
+                  removeSetTimeOut('successTxt');
+
+                }
+
+              }
+
+            });
+
+
+          }
+        }
       },
       error: function(xhr){
 
@@ -361,30 +429,23 @@ function addLB(){
       bigger = bigger.replace("/min", "");
       splay.src = bigger;
 
+      if(lightbox.contains(document.getElementById('deleteButton'))){
 
-
-      if(lightbox.contains(document.querySelector('deleteButton'))){
-
-        while(lightbox.childElementCount >= 6){
-
-          lightbox.removeChild(lightbox.lastChild);
-          lightbox.removeChild(lightbox.lastChild);
-
-        }
         //adding the user function of being able to edit the images title
         title.contentEditable = 'true';
         title.addEventListener("focus", checkChange);
         //title.addEventListener("blur", updateIM);
-        title.addEventListener("blur", updateIM);
+        title.addEventListener("blur", updateIMTitle);
 
-      }else {
-        while(lightbox.childElementCount >= 5){
-
-          lightbox.removeChild(lightbox.lastChild);
-          lightbox.removeChild(lightbox.lastChild);
-
-        }
       }
+      //remove the title and picture of the previous image that was in the lb
+      if(lightbox.childElementCount >= 6){
+
+        lightbox.removeChild(lightbox.lastChild);
+        lightbox.removeChild(lightbox.lastChild);
+
+      }
+
       //adding the lb title css to the newly created element
       title.classList.add('viewTitle');
 
@@ -394,6 +455,15 @@ function addLB(){
       lightbox.appendChild(splay);
 
       document.body.classList.add('noScroll');
+
+      //remove all of the possible hidden elements
+      next.classList.remove("hide");
+      previous.classList.remove("hide");
+      x.classList.remove("hide");
+      if(lightbox.contains(document.getElementById('deleteButton'))){
+        document.getElementById('deleteButton').classList.remove("hide");
+      }
+      document.querySelector('.viewTitle').classList.remove("hide");
 
 
     });
