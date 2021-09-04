@@ -14,6 +14,7 @@
 
     <title>All Photoshop Work</title>
     <link rel="icon" href="images/icon.ico">
+    <link rel="stylesheet" id="dayNightToggle" href="css/variablesDay.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/input.css">
     <link rel="stylesheet" href="css/view.css">
