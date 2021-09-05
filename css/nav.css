@@ -20,7 +20,7 @@ CSS File for the Nav Bar, Preloader, and other basic page css needs
 html {
 
   scroll-behavior: smooth;
-  background-color: #e6e6e6;
+  background-color: var(--white-shade-main);
   font-size: 22px;
   overflow-x: hidden;
 
@@ -40,15 +40,15 @@ Scrollbar
 }
 
 ::-webkit-scrollbar-track {
-  background: #e6e6e6;
+  background: var(--white-shade-main);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #5e5e5e;
+  background: var(--text-grey);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #8a8888;
+  background: var(--grey-shade-six);
 }
 
 /**************************************************************************
@@ -59,7 +59,7 @@ Preloader
 
   width: 100%;
   height: 100vh;
-  background-color: #e6e6e6;
+  background-color: var(--white-shade-main);
   position: fixed;
   z-index: 90;
   display: flex;
@@ -144,7 +144,7 @@ Navbar
 
 .nav-links a{
 
-  color: #333333;
+  color: var(--grey-shade-five);
   text-decoration: none;
   letter-spacing: 1px;
   font-weight: bold;
@@ -162,7 +162,7 @@ Navbar
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: #5e5e5e;
+  background-color: var(--text-grey);
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
@@ -195,7 +195,7 @@ Navbar
 }
 
 .nottransparent{
-  background-color: rgba(230, 230, 230, 0.85);
+  background-color: var(--white-shade-opacity-seven);
 }
 
 /**************************************************************************
@@ -214,7 +214,7 @@ Burger
 .burger div{
   width: 25px;
   height: 3px;
-  background-color: #333333;
+  background-color: var(--grey-shade-five);
   margin: 5px;
   transition: 0.5s ease-in-out;
 }
@@ -261,7 +261,7 @@ Add Image and Add User Button
 
 .homeIconButtons{
 
-  box-shadow: 0.1rem 0.1rem 0.3rem #999393, -0.1rem -0.1rem 0.25rem #f5f0f0;
+  box-shadow: 0.1rem 0.1rem 0.3rem var(--grey-shade-one), -0.1rem -0.1rem 0.25rem var(--white-shade-six);
   padding: 0.5rem;
   display: flex;
   justify-content: center;
@@ -269,8 +269,8 @@ Add Image and Add User Button
   cursor: pointer;
   font-size: 2rem;
   transition: 0.6s ease;
-  color: #ffffff;
-  background-color: rgba(194, 194, 194, 0.5);
+  color: var(--white);
+  background-color: var(--white-shade-opacity-eight);
   position: fixed;
   z-index: 10;
   transition: 0.6s ease;
@@ -280,7 +280,7 @@ Add Image and Add User Button
 .homeIconButtons:hover{
 
   transform: scale(1.1);
-  background-color: rgba(194, 194, 194, 0.8);
+  background-color: var(--white-shade-opacity-nine);
 
 }
 
@@ -324,7 +324,7 @@ Add Image and Add User Button
 
     visibility: hidden;
     position: fixed;
-    background: rgba(230, 230, 230, 1);
+    background: var(--white-shade-main);
     height: 105vh;
     width: 101%;
     transform: translate(-0.8%, -60%);
@@ -339,7 +339,7 @@ Add Image and Add User Button
   .nav-links a{
 
     font-size: 25px;
-    border: solid 1px rgba(0, 0, 0, 0.15);
+    border: solid 1px var(--black-opacity-three);
     padding: 10px 15px;
 
   }

@@ -31,9 +31,9 @@ CSS for the grid of the images
   padding-right: 2px;
   position: relative;
   overflow: hidden;
-  border: 8px #e6e6e6 solid;
+  border: 8px var(--white-shade-main) solid;
   text-align: center;
-  box-shadow: 0.1rem 0.1rem 0.3rem #c9c1c1, -0.1rem -0.1rem 0.25rem #ffffff;
+  box-shadow: 0.1rem 0.1rem 0.3rem var(--white-shade-three), -0.1rem -0.1rem 0.25rem var(--white);
 }
 
 .grid div::before{
@@ -64,7 +64,7 @@ CSS for the grid of the images
   font-weight: 500;
   font-style: normal;
   font-size: 1.1rem;
-  background-color: rgba(230, 230, 230, 0.9);
+  background-color: var(--white-shade-opacity-ten);
   padding: 3px 10px;
   text-align: center;
 
@@ -87,7 +87,7 @@ CSS for the loading block at the bottom of the page
     height: 3vw;
     max-width: 16px;
     max-height: 16px;
-    background-color: #000000;
+    background-color: var(--black);
     margin: 10px;
     border-radius: 50%;
 
