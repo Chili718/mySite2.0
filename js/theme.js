@@ -59,6 +59,10 @@ function changeIcon(){
     document.querySelector('.ship').src = 'images/ship.gif';
     document.querySelector('.loadDots').firstElementChild.src = 'images/Loading.gif';
     document.querySelector('.loadDots').lastElementChild.src = 'images/Circle.gif';
+
+
+    //start of font changes
+    document.querySelector('.navbar').classList.remove('nightBar');
   }else{//night theme changes
     document.querySelector('.dayNightToggle').innerHTML = "<ion-icon name='sunny-outline'></ion-icon>";
     //if we are on the home page which contains the only parallax
@@ -71,6 +75,10 @@ function changeIcon(){
     document.querySelector('.ship').src = 'images/shipNight.gif';
     document.querySelector('.loadDots').firstElementChild.src = 'images/LoadingNight.gif';
     document.querySelector('.loadDots').lastElementChild.src = 'images/CircleNight.gif';
+
+
+    //start of font changes
+    document.querySelector('.navbar').classList.add('nightBar');
   }
 
 }

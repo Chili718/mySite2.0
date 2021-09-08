@@ -244,6 +244,16 @@
          Theres a lot to look at and I can 100% guarantee you will like at least one of my images so check them out! I ended up really enjoying the experience and taking a lot from it. Anytime I want to learn a program, coding language, or anything I apply the same principle. I still make images for fun and will upload them here and on my Instagram when they are finished.
        </p>
 
+       <!--
+       <div class="scene"  id = "scene">
+         <div class="carousel">
+
+             <?php //require "php/gp.php";?>
+
+         </div>
+       </div>
+       -->
+
       <div class="btn btnPhotoshop"><a class="btnLink" href="view.php" target="" >View All Images</a></div>
 
       </section>
@@ -284,14 +294,6 @@
 
           </div>
 
-          <!--
-          <ul>
-            <a href="https://twitter.com/jon_tice_" target="_blank" rel="noopener noreferrer"><li><img src="images/twitter.png"></li></a>
-            <a href="https://github.com/Chili718?tab=repositories" target="_blank" rel="noopener noreferrer"><li><img src="images/git.png"></li></a>
-            <a href="https://www.instagram.com/tice_jon/" target="_blank" rel="noopener noreferrer"><li><img src="images/insta.png"></li></a>
-            <a href="https://www.facebook.com/jon.tice.718" target="_blank" rel="noopener noreferrer"><li><img src="images/facebook.png"></li></a>
-          </ul>
-        -->
           <div class="btn btnEmail">
             <a class="btnLink" href="mailto: ticej2@winthropalumni.com" target="_blank">Email Me</a>
             <ion-icon class="mailIcon" name="mail-outline"></ion-icon>

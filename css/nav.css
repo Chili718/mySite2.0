@@ -107,6 +107,12 @@ Preloader
 Navbar
 **************************************************************************/
 
+.nightBar{
+
+  font-family: rift, sans-serif !important;
+
+}
+
 .navbar{
 
   display: flex;
