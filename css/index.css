@@ -7,7 +7,7 @@ The home parallax image
 **************************************************************************/
 
 .parallax {
-  background-image: url("../images/Floating-Island-wide.jpg");
+  background-image: url("../images/mainDay.jpg");
   height: 100vh;
   background-attachment: fixed;
   background-position: center;
@@ -832,7 +832,7 @@ they do when not placed here for touch devices*/
 
   .iconLink:hover{
 
-    color: var(--white);
+    color: #ffffff;
 
   }
 

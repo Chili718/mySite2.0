@@ -14,7 +14,10 @@
 
     <title>Jon Tice - Designer and Full Stack Web Developer</title>
     <link rel="icon" href="images/icon.ico">
-    <link rel="stylesheet" id="dayNightToggle" href="css/variablesDay.css">
+
+    <link rel="stylesheet" id="dayNightToggle" href="">
+    <script type="text/javascript" src="js/theme.js"></script>
+
     <link rel="stylesheet" href="css/input.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/index.css">
@@ -27,6 +30,13 @@
     <script type="text/javascript" src="js/linlout.js"></script>
 
     <script>
+
+      $(document).ready(function() {
+
+        changeIcon();
+
+      });
+
       //change opacity of the header background on scroll
       $(window).on("scroll", function(){
 
@@ -92,11 +102,9 @@
         </div>
     </div>
 
-    <a href="">
-      <div class="homeIconButtons dayNightToggle">
-        <ion-icon name="moon-outline"></ion-icon>
-      </div>
-    </a>
+    <div class="homeIconButtons dayNightToggle" onclick="changeTheme(); changeIcon();">
+      <ion-icon name="moon-outline"></ion-icon>
+    </div>
 
     <?php
       //user functions of adding images and other users if the user is signed in or not

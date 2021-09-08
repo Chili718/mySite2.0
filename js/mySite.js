@@ -13,6 +13,8 @@ var navLinks = document.querySelector(".nav-links");
 var links = document.querySelectorAll(".nav-links li");
 var imgLink = document.querySelector(".imgLink");
 
+
+
 //removes the preloader when the page is loaded by adding the 'loaded' class
 window.addEventListener('load', () => {
 

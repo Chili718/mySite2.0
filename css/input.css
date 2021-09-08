@@ -111,6 +111,11 @@ General Form and Input CSS
 
 }
 
+input:-webkit-autofill {
+
+    -webkit-text-fill-color: var(--black);
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,

@@ -1,0 +1,49 @@
+/*
+
+
+File for the color variables of the night theme for the website
+
+
+*/
+
+:root{
+
+  --black: #ffffff;
+  --black-opacity-one: rgba(255, 255, 255, 0.45);
+  --black-opacity-two: rgba(23, 23, 23, 0.05);
+  --black-opacity-three: rgba(255, 255, 255, 0.15);
+  --black-opacity-four: rgba(0, 0, 0, 0.05);
+  --black-opacity-five: rgba(0, 0, 0, 0.2);
+  --black-opacity-six: rgba(0, 0, 0, 0.3);
+  --black-opacity-seven: rgba(255, 255, 255, 0.1);
+  --text-grey: #bababa;
+  --link-grey: #cccccc;
+  --white: rgba(50, 102, 150, 0.35);
+  --white-shade-main: #0d2944; /*2*/
+  --white-shade-one: #0e2d4a; /*1*/
+  --white-shade-two: rgba(4, 15, 26, 0.5);
+  --white-shade-three: rgba(4, 15, 26, 0.5);
+  --white-shade-four: #0c243c; /*3*/
+  --white-shade-five: #0a1f33; /*4*/
+  --white-shade-six: rgba(31, 72, 110, 0.55);
+  --white-shade-seven: #091a2b; /*5*/
+  --white-shade-eight: #d4d4d4;
+  --white-shade-nine: rgba(4, 15, 26, 0.6);
+  --white-shade-opacity-one: rgba(14, 45, 74, 0.8);
+  --white-shade-opacity-two: rgba(50, 102, 150, 0.4);
+  --white-shade-opacity-three: rgba(14, 45, 74, 0.6);
+  --white-shade-opacity-four: rgba(14, 45, 74, 0.85);
+  --white-shade-opacity-five: rgba(14, 45, 74, 0.9);
+  --white-shade-opacity-six: rgba(255, 255, 255, 0.5);
+  --white-shade-opacity-seven: rgba(12, 36, 60, 0.85);
+  --white-shade-opacity-eight: rgba(32, 63, 92, 0.5);
+  --white-shade-opacity-nine: rgba(61, 103, 143, 0.8);
+  --white-shade-opacity-ten: rgba(230, 230, 230, 0.9);
+  --grey-shade-one: rgba(4, 15, 26, 0.6);
+  --grey-shade-two: #808080;
+  --grey-shade-three: #bdbdbd;
+  --grey-shade-four: #bdbdbd;
+  --grey-shade-five: #dbdbdb;
+  --grey-shade-six: #8a8888;
+
+}

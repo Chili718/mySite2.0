@@ -22,7 +22,10 @@ if(!isset($_SESSION['verified']) || $_SESSION['verified'] !== true)
 
     <title>All Photoshop Work</title>
     <link rel="icon" href="images/icon.ico">
+
     <link rel="stylesheet" id="dayNightToggle" href="css/variablesDay.css">
+    <script type="text/javascript" src="js/theme.js"></script>
+
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/input.css">
     <!-- Front I use from Adobe -->
@@ -32,6 +35,16 @@ if(!isset($_SESSION['verified']) || $_SESSION['verified'] !== true)
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
     <script type="text/javascript" src="js/linlout.js"></script>
+
+    <script>
+
+      $(document).ready(function() {
+
+        changeIcon();
+
+      });
+
+    </script>
 
   </head>
 
@@ -83,11 +96,9 @@ if(!isset($_SESSION['verified']) || $_SESSION['verified'] !== true)
         </div>
     </div>
 
-    <a href="">
-      <div class="homeIconButtons dayNightToggle">
-        <ion-icon name="moon-outline"></ion-icon>
-      </div>
-    </a>
+    <div class="homeIconButtons dayNightToggle" onclick="changeTheme(); changeIcon();">
+      <ion-icon name="moon-outline"></ion-icon>
+    </div>
 
     <?php
 

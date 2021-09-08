@@ -269,7 +269,7 @@ Add Image and Add User Button
   cursor: pointer;
   font-size: 2rem;
   transition: 0.6s ease;
-  color: var(--white);
+  color: #ffffff;
   background-color: var(--white-shade-opacity-eight);
   position: fixed;
   z-index: 10;
