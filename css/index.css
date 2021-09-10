@@ -596,12 +596,14 @@ Photoshop Work Section
   min-width: 250px;
   max-width: 900px;
   line-height: 1.5;
+  margin-bottom: clamp(50px, 10vh, 100px);
 
 }
 
 .btnPhotoshop{
 
     box-shadow: 0.1rem 0.1rem 0.3rem var(--grey-shade-one), -0.1rem -0.1rem 0.25rem var(--white-shade-six);
+    margin-top: clamp(75px, 16vh, 125px);
 
 }
 

@@ -1,0 +1,91 @@
+.scene{
+  /*
+  padding-top: clamp(55px, 5vh, 100px);
+  padding-bottom: clamp(55px, 5vh, 100px);
+  */
+  width: 100%;
+  max-height: 240px;
+  min-height: 200px;
+  height: 25vh;
+  perspective: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel{
+
+  width: clamp(208px, 35%, 350px);
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  position: fixed;
+  top: 0;
+  transform: translateZ(-385px) rotateY(0deg);
+  /*transform: translateZ(-481px) rotateY(0deg);*/
+}
+
+.carousel_cell{
+
+  max-height: 225px;
+  max-width: 350px;
+  min-height: 115px;
+  min-width: 200px;
+  position: absolute;
+  width: 35vw;
+  height: 25vw;
+  transition: transform 1s, opacity 1s;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  cursor: pointer;
+  border: 3px var(--white-shade-five) solid;
+
+}
+
+.carousel_cell img{
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+
+}
+/*clamp(500px, 50vw ,698px)*/
+
+.carousel_cell:nth-child(1) { transform: rotateY(0deg) translateZ(clamp(500px, 50vw ,698px)); }
+
+.carousel_cell:nth-child(2) { transform: rotateY(40deg) translateZ(clamp(500px, 50vw ,698px)); }
+
+.carousel_cell:nth-child(3) { transform: rotateY(80deg) translateZ(clamp(500px, 50vw ,698px)); }
+
+.carousel_cell:nth-child(4) { transform: rotateY(120deg) translateZ(clamp(500px, 50vw ,698px)); }
+
+.carousel_cell:nth-child(5) { transform: rotateY(160deg) translateZ(clamp(500px, 50vw ,698px)); }
+
+.carousel_cell:nth-child(6) { transform: rotateY(200deg) translateZ(clamp(500px, 50vw ,698px)); }
+
+.carousel_cell:nth-child(7) { transform: rotateY(240deg) translateZ(clamp(500px, 50vw ,698px)); }
+
+.carousel_cell:nth-child(8) { transform: rotateY(280deg) translateZ(clamp(500px, 50vw ,698px)); }
+
+.carousel_cell:nth-child(9) { transform: rotateY(320deg) translateZ(clamp(500px, 50vw ,698px)); }
+
+@media screen and (max-width: 1100px){
+
+  .carousel{
+
+
+
+  }
+
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+  .carousel_cell img:hover{
+
+    transform: scale(1.1);
+
+  }
+
+}

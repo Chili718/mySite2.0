@@ -16,13 +16,13 @@ var rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
 
 var radius, theta;
 
-var lightbox = document.getElementById('lightbox');
+//var lightbox = document.getElementById('lightbox');
 
 function rotateCarousel(){
 
   var angle = theta * selectedIndex * -1;
 
-  carousel.style.transform = 'translateZ(' + -radius + 'px) ' + rotateFn +'(' + angle + 'deg)';
+  //carousel.style.transform = 'translateZ(' + -radius + 'px) ' + rotateFn +'(' + angle + 'deg)';
 
 }
 ////////////////////////////////////////////////////////////
@@ -88,12 +88,13 @@ function previousCar(){
   changeCarousel();
 
 }
-
+/*
 prevButton.addEventListener('click', function(){
 
   previousCar();
 
 });
+*/
 //////////////////////////////////////////////////////////////
 var nextButton = document.querySelector('.next');
 
@@ -152,13 +153,13 @@ function nextCar(){
   //console.log(selectedIndex + "Next");
 
 }
-
+/*
 nextButton.addEventListener('click', function(){
 
   nextCar();
 
 });
-
+*/
 function swipeDir(dir){
 
   console.log(dir);
@@ -177,8 +178,8 @@ function swipeDir(dir){
 
 }
 
-detectSwipe('lightbox', swipeDir);
-detectSwipe('scene', swipeDir);
+//detectSwipe('lightbox', swipeDir);
+//detectSwipe('scene', swipeDir);
 
 function changeCarousel(){
 

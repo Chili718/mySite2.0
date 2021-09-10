@@ -97,6 +97,12 @@ General Form and Input CSS
 
 }
 
+input[type=file]::file-selector-button{
+
+  color: var(--grey-shade-five);
+
+}
+
 .frm label, span{
 
   color: var(--text-grey);
