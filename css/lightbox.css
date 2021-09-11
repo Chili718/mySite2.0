@@ -59,7 +59,6 @@ CSS File for the lightbox and its buttons
   background-color: var(--white-shade-opacity-eight);
   position: fixed;
   z-index: 10;
-  transition: 0.6s ease;
   border-radius: 1rem;
 
 }

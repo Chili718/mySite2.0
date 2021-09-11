@@ -1,7 +1,12 @@
+/*
+
+File for the functionality of the home pages carousel
+
+*/
 var carousel = document.querySelector('.carousel');
 
 var cells = carousel.querySelectorAll('.carousel_cell');
-
+//number of images in the carousel
 var cellCount = 9;
 
 var selectedIndex = 0;
@@ -22,14 +27,14 @@ function rotateCarousel(){
 
   var angle = theta * selectedIndex * -1;
 
-  //carousel.style.transform = 'translateZ(' + -radius + 'px) ' + rotateFn +'(' + angle + 'deg)';
+  carousel.style.transform = 'translateZ(-385px) ' + rotateFn +'(' + angle + 'deg)';
 
 }
 ////////////////////////////////////////////////////////////
-var prevButton = document.querySelector('.previous');
+var prevButton = document.querySelector('.viewPreviousCaro');
 
 function previousCar(){
-
+  /*
   if(lightbox.classList.contains('active'))
   {
 
@@ -79,7 +84,7 @@ function previousCar(){
 
 
   }
-
+  */
     selectedIndex--;
 
 
@@ -88,18 +93,18 @@ function previousCar(){
   changeCarousel();
 
 }
-/*
+
 prevButton.addEventListener('click', function(){
 
   previousCar();
 
 });
-*/
+
 //////////////////////////////////////////////////////////////
-var nextButton = document.querySelector('.next');
+var nextButton = document.querySelector('.viewNextCaro');
 
 function nextCar(){
-
+  /*
   if(lightbox.classList.contains('active'))
   {
 
@@ -145,7 +150,7 @@ function nextCar(){
 
 
   }
-
+  */
     selectedIndex++;
 
 
@@ -153,13 +158,13 @@ function nextCar(){
   //console.log(selectedIndex + "Next");
 
 }
-/*
+
 nextButton.addEventListener('click', function(){
 
   nextCar();
 
 });
-*/
+
 function swipeDir(dir){
 
   console.log(dir);
@@ -199,8 +204,9 @@ function changeCarousel(){
 
       var cellAngle = theta * i;
 
-      cell.style.transform = rotateFn + '(' + cellAngle + 'deg); translateZ(' +
-      radius + 'px);';
+      //cell.style.transform = rotateFn + '(' + cellAngle + 'deg); translateZ(' + radius + 'px);';
+
+      cell.style.transform = rotateFn + '(' + cellAngle + 'deg); ';
 
     }else{
 
@@ -215,5 +221,3 @@ function changeCarousel(){
   rotateCarousel();
 
 }
-
-changeCarousel();

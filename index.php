@@ -260,8 +260,11 @@
          </div>
        </div>
 
-
-      <div class="btn btnPhotoshop"><a class="btnLink" href="view.php" target="" >View All Images</a></div>
+       <div class="options">
+         <div class='carouselButtons viewPreviousCaro'><ion-icon name="arrow-back-circle-outline"></ion-icon></div>
+         <div class="btn btnPhotoshop"><a class="btnLink" href="view.php" target="" >View All Images</a></div>
+         <div class='carouselButtons viewNextCaro'><ion-icon name="arrow-forward-circle-outline"></ion-icon></div>
+       </div>
 
       </section>
 
