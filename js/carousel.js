@@ -27,7 +27,7 @@ function rotateCarousel(){
 
   var angle = theta * selectedIndex * -1;
 
-  carousel.style.transform = 'translateZ(-385px) ' + rotateFn +'(' + angle + 'deg)';
+  carousel.style.transform = 'translateZ(-385px)' + rotateFn +'(' + angle + 'deg)';
 
 }
 ////////////////////////////////////////////////////////////
@@ -167,7 +167,7 @@ nextButton.addEventListener('click', function(){
 
 function swipeDir(dir){
 
-  console.log(dir);
+  //console.log(dir);
   if(dir == 'l')
   {
 
@@ -184,7 +184,7 @@ function swipeDir(dir){
 }
 
 //detectSwipe('lightbox', swipeDir);
-//detectSwipe('scene', swipeDir);
+detectSwipe('swipeBox', swipeDir);
 
 function changeCarousel(){
 

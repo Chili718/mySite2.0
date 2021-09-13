@@ -149,6 +149,8 @@ if(!isset($_SESSION['verified']) || $_SESSION['verified'] !== true)
 
     </div>
 
+    <p class="cpyrght"> &copy; 2021 Jon Tice. <p>
+
     <script type="text/javascript" src="js/mySite.js"></script>
     <script src="js/uploadMin.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

@@ -596,7 +596,7 @@ Photoshop Work Section
   min-width: 250px;
   max-width: 900px;
   line-height: 1.5;
-  margin-bottom: clamp(50px, 10vh, 100px);
+  margin-bottom: clamp(35px, 5vh, 100px);
 
 }
 
@@ -623,16 +623,6 @@ Social Contact Section
   margin-top: -14vh;
   padding-top: 14vh;
   position: relative;
-
-}
-
-.cpyrght{
-
-  position: absolute;
-  bottom: 2%;
-  right: 2%;
-  background: var(--black-opacity-three);
-  padding: 5px 15px;
 
 }
 
@@ -769,6 +759,16 @@ Social Contact Section
   .image-anim p{
 
     font-size: 0.6rem;
+
+  }
+
+}
+
+@media screen and (max-width: 426px){
+
+  .photoshopExplanation{
+
+    margin-bottom: 0px;
 
   }
 

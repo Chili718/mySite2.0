@@ -139,6 +139,8 @@ if(isset($_SESSION['verified']))
 
     </div>
 
+    <p class="cpyrght"> &copy; 2021 Jon Tice. <p>
+
     <script>
       //preventing the page from reloading after hitting enter
       $("#frm").submit(function(e) {

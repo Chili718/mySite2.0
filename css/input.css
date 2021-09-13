@@ -27,6 +27,21 @@ Error and Success Messages
 
 }
 
+.cpyrght{
+
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  background: var(--black-opacity-three);
+  padding: 5px 15px;
+  font-size: 0.8rem;
+  font-family: cardea, serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text-grey);
+
+}
+
 /**************************************************************************
 Neumorphic Button
 **************************************************************************/

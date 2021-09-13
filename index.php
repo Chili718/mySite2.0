@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="css/input.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/lightbox.css">
     <link rel="stylesheet" href="css/carousel.css">
     <!-- Front I use from Adobe -->
     <script src="https://use.typekit.net/efv3afb.js"></script>
@@ -245,25 +246,29 @@
          Theres a lot to look at and I can 100% guarantee you will like at least one of my images so check them out! I ended up really enjoying the experience and taking a lot from it. Anytime I want to learn a program, coding language, or anything I apply the same principle. I still make images for fun and will upload them here and on my Instagram when they are finished.
        </p>
 
-
-       <div class="scene"  id = "scene">
-         <div class="carousel">
-          <div class="carousel_cell"><img src="photoshopWork/min/Ashen-LakeMin.jpg" class="cil"></div>
-          <div class="carousel_cell"><img src="photoshopWork/min/BalticMin.jpg" class="cil"></div>
-          <div class="carousel_cell"><img src="photoshopWork/min/Officer-PuffinMin.jpg" class="cil"></div>
-          <div class="carousel_cell"><img src="photoshopWork/min/beat-gooseMin.jpg" class="cil"></div>
-          <div class="carousel_cell"><img src="photoshopWork/min/Big-Ocean-Bigger-FishMin.jpg" class="cil"></div>
-          <div class="carousel_cell"><img src="photoshopWork/min/Floating-IslandMin.jpg" class="cil"></div>
-          <div class="carousel_cell"><img src="photoshopWork/min/MilkMin.jpg" class="cil"></div>
-          <div class="carousel_cell"><img src="photoshopWork/min/mainMin.jpg" class="cil"></div>
-          <div class="carousel_cell"><img src="photoshopWork/min/CupMin.jpg" class="cil"></div>
+       <div class="swipeBox" id="swipeBox">
+         <div class="scene"  id = "scene">
+           <div class="carousel">
+             <!--
+            <div class="carousel_cell"><img src="photoshopWork/min/Ashen-LakeMin.jpg" class="cil"></div>
+            <div class="carousel_cell"><img src="photoshopWork/min/BalticMin.jpg" class="cil"></div>
+            <div class="carousel_cell"><img src="photoshopWork/min/Officer-PuffinMin.jpg" class="cil"></div>
+            <div class="carousel_cell"><img src="photoshopWork/min/beat-gooseMin.jpg" class="cil"></div>
+            <div class="carousel_cell"><img src="photoshopWork/min/Big-Ocean-Bigger-FishMin.jpg" class="cil"></div>
+            <div class="carousel_cell"><img src="photoshopWork/min/Floating-IslandMin.jpg" class="cil"></div>
+            <div class="carousel_cell"><img src="photoshopWork/min/MilkMin.jpg" class="cil"></div>
+            <div class="carousel_cell"><img src="photoshopWork/min/mainMin.jpg" class="cil"></div>
+            <div class="carousel_cell"><img src="photoshopWork/min/CupMin.jpg" class="cil"></div>
+          -->
+          <?php require 'php/getCarouselPics.php'; ?>
+           </div>
          </div>
-       </div>
 
-       <div class="options">
-         <div class='carouselButtons viewPreviousCaro'><ion-icon name="arrow-back-circle-outline"></ion-icon></div>
-         <div class="btn btnPhotoshop"><a class="btnLink" href="view.php" target="" >View All Images</a></div>
-         <div class='carouselButtons viewNextCaro'><ion-icon name="arrow-forward-circle-outline"></ion-icon></div>
+         <div class="options">
+           <div class='carouselButtons viewPreviousCaro'><ion-icon name="arrow-back-circle-outline"></ion-icon></div>
+           <div class="btn btnPhotoshop"><a class="btnLink" href="view.php" target="" >View All Images</a></div>
+           <div class='carouselButtons viewNextCaro'><ion-icon name="arrow-forward-circle-outline"></ion-icon></div>
+         </div>
        </div>
 
       </section>
@@ -318,6 +323,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script type="text/javascript" src="js/mySite.js"></script>
+    <script type="text/javascript" src="js/swipe.js"></script>
     <script type="text/javascript" src="js/carousel.js"></script>
   </body>
 

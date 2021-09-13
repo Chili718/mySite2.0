@@ -51,8 +51,10 @@ function changeIcon(){
     document.querySelector('.dayNightToggle').innerHTML = "<ion-icon name='moon-outline'></ion-icon>";
     //if we are on the home page which contains the only parallax
     //dont have to check for the other elements because they are on every page
-    if(document.querySelector('.parallax') != null)
+    if(document.querySelector('.parallax') != null){
+      document.querySelector('.myPicture').src = 'images/picofme.png';
       document.querySelector('.parallax').style.backgroundImage = "url('images/mainDay.jpg')";
+    }
 
     document.querySelector('.nav-signature').src = 'images/logo.png';
     //all preloader image changes
@@ -67,8 +69,10 @@ function changeIcon(){
     document.querySelector('.dayNightToggle').innerHTML = "<ion-icon name='sunny-outline'></ion-icon>";
     //if we are on the home page which contains the only parallax
     //dont have to check for the other elements because they are on every page
-    if(document.querySelector('.parallax') != null)
+    if(document.querySelector('.parallax') != null){
+      document.querySelector('.myPicture').src = 'images/picofmeNight.png';
       document.querySelector('.parallax').style.backgroundImage = "url('images/mainNight.jpg')";
+    }
 
     document.querySelector('.nav-signature').src = 'images/logoNight.png';
     //all preloader image changes
