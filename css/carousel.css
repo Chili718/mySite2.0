@@ -6,6 +6,7 @@ CSS file for the carousel on the home page of the website
 
   width: 100%;
   margin-bottom: 10px;
+  touch-action: none;
 
 }
 .scene{

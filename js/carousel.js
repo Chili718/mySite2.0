@@ -8,21 +8,22 @@ var carousel = document.querySelector('.carousel');
 var cells = carousel.querySelectorAll('.carousel_cell');
 //number of images in the carousel
 var cellCount = 9;
-
+//index of the cell selected
 var selectedIndex = 0;
 
 var cellWidth = carousel.offsetWidth;
 
 var cellHeight = carousel.offsetHeight;
-
+//willl always rotate on the y axis due to no need to have it rotate on the x axis
+//for this project at least
 var isHorizontal = true;
-
 var rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
 
-var radius, theta;
+var theta;
 
 //var lightbox = document.getElementById('lightbox');
 
+//function to rotate the carousel as a whole
 function rotateCarousel(){
 
   var angle = theta * selectedIndex * -1;
@@ -164,9 +165,10 @@ nextButton.addEventListener('click', function(){
   nextCar();
 
 });
-
+//function for handling the direction of the swipes from the swipe js function
 function swipeDir(dir){
-
+  //document.body.style.overflow = "hidden";
+  //.setAttribute("style","-ms-touch-action: none;");
   //console.log(dir);
   if(dir == 'l')
   {
@@ -186,13 +188,13 @@ function swipeDir(dir){
 //detectSwipe('lightbox', swipeDir);
 detectSwipe('swipeBox', swipeDir);
 
+//function to transform all of the cells in the carousel
+//to the right angles then rotate it
 function changeCarousel(){
 
   theta = 360 / cellCount;
 
   var cellSize = isHorizontal ? cellWidth : cellHeight;
-
-  radius = Math.round( (cellSize / 2) / Math.tan( Math.PI / cellCount ) );
 
   for( var i = 0; i < cells.length; i++){
 
@@ -203,8 +205,6 @@ function changeCarousel(){
       cell.style.opacity = 1;
 
       var cellAngle = theta * i;
-
-      //cell.style.transform = rotateFn + '(' + cellAngle + 'deg); translateZ(' + radius + 'px);';
 
       cell.style.transform = rotateFn + '(' + cellAngle + 'deg); ';
 

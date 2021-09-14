@@ -25,7 +25,7 @@ function detectSwipe(el,func){
     var t = e.touches[0];
     swipe_det.sX = t.screenX;
     swipe_det.sY = t.screenY;
-    document.body.style.overflow = "hidden";
+    //document.body.style.overflow = "hidden";
   },false);
   //continuosly update the coordinates as the user moves the swipe
   ele.addEventListener('touchmove',function(e){
@@ -55,7 +55,7 @@ function detectSwipe(el,func){
       }
 
     }
-    document.body.style.overflow = "scroll";
+    //document.body.style.overflow = "scroll";
 
     //vertical detection calculation
     if ((((swipe_det.eY - min_y > swipe_det.sY) || (swipe_det.eY + min_y < swipe_det.sY)) && ((swipe_det.eX < swipe_det.sX + max_x) && (swipe_det.sX > swipe_det.eX - max_x)))) {

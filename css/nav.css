@@ -23,6 +23,7 @@ html {
   background-color: var(--white-shade-main);
   font-size: 22px;
   overflow-x: hidden;
+  overscroll-behavior: none;
 
 }
 
