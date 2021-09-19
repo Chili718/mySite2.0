@@ -26,7 +26,7 @@ File for getting the random nine pictures for the carousel on the homepage
 
        $minPath = substr_replace($minPath, "/min", strripos($minPath,"/"),0);
 
-       echo "<div class = 'carousel_cell'><img src = '{$minPath}' class='cil'></div>";
+       echo "<div class = 'carousel_cell'><h2>".$data["name"]."</h2><img src = '{$minPath}' class='cil'></div>";
 
      }
 

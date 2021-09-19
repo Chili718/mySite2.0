@@ -13,6 +13,7 @@ CSS File for the lightbox and its buttons
   display: none;
   top: 0;
   text-align: center;
+  touch-action: none;
 
 }
 
@@ -109,7 +110,11 @@ CSS File for the lightbox and its buttons
 
 }
 
-.noScroll {margin: 0; height: 100vh; overflow: hidden !important;}
+.noScroll{
+  margin: 0;
+  height: 100vh;
+  overflow: hidden !important;
+}
 
 @media (hover: hover) and (pointer: fine){
 

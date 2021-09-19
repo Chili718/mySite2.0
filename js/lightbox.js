@@ -134,7 +134,7 @@ next.addEventListener('click', function(){
 //function for giving the proper reaction to which way the user swipes
 //
 function swipeDir(dir){
-  console.log(dir);
+  //console.log(dir);
   if(dir == 'l')//previous image
   {
 
@@ -151,7 +151,8 @@ function swipeDir(dir){
     lightbox.classList.remove('active');
 
 
-    document.body.classList.remove('noScroll');
+    //document.body.classList.remove('noScroll');
+    enableScroll();
 
   }
 
@@ -164,7 +165,8 @@ document.body.onkeyup = function(e){
       lightbox.classList.remove('active');
 
 
-      document.body.classList.remove('noScroll');
+      //document.body.classList.remove('noScroll');
+      enableScroll();
     }
 }
 
@@ -177,7 +179,8 @@ lightbox.addEventListener('click', e => {
   lightbox.classList.remove('active');
 
 
-  document.body.classList.remove('noScroll');
+  //document.body.classList.remove('noScroll');
+  enableScroll();
 
 
 });
@@ -186,10 +189,16 @@ x.addEventListener('click', e => {
 
   lightbox.classList.remove('active');
 
-  document.body.classList.remove('noScroll');
+  //document.body.classList.remove('noScroll');
+  enableScroll();
 
 });
 
+//
+//
+//Event listener for the button that shows and hides the icons for the lightbox
+//
+//
 showHideButton.addEventListener('click', e => {
 
   if(showHideButton.innerHTML.includes('eye-off-outline')){
@@ -454,7 +463,7 @@ function addLB(){
       //append image to the lightbox
       lightbox.appendChild(splay);
 
-      document.body.classList.add('noScroll');
+      //document.body.classList.add('noScroll');
 
       //remove all of the possible hidden elements
       next.classList.remove("hide");
@@ -464,6 +473,8 @@ function addLB(){
         document.getElementById('deleteButton').classList.remove("hide");
       }
       document.querySelector('.viewTitle').classList.remove("hide");
+
+      disableScroll();
 
 
     });

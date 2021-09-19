@@ -320,11 +320,24 @@
 
       <!-- SOCIAL CONTACT SECTION END -->
 
+      <!-- Carousel Lightbox Start -->
+
+      <div id="lightbox">
+        <div class='lightboxButtons closeButton'><ion-icon name="close-circle-outline"></ion-icon></div>
+        <div class='lightboxButtons viewPrevious'><ion-icon name="arrow-back-circle-outline"></ion-icon></div>
+        <div class='lightboxButtons viewNext'><ion-icon name="arrow-forward-circle-outline"></ion-icon></div>
+        <div class='lightboxButtons showHideButton'><ion-icon name="eye-off-outline"></ion-icon></div>
+      </div>
+
+      <!-- Carousel Lightbox End -->
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script type="text/javascript" src="js/mySite.js"></script>
     <script type="text/javascript" src="js/swipe.js"></script>
+    <script type="text/javascript" src="js/scrolling.js"></script>
     <script type="text/javascript" src="js/carousel.js"></script>
+    <script type="text/javascript" src="js/carouselLightbox.js"></script>
   </body>
 
 </html>

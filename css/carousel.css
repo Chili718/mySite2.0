@@ -52,6 +52,12 @@ CSS file for the carousel on the home page of the website
 
 }
 
+.carousel_cell h2{
+
+  display: none !important;
+
+}
+
 .carousel_cell img{
 
   width: 100%;

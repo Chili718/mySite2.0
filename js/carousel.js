@@ -1,6 +1,6 @@
 /*
 
-File for the functionality of the home pages carousel
+File for the functionality of the home pages carousel and its lightbox
 
 */
 var carousel = document.querySelector('.carousel');
@@ -21,8 +21,6 @@ var rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
 
 var theta;
 
-//var lightbox = document.getElementById('lightbox');
-
 //function to rotate the carousel as a whole
 function rotateCarousel(){
 
@@ -35,58 +33,8 @@ function rotateCarousel(){
 var prevButton = document.querySelector('.viewPreviousCaro');
 
 function previousCar(){
-  /*
-  if(lightbox.classList.contains('active'))
-  {
 
-    var lit = lightbox.lastChild.src;
-
-    var begin = lightbox.lastChild.src.substring(0, lightbox.lastChild.src.lastIndexOf("/"));
-
-    begin = begin.concat("/min");
-
-    begin = begin.concat(lightbox.lastChild.src.substring(lightbox.lastChild.src.lastIndexOf("/"), lightbox.lastChild.src.lastIndexOf(".")));
-
-    begin = begin.concat("Min");
-
-    begin = begin.concat(lightbox.lastChild.src.substring(lightbox.lastChild.src.lastIndexOf("."), lightbox.lastChild.src.length));
-
-    //console.log(begin);
-
-    var node = 0;
-
-    for (var i = 0; i < cells.length; i++) {
-      if(cells[i].firstChild.src === begin)
-      {
-        if((i-1) != -1)
-        {
-          node = i-1;
-        }else{
-          node = cells.length-1;
-        }
-        break;
-      }
-    }
-
-    var bigger = cells[node].firstChild.src.replace("Min", "");
-    bigger = bigger.replace("/min", "");
-    //console.log(node);
-    var splay = document.createElement('img');
-    splay.src = bigger;
-
-    //console.log(bigger);
-    while(lightbox.childElementCount >= 2){
-
-      lightbox.removeChild(lightbox.lastChild);
-
-    }
-
-    lightbox.appendChild(splay);
-
-
-  }
-  */
-    selectedIndex--;
+  selectedIndex--;
 
 
   //console.log(selectedIndex + "Prev");
@@ -105,54 +53,8 @@ prevButton.addEventListener('click', function(){
 var nextButton = document.querySelector('.viewNextCaro');
 
 function nextCar(){
-  /*
-  if(lightbox.classList.contains('active'))
-  {
 
-    var lit = lightbox.lastChild.src;
-
-    var begin = lightbox.lastChild.src.substring(0, lightbox.lastChild.src.lastIndexOf("/"));
-
-    begin = begin.concat("/min");
-
-    begin = begin.concat(lightbox.lastChild.src.substring(lightbox.lastChild.src.lastIndexOf("/"), lightbox.lastChild.src.lastIndexOf(".")));
-
-    begin = begin.concat("Min");
-
-    begin = begin.concat(lightbox.lastChild.src.substring(lightbox.lastChild.src.lastIndexOf("."), lightbox.lastChild.src.length));
-
-    var node = 0;
-
-    for (var i = 0; i < cells.length; i++) {
-      if(cells[i].firstChild.src === begin)
-      {
-        if((i+1) > cells.length-1){
-          node = 0;
-        }else{
-          node = i+1;
-        }
-        break;
-      }
-    }
-
-    var bigger = cells[node].firstChild.src.replace("Min", "");
-    bigger = bigger.replace("/min", "");
-    //console.log(node);
-    var splay = document.createElement('img');
-    splay.src = bigger;
-
-    while(lightbox.childElementCount >= 2){
-
-      lightbox.removeChild(lightbox.lastChild);
-
-    }
-
-    lightbox.appendChild(splay);
-
-
-  }
-  */
-    selectedIndex++;
+  selectedIndex++;
 
 
   changeCarousel();
