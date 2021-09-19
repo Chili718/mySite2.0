@@ -119,7 +119,7 @@
       }
     ?>
     <div class="parallax" id="home">
-      <!--
+
       <div class="image-anim">
         <svg id="name" width="518" height="107" viewBox="0 0 518 107" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M67.056 2.80801C69.648 2.80801 71.904 3.09601 73.824 3.672C75.84 4.24801 76.944 5.11201 77.136 6.26401C77.136 8.66401 75.216 17.928 71.376 34.056C67.536 50.184 63.984 64.488 60.72 76.968C58.896 83.88 55.344 89.592 50.064 94.104C44.88 98.52 38.016 100.728 29.472 100.728C22.464 100.728 16.896 99.432 12.768 96.84C8.73599 94.152 5.95199 90.984 4.41599 87.336C2.78399 83.688 1.96799 80.088 1.96799 76.536C1.96799 70.968 2.68799 66.936 4.12799 64.44C5.47199 61.848 7.87199 60.552 11.328 60.552C14.688 60.552 17.328 61.032 19.248 61.992C21.168 62.856 22.128 64.008 22.128 65.448C22.128 66.408 21.36 67.944 19.824 70.056C18.192 72.264 17.376 73.848 17.376 74.808C17.472 79.32 18.48 82.44 20.4 84.168C22.416 85.896 25.2 86.76 28.752 86.76C31.248 86.76 33.648 85.752 35.952 83.736C38.352 81.72 40.272 78.024 41.712 72.648L55.68 18.648C49.44 19.704 44.304 20.664 40.272 21.528C38.352 20.856 36.864 19.848 35.808 18.504C34.848 17.064 34.368 15.384 34.368 13.464C34.368 10.68 36.24 8.47201 39.984 6.84001C47.568 5.30401 53.088 4.29601 56.544 3.81601C60 3.24001 63.504 2.90401 67.056 2.80801Z" stroke="white" stroke-width="3"/>
@@ -132,7 +132,7 @@
         </svg>
         <p>Designer and Full Stack Web Developer</p>
       </div>
-    -->
+    
       <div class="downArrow">
           <a href="#about">
           <span></span>
@@ -249,17 +249,6 @@
        <div class="swipeBox" id="swipeBox">
          <div class="scene"  id = "scene">
            <div class="carousel">
-             <!--
-            <div class="carousel_cell"><img src="photoshopWork/min/Ashen-LakeMin.jpg" class="cil"></div>
-            <div class="carousel_cell"><img src="photoshopWork/min/BalticMin.jpg" class="cil"></div>
-            <div class="carousel_cell"><img src="photoshopWork/min/Officer-PuffinMin.jpg" class="cil"></div>
-            <div class="carousel_cell"><img src="photoshopWork/min/beat-gooseMin.jpg" class="cil"></div>
-            <div class="carousel_cell"><img src="photoshopWork/min/Big-Ocean-Bigger-FishMin.jpg" class="cil"></div>
-            <div class="carousel_cell"><img src="photoshopWork/min/Floating-IslandMin.jpg" class="cil"></div>
-            <div class="carousel_cell"><img src="photoshopWork/min/MilkMin.jpg" class="cil"></div>
-            <div class="carousel_cell"><img src="photoshopWork/min/mainMin.jpg" class="cil"></div>
-            <div class="carousel_cell"><img src="photoshopWork/min/CupMin.jpg" class="cil"></div>
-          -->
           <?php require 'php/getCarouselPics.php'; ?>
            </div>
          </div>
