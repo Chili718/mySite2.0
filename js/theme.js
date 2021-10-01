@@ -80,6 +80,8 @@ function changeIcon(){
     document.querySelector('.loadDots').firstElementChild.src = 'images/LoadingNight.gif';
     document.querySelector('.loadDots').lastElementChild.src = 'images/CircleNight.gif';
 
+    //home svg changes
+    //document.querySelector('.image-anim').innerHTML = "";
 
     //start of font changes
     document.querySelector('.navbar').classList.add('nightBar');

@@ -62,48 +62,49 @@ svg{
   font-weight: 400;
   font-style: normal;
   font-size: 0.9rem;
-  color: #ffffff;
+  color: var(--grey-shade-five);
   padding-top: 10px;
   opacity: 0;
   animation: fadeIn 2s ease-in 6s 1 normal forwards;
   margin-top: 0.8rem;
+  margin-bottom: 75px;
 
 }
 
 #name path:nth-child(1){
   stroke-dasharray: 371px;
   stroke-dashoffset: 371px;
-  animation: line-anim 3s ease forwards 2s;
+  animation: line-anim 4s ease forwards 3s;
 }
 #name path:nth-child(2){
   stroke-dasharray: 350.6px;
   stroke-dashoffset: 350.6px;
-  animation: line-anim 3s ease forwards 2.3s;
+  animation: line-anim 4s ease forwards 3.3s;
 }
 #name path:nth-child(3){
   stroke-dasharray: 384.8px;
   stroke-dashoffset: 384.8px;
-  animation: line-anim 3s ease forwards 2.6s;
+  animation: line-anim 4s ease forwards 3.6s;
 }
 #name path:nth-child(4){
   stroke-dasharray: 324.5px;
   stroke-dashoffset: 324.5px;
-  animation: line-anim 3s ease forwards 2.9s;
+  animation: line-anim 4s ease forwards 3.9s;
 }
 #name path:nth-child(5){
   stroke-dasharray: 239.5px;
   stroke-dashoffset: 239.5px;
-  animation: line-anim 3s ease forwards 3.0s;
+  animation: line-anim 4s ease forwards 4.0s;
 }
 #name path:nth-child(6){
   stroke-dasharray: 319.6px;
   stroke-dashoffset: 319.6px;
-  animation: line-anim 3s ease forwards 3.3s;
+  animation: line-anim 4s ease forwards 4.3s;
 }
 #name path:nth-child(7){
   stroke-dasharray: 387.5px;
   stroke-dashoffset: 387.5px;
-  animation: line-anim 3s ease forwards 3.5s;
+  animation: line-anim 4s ease forwards 4.5s;
 }
 
 @keyframes line-anim{
@@ -308,7 +309,24 @@ Freelance Work Section
   margin-top: 4vw;
   display: flex;
   justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+
+}
+
+.worksContainerInner{
+
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: inherit;
+
+}
+
+.worksContainerInner:not(:last-of-type){
+
+  margin-bottom: 6vh;
 
 }
 
@@ -321,6 +339,7 @@ Freelance Work Section
   /*position: relative;*/
   box-shadow: 0.1rem 0.1rem 0.3rem var(--white-shade-three), -0.1rem -0.1rem 0.25rem var(--white);
   --border-size: 1px;
+  max-width: 600px;
 
 }
 
@@ -715,6 +734,12 @@ Social Contact Section
 
   }
 
+  .worksContainerInner{
+
+    flex-direction: column;
+
+  }
+
   .worksContainer{
 
     display: contents;
@@ -724,8 +749,13 @@ Social Contact Section
 
   .worksContainer div:first-of-type{
 
-    margin-bottom: 5vh;
     margin-top: 3vh;
+
+  }
+
+  .worksContainer div:not(:last-child){
+
+    margin-bottom: 5vh;
 
   }
 
