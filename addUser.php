@@ -160,7 +160,7 @@ if(!isset($_SESSION['verified']) || $_SESSION['verified'] !== true)
 
 </html>
 <script>
-
+  //prevent the form resubmission dialogue box
   $(document).ready(function(){
 
     $("#frm").submit(function(e) {

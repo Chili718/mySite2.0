@@ -97,7 +97,7 @@ CSS file for the carousel on the home page of the website
 
 .carouselButtons{
 
-  box-shadow: 0.1rem 0.1rem 0.3rem var(--grey-shade-one), -0.1rem -0.1rem 0.25rem var(--white-shade-six);
+  box-shadow: 0.1rem 0.1rem 0.3rem var(--grey-shade-one), -0.07rem -0.07rem 0.23rem var(--white-shade-six);
   padding: 0.4rem;
   display: flex;
   justify-content: center;

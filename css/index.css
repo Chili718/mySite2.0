@@ -282,13 +282,13 @@ About Me Section
 
 .btnResume{
 
-    box-shadow: 0.1rem 0.1rem 0.3rem var(--white-shade-two), -0.1rem -0.1rem 0.25rem var(--white);
+    box-shadow: 0.1rem 0.1rem 0.3rem var(--white-shade-two), -0.05rem -0.05rem 0.25rem var(--white);
 
 }
 
 .btnResume:active{
 
-  box-shadow: inset .1rem .1rem .25rem var(--white-shade-two), inset -.1rem -.1rem .25rem var(--white);
+  box-shadow: inset .1rem .1rem .25rem var(--white-shade-two), inset -.07rem -.07rem .25rem var(--white);
 
 }
 
@@ -337,7 +337,7 @@ Freelance Work Section
   flex-direction: column;
   padding: 4vh 4vh 2vh 4vh;
   /*position: relative;*/
-  box-shadow: 0.1rem 0.1rem 0.3rem var(--white-shade-three), -0.1rem -0.1rem 0.25rem var(--white);
+  box-shadow: 0.09rem 0.09rem 0.3rem var(--white-shade-three), -0.07rem -0.07rem 0.25rem var(--white);
   --border-size: 1px;
   max-width: 600px;
 
@@ -564,7 +564,7 @@ Code Projecsts Section
 
 .container:hover{
 
-  box-shadow: 0.1rem 0.1rem 0.3rem var(--white-shade-nine), -0.1rem -0.1rem 0.25rem var(--white-shade-opacity-two);
+  box-shadow: 0.1rem 0.1rem 0.3rem var(--white-shade-nine), -0.08rem -0.08rem 0.25rem var(--white-shade-opacity-two);
   transform: scale(1.02);
   border: solid 1px rgba(0, 0, 0, 0);
 
@@ -629,13 +629,13 @@ Photoshop Work Section
 
 .btnPhotoshop{
 
-    box-shadow: 0.1rem 0.1rem 0.3rem var(--grey-shade-one), -0.1rem -0.1rem 0.25rem var(--white-shade-six);
+    box-shadow: 0.1rem 0.1rem 0.3rem var(--grey-shade-one), -0.07rem -0.07rem 0.25rem var(--white-shade-six);
 
 }
 
 .btnPhotoshop:active{
 
-  box-shadow: inset .1rem .1rem .25rem var(--grey-shade-one), inset -.1rem -.1rem .25rem var(--white-shade-six);
+  box-shadow: inset .1rem .1rem .25rem var(--grey-shade-one), inset -.08rem -.08rem .25rem var(--white-shade-six);
 
 }
 
@@ -667,7 +667,7 @@ Social Contact Section
 
 .iconLink{
 
-  box-shadow: 0.1rem 0.1rem 0.3rem var(--grey-shade-one), -0.1rem -0.1rem 0.25rem var(--white-shade-six);
+  box-shadow: 0.1rem 0.1rem 0.3rem var(--grey-shade-one), -0.07rem -0.07rem 0.25rem var(--white-shade-six);
   padding: 0.5rem;
   border-radius: 50%;
   display: flex;
@@ -688,7 +688,7 @@ Social Contact Section
 
 .btnEmail{
 
-    box-shadow: 0.1rem 0.1rem 0.3rem var(--grey-shade-one), -0.1rem -0.1rem 0.25rem var(--white-shade-six);
+    box-shadow: 0.1rem 0.1rem 0.3rem var(--grey-shade-one), -0.07rem -0.07rem 0.25rem var(--white-shade-six);
     font-size: 1.5rem;
     color: var(--grey-shade-three);
     margin-top: 2vh;

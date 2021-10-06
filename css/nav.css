@@ -146,7 +146,12 @@ Navbar
 .nav-links li{
 
   list-style: none;
-
+  /*
+  background-color: var(--white-shade-opacity-seven);
+  border-radius: 25px;
+  padding: 0px 10px 4px 10px;
+  box-shadow: 0.1rem 0.1rem 0.3rem var(--white-shade-two), -0.05rem -0.05rem 0.25rem var(--white);
+  */
 }
 
 .nav-links a{

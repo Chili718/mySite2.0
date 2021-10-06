@@ -97,7 +97,7 @@ General Form and Input CSS
     flex-direction: column;
     align-items: center;
     padding: 40px;
-    box-shadow: 0.1rem 0.1rem 0.3rem var(--white-shade-two), -0.1rem -0.1rem 0.25rem var(--white);
+    box-shadow: 0.1rem 0.1rem 0.3rem var(--white-shade-two), -0.08rem -0.08rem 0.25rem var(--white);
     max-width: 350px;
     min-width: 215px;
     margin-top: 4%;
@@ -166,7 +166,7 @@ select:-webkit-autofill:focus {
 .frmBtn{
 
   margin-top: 30px;
-  box-shadow: 0.1rem 0.1rem 0.3rem var(--white-shade-two), -0.1rem -0.1rem 0.25rem var(--white);
+  box-shadow: 0.1rem 0.1rem 0.3rem var(--white-shade-two), -0.08rem -0.08rem 0.25rem var(--white);
   border-radius: 1rem;
   font-size: 0.8rem;
   color: var(--link-grey);

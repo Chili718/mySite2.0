@@ -223,7 +223,7 @@
       <h1>Coding Projects</h1>
 
       <p class ="codeprojectsExplanation">
-        Here are two of my bigger projects I've done in my free time using REACT. You can view the code on Git along with other programs I've made using a variety of other languages such as C++, C#(Unity), Python, Java. My <a href="https://github.com/Chili718?tab=repositories"  target="_blank" rel="noopener noreferrer">Git Repositories</a> are a combination of my course work and other projects I've done in my free time. You can also view the source for <a href="https://github.com/Chili718/dynamicSite"  target="_blank" rel="noopener noreferrer">This Website</a> which was made using JS, PHP, jQuery, and mySQL.
+        Here are two of my bigger projects I've done in my free time using REACT. You can view the code on Git along with other programs I've made using a variety of other languages such as C++, C#(Unity), Python, Java. My <a href="https://github.com/Chili718?tab=repositories"  target="_blank" rel="noopener noreferrer">Git Repositories</a> are a combination of my course work and other projects I've done in my free time. You can also view the source for <a href="https://github.com/Chili718/mySite2.0"  target="_blank" rel="noopener noreferrer">This Website</a> which was made using JS, PHP, jQuery, and mySQL.
       </p>
 
       <p class="tapOrHover">Tap or Hover for more!</p>
