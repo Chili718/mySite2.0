@@ -27,6 +27,10 @@ html {
 
 }
 
+html, body {
+  overflow-x: hidden !important;
+}
+
 .resize-animation-stopper *:not(.image-anim svg):not(.image-anim path):not(.image-anim p){
   animation: none !important;
   transition: none !important;
