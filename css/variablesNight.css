@@ -46,5 +46,6 @@ the names of the variables in this file do not reflect the actual colors
   --grey-shade-four: #bdbdbd;
   --grey-shade-five: #dbdbdb;
   --grey-shade-six: #8a8888;
+  --fill-color: rgba(50, 102, 150, 0);
 
 }

@@ -22,6 +22,13 @@ SVG name animation over the parallax image
 svg{
 
   z-index: 2;
+  /*fill: var(--fill-color);*/
+
+}
+
+path{
+
+  stroke: var(--black) !important;
 
 }
 
@@ -45,8 +52,9 @@ svg{
   max-width: 650px;
   min-width: 275px;
   height: auto;
-  padding: 25px 22px 0px 22px;
-  border-radius: 1rem;
+  padding: 15px 10px 15px 10px;
+  /*border-radius: 1rem;*/
+  background-color: var(--fill-color);
 
 }
 
@@ -62,12 +70,13 @@ svg{
   font-weight: 400;
   font-style: normal;
   font-size: 0.9rem;
-  color: var(--grey-shade-five);
-  padding-top: 10px;
+  color: var(--black);
+  padding: 6px 10px;
   opacity: 0;
   animation: fadeIn 2s ease-in 6s 1 normal forwards;
   margin-top: 0.8rem;
   margin-bottom: 75px;
+  background-color: var(--fill-color);
 
 }
 
