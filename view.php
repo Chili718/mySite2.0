@@ -67,6 +67,13 @@
       });
 
       $(".preloader").height(window.innerHeight);
+      if($(window).width() < 921){
+        $(".nav-links").height(window.innerHeight + 25);
+      }else{
+        $('.nav-links').css('height', '');
+        if($('.nav-links').hasClass('open'))
+          toggleMenu();
+      }
 
       changeIcon();
 
@@ -192,6 +199,13 @@
 
     $( window ).resize(function() {
       $(".preloader").height(window.innerHeight);
+      if($(window).width() < 921){
+        $(".nav-links").height(window.innerHeight + 25);
+      }else{
+        $('.nav-links').css('height', '');
+        if($('.nav-links').hasClass('open'))
+          toggleMenu();
+      }
     });
 
     </script>

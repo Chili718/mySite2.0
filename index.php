@@ -44,7 +44,8 @@
           $(".nav-links").height(window.innerHeight + 25);
         }else{
           $('.nav-links').css('height', '');
-          $('.nav-links').removeClass('open');
+          if($('.nav-links').hasClass('open'))
+            toggleMenu();
         }
 
       });
@@ -56,7 +57,8 @@
           $(".nav-links").height(window.innerHeight + 25);
         }else{
           $('.nav-links').css('height', '');
-          $('.nav-links').removeClass('open');
+          if($('.nav-links').hasClass('open'))
+            toggleMenu();
         }
       });
 
