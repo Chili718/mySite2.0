@@ -40,7 +40,14 @@ if(!isset($_SESSION['verified']) || $_SESSION['verified'] !== true)
 
         changeIcon();
 
+        $(".preloader").height(window.innerHeight);
+        $(".centerForm").height(window.innerHeight);
 
+      });
+
+      $( window ).resize(function() {
+        $(".preloader").height(window.innerHeight);
+        $(".centerForm").height(window.innerHeight);
       });
 
     </script>

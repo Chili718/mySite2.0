@@ -19,6 +19,7 @@ CSS file for the carousel on the home page of the website
   min-height: 200px;
   height: 25vh;
   perspective: 100vw;
+  perspective-origin: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,10 +30,11 @@ CSS file for the carousel on the home page of the website
   width: clamp(205px, 35%, 350px);
   height: 100%;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   transition: transform 1s;
-  position: fixed;
+  position: absolute;
   top: 0;
-  transform: translateZ(-385px) rotateY(0deg);
+  -webkit-transform: translateZ(-385px) rotateY(0deg);
 }
 
 .carousel_cell{
@@ -49,6 +51,8 @@ CSS file for the carousel on the home page of the website
   overflow-x: hidden;
   cursor: pointer;
   border: 3px var(--white-shade-five) solid;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 
 }
 

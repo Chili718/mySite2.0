@@ -268,6 +268,8 @@ function addLB(){
 
     image.addEventListener('click', e => {
 
+      showHideButton.innerHTML = "<ion-icon name='eye-off-outline'></ion-icon>";
+
       //must clone node or else when we remove the child on close it will remove
       //the actual sibling node
       var title = image.firstChild.cloneNode(true);//.textContent;

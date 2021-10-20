@@ -476,7 +476,6 @@ function addLB(){
 
       disableScroll();
 
-
     });
 
   });

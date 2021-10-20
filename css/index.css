@@ -8,7 +8,6 @@ The home parallax image
 
 .parallax {
   background-image: url("../images/mainDay.jpg");
-  height: 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -242,6 +241,7 @@ section a:not(.btnLink){
   font-family: cardea, serif;
   font-weight: 400;
   font-style: normal;
+  z-index: 3;
 
 }
 
@@ -819,6 +819,12 @@ Social Contact Section
 
   }
 
+  .parallax{
+
+    background-attachment: scroll;
+
+  }
+
 }
 
 @media screen and (max-width: 375px){
@@ -892,3 +898,7 @@ they do when not placed here for touch devices*/
   }
 
 }
+
+@media (max-width: @iphone-screen) {
+      background-attachment: scroll;
+  }

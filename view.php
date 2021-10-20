@@ -66,6 +66,8 @@
 
       });
 
+      $(".preloader").height(window.innerHeight);
+
       changeIcon();
 
       //console.log($(".psW").length);
@@ -186,6 +188,10 @@
 
       });
 
+    });
+
+    $( window ).resize(function() {
+      $(".preloader").height(window.innerHeight);
     });
 
     </script>
