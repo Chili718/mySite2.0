@@ -92,7 +92,8 @@ if(!isset($_SESSION['verified']) || $_SESSION['verified'] !== true)
           <li><a href="index.php#projects">Projects</a></li>
           <li><a href="view.php">Photoshop Work</a></li>
           <li><a href="index.php#contact">Contact</a></li>
-          <li><a href="downloads/TiceResume.pdf" download="JonTiceResume">Resume</a></li>
+          <li><a href="downloads/TiceResume.pdf" target="_blank">Resume</a></li>
+          <!--download="JonTiceResume"-->
 
           <?php
             //display login our logout link depending on the if the users is or not
