@@ -229,14 +229,14 @@
           <div class="workContainer">
             <h2>Wonder Dog University</h2>
             <a href="https://www.wonderdoguniversity.com/" target="_blank" rel="noopener noreferrer">
-              <img src="images/wonderdog.png">
+              <img src="images/wonderdog.jpg">
             </a>
           </div>
 
           <div class="workContainer">
             <h2>The Meander</h2>
             <a href="" target="_blank" rel="noopener noreferrer">
-              <img src="images/meander.png">
+              <img src="images/meander.jpg">
             </a>
           </div>
         </div>
